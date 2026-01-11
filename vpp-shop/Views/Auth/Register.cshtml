@@ -1,0 +1,17 @@
+﻿@model vpp_shop.Models.ViewModels.RegisterViewModel
+
+<h2>Đăng ký</h2>
+
+<form method="post">
+    <input asp-for="FullName" placeholder="Họ tên" /><br />
+    <input asp-for="Email" placeholder="Email" /><br />
+    <input asp-for="Phone" placeholder="SĐT" /><br />
+    <input asp-for="Password" type="password" placeholder="Mật khẩu" /><br />
+
+    <button type="submit">Đăng ký</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}

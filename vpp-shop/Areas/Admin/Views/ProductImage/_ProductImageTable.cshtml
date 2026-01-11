@@ -1,0 +1,49 @@
+﻿@model List<vpp_shop.Models.Product>
+
+<table class="table table-bordered align-middle">
+    <thead>
+        <tr>
+            <th style="width:30%">Tên sản phẩm</th>
+            <th style="width:20%">Ảnh chính</th>
+            <th style="width:30%">Ảnh phụ</th>
+            <th style="width:20%">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+
+                <td class="text-center">
+                    <img src="/images/products/@p.Image"
+                         width="90"
+                         class="border rounded" />
+                </td>
+
+                <td>
+                    <div class="sub-image-box">
+                        <div class="sub-image-list">
+                            @foreach (var img in p.ProductImages)
+                            {
+                                <div class="sub-image-item">
+                                    <img src="/images/products/sub/@img.ImageUrl" />
+                                    <button onclick="deleteImage(@img.Id)">×</button>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </td>
+
+                <td class="text-center">
+                    <button class="btn btn-primary btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#uploadModal"
+                            onclick="setProductId(@p.Id)">
+                        + Thêm ảnh
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

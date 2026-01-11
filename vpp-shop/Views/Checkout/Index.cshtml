@@ -1,0 +1,75 @@
+﻿@model vpp_shop.Models.ViewModels.CheckoutViewModel
+
+<h2>Thanh toán</h2>
+
+<div class="card mb-3">
+    <div class="card-header fw-bold">📍 Thông tin nhận hàng</div>
+    <div class="card-body">
+        <input class="form-control mb-2" asp-for="ReceiverName" placeholder="Họ tên" />
+        <input class="form-control mb-2" asp-for="Phone" placeholder="Số điện thoại" />
+        <textarea class="form-control" asp-for="Address" placeholder="Địa chỉ"></textarea>
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header fw-bold">🛒 Sản phẩm</div>
+    <div class="card-body">
+        @foreach (var item in Model.Items)
+        {
+            <div class="d-flex gap-2 mb-2 align-items-center">
+                <img src="~/images/products/@item.Product.Image"
+                     style="width:50px;height:50px;border-radius:6px" />
+                <div>
+                    @item.Product.Name <br />
+                    <small>SL: @item.Quantity × @item.Product.Price.ToString("N0") đ</small>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<h4 class="text-end text-danger">
+    Tổng tiền: @Model.TotalMoney.ToString("N0") đ
+</h4>
+
+<form method="post" asp-action="Confirm">
+    @foreach (var item in Model.Items)
+    {
+        <input type="hidden" name="itemIds" value="@item.Id" />
+    }
+    @if (Model.SavedAddresses != null && Model.SavedAddresses.Any())
+    {
+        <div class="card mb-3">
+            <div class="card-header fw-bold">
+                📍 Địa chỉ đã lưu
+            </div>
+            <div class="card-body">
+                @foreach (var a in Model.SavedAddresses)
+                {
+                    <div class="border rounded p-2 mb-2">
+                        <strong>@a.ReceiverName</strong> |
+                        @a.Phone <br />
+                        <small>@a.Address</small>
+
+                        @if (a.IsDefault == true)
+                        {
+                            <span class="badge bg-success ms-2">
+                                Mặc định
+                            </span>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+    <input type="hidden" asp-for="ReceiverName" />
+    <input type="hidden" asp-for="Phone" />
+    <input type="hidden" asp-for="Address" />
+
+    <div class="text-end">
+        <button class="btn btn-primary btn-lg">
+            Xác nhận đặt hàng
+        </button>
+    </div>
+</form>

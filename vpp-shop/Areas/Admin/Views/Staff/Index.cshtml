@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 class="mb-3">Quản lý nhân viên</h3>
+
+<button class="btn btn-primary mb-3" onclick="toggleCreate()">
+    + Thêm staff
+</button>
+
+<!-- Form thêm staff -->
+<div id="createBox" class="card mb-3" style="display:none;">
+    <div class="card-body">
+        <input id="fullName" class="form-control mb-2" placeholder="Họ tên" />
+        <input id="username" class="form-control mb-2" placeholder="Username" />
+        <input id="password" type="password" class="form-control mb-2" placeholder="Mật khẩu" />
+
+        <button class="btn btn-success" onclick="createStaff()">Lưu</button>
+        <button class="btn btn-secondary" onclick="toggleCreate()">Huỷ</button>
+    </div>
+</div>
+
+<!-- Bảng staff -->
+<div id="staffTable"></div>
+
+@section Scripts {
+    <script src="~/js/admin-staff.js"></script>
+}

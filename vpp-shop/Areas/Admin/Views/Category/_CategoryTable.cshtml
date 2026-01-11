@@ -1,0 +1,34 @@
+﻿@model List<vpp_shop.Models.Category>
+
+<table class="table table-bordered align-middle">
+    <thead>
+        <tr>
+            <th class="col-number">ID</th>
+            <th>Tên</th>
+            <th>Mô tả</th>
+            <th class="col-number">Số SP</th>
+            <th class="col-action">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td class="col-number">@c.Id</td>
+                <td>@c.Name</td>
+                <td>@c.Description</td>
+                <td class="col-number">@c.Products.Count</td>
+                <td class="col-action">
+                    <button class="btn btn-warning btn-sm"
+                            onclick="openEditCategory(@c.Id)">
+                        Sửa
+                    </button>
+                    <button class="btn btn-danger btn-sm"
+                            onclick="deleteCategory(@c.Id)">
+                        Xoá
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

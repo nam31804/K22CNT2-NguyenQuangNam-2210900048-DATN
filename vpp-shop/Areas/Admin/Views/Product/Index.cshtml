@@ -1,0 +1,109 @@
+﻿@model List<vpp_shop.Models.Product>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="h3 mb-4 text-gray-800">Quản lý sản phẩm</h1>
+
+<a asp-area="Admin"
+   asp-controller="Product"
+   asp-action="Create"
+   class="btn btn-primary mb-3">
+    + Thêm sản phẩm
+</a>
+
+<table class="table table-bordered align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Slug</th>
+            <th>Giá</th>
+            <th>Số lượng tồn</th>
+            <th>Mô tả</th>
+            <th>Ảnh</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+
+                <td class="fw-semibold">
+                    @p.Name
+                </td>
+
+                <!-- SLUG -->
+                <td>
+                    <code>@p.Slug</code>
+                </td>
+
+                <!-- GIÁ -->
+                <td>
+                    @p.Price.ToString("N0")
+                </td>
+
+                <!-- STOCK -->
+                <td>
+                    @if (p.Stock.HasValue && p.Stock > 0)
+                    {
+                        <span class="badge bg-success">@p.Stock</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Hết</span>
+                    }
+                </td>
+
+                <!-- MÔ TẢ (RÚT GỌN) -->
+                <td style="max-width:250px">
+                    @if (!string.IsNullOrEmpty(p.Description))
+                    {
+                        @p.Description.Substring(0, Math.Min(p.Description.Length, 80))
+                        <text>...</text>
+                    }
+                </td>
+
+                <!-- ẢNH -->
+                <td>
+                    @if (!string.IsNullOrEmpty(p.Image))
+                    {
+                        <img src="~/images/products/@p.Image"
+                             width="60"
+                             height="60"
+                             class="border rounded"
+                             style="object-fit:contain" />
+                    }
+                </td>
+
+                <!-- ACTION -->
+                <td>
+                    <a asp-area="Admin"
+                       asp-controller="Product"
+                       asp-action="Edit"
+                       asp-route-id="@p.Id"
+                       class="btn btn-sm btn-warning mb-1">
+                        Sửa
+                    </a>
+
+                    <form asp-area="Admin"
+                          asp-controller="Product"
+                          asp-action="Delete"
+                          method="post"
+                          style="display:inline"
+                          onsubmit="return confirm('Bạn có chắc muốn xoá sản phẩm này?');">
+
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@p.Id" />
+
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Xoá
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

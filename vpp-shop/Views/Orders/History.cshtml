@@ -1,0 +1,65 @@
+﻿@model List<vpp_shop.Models.Order>
+
+<h2>Lịch sử đơn hàng</h2>
+
+@if (!Model.Any())
+{
+    <p>Bạn chưa có đơn hàng nào.</p>
+}
+else
+{
+    <table class="table table-bordered align-middle">
+        <thead>
+            <tr>
+                <th>Mã đơn</th>
+                <th>Ngày đặt</th>
+                <th>Sản phẩm đã mua</th>
+                <th>Tổng tiền</th>
+                <th>Thanh toán</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var o in Model)
+            {
+                <tr>
+                    <td>#@o.Id</td>
+
+                    <td>
+                        @o.CreatedAt?.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                    <!-- SẢN PHẨM -->
+                    <td>
+                        @foreach (var item in o.OrderItems)
+                        {
+                            <div class="d-flex align-items-center mb-2 gap-2">
+                                <img src="~/images/products/@item.Product.Image"
+                                     style="width:50px;height:50px;object-fit:cover;border-radius:6px" />
+
+                                <div>
+                                    <div>@item.Product.Name</div>
+                                    <small class="text-muted">
+                                        SL: @item.Quantity × @item.Price.ToString("N0") đ
+                                    </small>
+                                </div>
+                            </div>
+                        }
+                    </td>
+
+                    <td class="text-danger fw-bold">
+                        @o.TotalMoney.ToString("N0") đ
+                    </td>
+
+                    <td>@o.PaymentMethod</td>
+
+                    <td>
+                        <span class="badge bg-success">
+                            @o.Status
+                        </span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,148 @@
+﻿@model List<vpp_shop.Models.Product>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Ảnh sản phẩm</h3>
+
+<table class="table table-bordered align-middle">
+    <thead>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Ảnh chính</th>
+            <th>Ảnh phụ</th>
+            <th width="140">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+
+                <td>
+                    <img src="/images/products/@p.Image"
+                         width="80"
+                         class="border rounded" />
+                </td>
+
+                <td>
+                    <div class="d-flex gap-2 flex-wrap">
+                        @foreach (var img in p.ProductImages)
+                        {
+                            <div class="text-center">
+                                <img src="/images/products/sub/@img.ImageUrl"
+                                     width="60"
+                                     class="border rounded mb-1" />
+                                <button class="btn btn-danger btn-sm"
+                                        onclick="deleteImage(@img.Id)">
+                                    X
+                                </button>
+                            </div>
+                        }
+                    </div>
+                </td>
+
+                <td>
+                    <!-- 🔥 SỬA Ở ĐÂY -->
+                    <button class="btn btn-primary btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#uploadModal"
+                            onclick="setProductId(@p.Id)">
+                        + Thêm ảnh
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- MODAL UPLOAD -->
+<div class="modal fade" id="uploadModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thêm ảnh phụ</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="productIdInput" />
+
+                <div id="dropZone"
+                     class="border rounded p-4 text-center"
+                     style="cursor:pointer">
+                    <p class="mb-1">Kéo thả ảnh vào đây</p>
+                    <small>(JPG, PNG – chọn nhiều ảnh)</small>
+                    <input type="file" id="imageInput" multiple hidden />
+                </div>
+
+                <div id="preview"
+                     class="d-flex gap-2 flex-wrap mt-3"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                    Huỷ
+                </button>
+                <button class="btn btn-primary" onclick="submitImages()">
+                    Upload ảnh
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            let selectedFiles = [];
+            const preview = document.getElementById("preview");
+            const productIdInput = document.getElementById("productIdInput");
+            const dropZone = document.getElementById("dropZone");
+            const fileInput = document.getElementById("imageInput");
+
+            // 🔥 chỉ set productId – KHÔNG mở modal bằng JS
+            window.setProductId = function (id) {
+                productIdInput.value = id;
+                selectedFiles = [];
+                preview.innerHTML = "";
+                fileInput.value = "";
+            };
+
+            window.submitImages = function () {
+                if (selectedFiles.length === 0) return;
+
+                const fd = new FormData();
+                fd.append("productId", productIdInput.value);
+                selectedFiles.forEach(f => fd.append("images", f));
+
+                fetch("/Admin/ProductImage/AddMultiple", {
+                    method: "POST",
+                    body: fd
+                }).then(() => location.reload());
+            };
+
+            window.deleteImage = function (id) {
+                fetch("/Admin/ProductImage/Delete?id=" + id, {
+                    method: "POST"
+                }).then(() => location.reload());
+            };
+
+            dropZone.onclick = () => fileInput.click();
+
+            fileInput.onchange = () => {
+                for (let f of fileInput.files) {
+                    selectedFiles.push(f);
+                    const img = document.createElement("img");
+                    img.src = URL.createObjectURL(f);
+                    img.style.height = "80px";
+                    img.className = "border rounded";
+                    preview.appendChild(img);
+                }
+            };
+
+        });
+    </script>
+}

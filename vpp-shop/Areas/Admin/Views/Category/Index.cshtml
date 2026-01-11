@@ -1,0 +1,91 @@
+﻿@model List<vpp_shop.Models.Category>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/admin-common.css" />
+    <link rel="stylesheet" href="~/css/admin-category.css" />
+}
+
+<div class="category-page">
+
+    <!-- HEADER -->
+    <h3 class="mb-3">Quản lý thể loại</h3>
+
+    <button class="btn btn-primary mb-3"
+            onclick="openCreateCategory()">
+        + Thêm thể loại
+    </button>
+
+
+    <!-- TABLE -->
+    <div id="categoryTable" class="category-table">
+        @await Html.PartialAsync("_CategoryTable", Model)
+    </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="categoryModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="categoryModalTitle">
+                    Thêm thể loại
+                </h5>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <form id="categoryForm">
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="catId" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Tên thể loại</label>
+                        <input class="form-control"
+                               name="Name"
+                               id="catName"
+                               required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mô tả</label>
+                        <textarea class="form-control"
+                                  name="Description"
+                                  id="catDesc"
+                                  rows="3"></textarea>
+                    </div>
+
+                    <div id="categoryProductsBox" class="d-none">
+                        <hr />
+                        <h6>Sản phẩm trong thể loại</h6>
+                        <ul id="categoryProducts"
+                            class="list-group small"></ul>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit"
+                            class="btn btn-primary">
+                        Lưu
+                    </button>
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin-reload.js"></script>
+    <script src="~/js/admin-category.js"></script>
+}

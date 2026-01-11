@@ -1,0 +1,184 @@
+﻿@model List<vpp_shop.Models.User>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Quản lý người dùng</h3>
+
+<input id="search" class="form-control mb-3" placeholder="Tìm ID hoặc tên" />
+
+<table class="table table-bordered align-middle">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Đơn</th>
+            <th>Ví</th>
+            <th>Trạng thái</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="userBody">
+        @foreach (var u in Model)
+        {
+            <tr data-id="@u.Id">
+                <td>@u.Id</td>
+                <td>@u.FullName</td>
+                <td>@u.Email</td>
+                <td>@u.Phone</td>
+                <td>@u.Orders.Count</td>
+                <td>@(u.Wallet?.Balance?.ToString("N0") ?? "0") đ</td>
+                <td>
+                    <span class="badge @(u.IsActive == true ? "bg-success" : "bg-danger")">
+                        @(u.IsActive == true ? "Hoạt động" : "Bị khoá")
+                    </span>
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-info btn-detail">Chi tiết</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- MODAL -->
+<div class="modal fade" id="userModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Chi tiết người dùng</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $('#search').keyup(function () {
+            $.get('/Admin/User/Index', { keyword: this.value }, html => {
+                $('#userBody').html($(html).find('#userBody').html());
+            });
+        });
+
+        $(document).on('click', '.btn-detail', function () {
+            const id = $(this).closest('tr').data('id');
+
+            $.get('/Admin/User/Detail', { id }, u => {
+
+                $('#modalBody').html(`
+                    <input type="hidden" id="userId" value="${u.id}">
+                    <input type="hidden" id="addressId" value="${u.address?.id ?? 0}">
+
+                    <input class="form-control mb-2"
+                           id="fullName"
+                           value="${u.fullName ?? ''}"
+                           placeholder="Họ tên người dùng">
+
+                    <input class="form-control mb-2"
+                           id="email"
+                           value="${u.email ?? ''}"
+                           placeholder="Email">
+
+                    <input class="form-control mb-2"
+                           id="phone"
+                           value="${u.phone ?? ''}"
+                           placeholder="Số điện thoại">
+
+                    <p>Đơn đã đặt: ${u.orderCount}</p>
+                    <p>Ví: ${u.balance.toLocaleString()} đ</p>
+
+                    <hr/>
+
+                    <input class="form-control mb-2"
+                           id="receiverName"
+                           value="${u.address?.receiverName ?? ''}"
+                           placeholder="Tên người nhận">
+
+                    <input class="form-control mb-2"
+                           id="receiverPhone"
+                           value="${u.address?.phone ?? ''}"
+                           placeholder="SĐT người nhận">
+
+                    <input class="form-control mb-2"
+                           id="address"
+                           value="${u.address?.address ?? ''}"
+                           placeholder="Địa chỉ giao hàng">
+
+                    <input class="form-control mb-2"
+                           id="district"
+                           value="${u.address?.district ?? ''}"
+                           placeholder="Quận / Huyện">
+
+                    <input class="form-control mb-3"
+                           id="city"
+                           value="${u.address?.city ?? ''}"
+                           placeholder="Tỉnh / Thành">
+
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary" onclick="updateAll()">Cập nhật</button>
+                        <button class="btn btn-warning" onclick="resetPass(${u.id})">Reset MK</button>
+                        <button class="btn btn-danger" onclick="toggleUser(${u.id})">Khoá / Mở</button>
+                    </div>
+                `);
+
+                new bootstrap.Modal('#userModal').show();
+            });
+        });
+
+        function updateAll() {
+            const data = {
+                userId: $('#userId').val(),
+                addressId: $('#addressId').val(),
+                fullName: $('#fullName').val(),
+                email: $('#email').val(),
+                phone: $('#phone').val(),
+                receiverName: $('#receiverName').val(),
+                receiverPhone: $('#receiverPhone').val(),
+                address: $('#address').val(),
+                district: $('#district').val(),
+                city: $('#city').val()
+            };
+
+            for (const k in data) {
+                if (k !== 'district' && k !== 'city' && !data[k]) {
+                    alert('Không được để trống thông tin');
+                    return;
+                }
+            }
+
+            $.post('/Admin/User/UpdateAll', data, () => {
+                const row = $('tr[data-id="' + data.userId + '"]');
+                row.find('td:eq(1)').text(data.fullName);
+                row.find('td:eq(2)').text(data.email);
+                row.find('td:eq(3)').text(data.phone);
+            });
+        }
+
+        function resetPass(id) {
+            if (!confirm('Reset mật khẩu về 12345?')) return;
+            $.post('/Admin/User/ResetPassword', { id }, () =>
+                alert('Đã reset mật khẩu'));
+        }
+
+        function toggleUser(id) {
+            $.post('/Admin/User/ToggleActive', { id }, () => {
+
+                const badge = $('tr[data-id="' + id + '"] span');
+
+                if (badge.text().trim() === 'Hoạt động') {
+                    badge.removeClass('bg-success')
+                         .addClass('bg-danger')
+                         .text('Bị khoá');
+                } else {
+                    badge.removeClass('bg-danger')
+                         .addClass('bg-success')
+                         .text('Hoạt động');
+                }
+            });
+        }
+    </script>
+}

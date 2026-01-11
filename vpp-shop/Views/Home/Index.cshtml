@@ -1,0 +1,29 @@
+﻿@model List<vpp_shop.Models.Product>
+
+<h2>Sản phẩm mới</h2>
+
+<div style="display:flex; flex-wrap:wrap; gap:20px">
+    @foreach (var item in Model)
+    {
+        <div style="border:1px solid #ccc; padding:10px; width:200px">
+            <img src="~/images/products/@item.Image"
+                 style="width:100%; height:150px; object-fit:cover" />
+
+            <h4>@item.Name</h4>
+            <p>@item.Price.ToString("N0") đ</p>
+
+            <a asp-controller="Product"
+               asp-action="Detail"
+               asp-route-id="@item.Id">
+                Xem chi tiết
+            </a>
+            <a asp-controller="Cart"
+               asp-action="AddToCart"
+               asp-route-productId="@item.Id"
+               class="btn btn-sm btn-primary">
+                Thêm vào giỏ
+            </a>
+
+        </div>
+    }
+</div>

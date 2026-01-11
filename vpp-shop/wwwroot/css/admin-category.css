@@ -1,0 +1,17 @@
+﻿
+
+/* table */
+.category-table table {
+    background: #fff;
+}
+
+.category-table th {
+    background: #f8f9fc;
+    font-weight: 600;
+}
+
+/* căn giữa thao tác */
+.col-action {
+    text-align: center;
+    white-space: nowrap;
+}
