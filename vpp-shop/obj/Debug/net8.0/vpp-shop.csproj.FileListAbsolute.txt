@@ -507,3 +507,4 @@ C:\Users\Admin\Documents\vpp-shop\vpp-shop\obj\Debug\net8.0\refint\vpp-shop.dll
 C:\Users\Admin\Documents\vpp-shop\vpp-shop\obj\Debug\net8.0\vpp-shop.pdb
 C:\Users\Admin\Documents\vpp-shop\vpp-shop\obj\Debug\net8.0\vpp-shop.genruntimeconfig.cache
 C:\Users\Admin\Documents\vpp-shop\vpp-shop\obj\Debug\net8.0\ref\vpp-shop.dll
+C:\Users\Admin\Documents\vpp-shop\vpp-shop\obj\Debug\net8.0\vpp-shop.sourcelink.json

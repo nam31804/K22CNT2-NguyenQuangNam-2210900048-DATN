@@ -1,32 +1,59 @@
 ﻿@model List<vpp_shop.Models.Category>
 
 <table class="table table-bordered align-middle">
-    <thead>
+    <thead class="table-light">
         <tr>
             <th class="col-number">ID</th>
-            <th>Tên</th>
+            <th>Tên thể loại</th>
+            <th>Danh mục</th>
             <th>Mô tả</th>
             <th class="col-number">Số SP</th>
             <th class="col-action">Thao tác</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var c in Model)
+        @if (Model != null && Model.Any())
+        {
+            foreach (var c in Model)
+            {
+                <tr>
+                    <td class="col-number">@c.Id</td>
+
+                    <td>
+                        <strong>@c.Name</strong>
+                    </td>
+
+                    <td>
+                        @c.CategoryGroup?.Name
+                    </td>
+
+                    <td>
+                        @c.Description
+                    </td>
+
+                    <td class="col-number">
+                        @c.Products.Count
+                    </td>
+
+                    <td class="col-action">
+                        <button class="btn btn-warning btn-sm me-1"
+                                onclick="openEditCategory(@c.Id)">
+                            Sửa
+                        </button>
+
+                        <button class="btn btn-danger btn-sm"
+                                onclick="deleteCategory(@c.Id)">
+                            Xoá
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td class="col-number">@c.Id</td>
-                <td>@c.Name</td>
-                <td>@c.Description</td>
-                <td class="col-number">@c.Products.Count</td>
-                <td class="col-action">
-                    <button class="btn btn-warning btn-sm"
-                            onclick="openEditCategory(@c.Id)">
-                        Sửa
-                    </button>
-                    <button class="btn btn-danger btn-sm"
-                            onclick="deleteCategory(@c.Id)">
-                        Xoá
-                    </button>
+                <td colspan="6" class="text-center text-muted">
+                    Chưa có thể loại nào
                 </td>
             </tr>
         }

@@ -1,0 +1,62 @@
+﻿/* ===============================
+   CATEGORY ADMIN PAGE
+================================ */
+
+.category-page {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+    /* Header */
+    .category-page h3 {
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    /* Button */
+    .category-page .btn-primary {
+        font-weight: 500;
+    }
+
+/* Table */
+.category-table {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+/* Cột nhỏ */
+.col-number {
+    width: 80px;
+    text-align: center;
+}
+
+.col-action {
+    width: 140px;
+    text-align: center;
+}
+
+/* Modal */
+#categoryModal .modal-title {
+    font-weight: 600;
+}
+
+#categoryForm .form-label {
+    font-weight: 500;
+}
+
+/* Product list trong modal */
+#categoryProductsBox h6 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#categoryProducts li {
+    padding: 6px 10px;
+}

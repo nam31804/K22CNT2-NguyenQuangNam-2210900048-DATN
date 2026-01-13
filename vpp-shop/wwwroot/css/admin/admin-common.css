@@ -1,0 +1,6 @@
+﻿/* dùng cho ID, tiền, số lượng */
+.col-number {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}

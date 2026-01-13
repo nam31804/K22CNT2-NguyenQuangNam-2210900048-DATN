@@ -12,6 +12,11 @@ public partial class Category
     public string? Description { get; set; }
 
     public DateTime? CreatedAt { get; set; }
+    // fk
+    public int CategoryGroupId { get; set; }
+
+    // 🔗 Navigation tới bảng cha
+    public virtual CategoryGroup CategoryGroup { get; set; } = null!;
 
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }

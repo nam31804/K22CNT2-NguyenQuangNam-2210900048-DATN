@@ -22,6 +22,8 @@ public partial class VanPhongPhamDBContext : DbContext
 
     public virtual DbSet<CartItem> CartItems { get; set; }
 
+    public virtual DbSet<CategoryGroup> CategoryGroups { get; set; }
+
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }

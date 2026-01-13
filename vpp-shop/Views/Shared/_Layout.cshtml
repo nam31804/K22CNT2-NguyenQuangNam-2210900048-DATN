@@ -1,106 +1,141 @@
 ﻿@using Microsoft.AspNetCore.Http
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - vpp_shop</title>
+    <title>@ViewData["Title"] - Twinkle</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/vpp_shop.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">vpp_shop</a>
 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                    </ul>
+    @{
+        var userId = Context.Session.GetInt32("USER_ID");
+        var userName = Context.Session.GetString("USER_NAME");
+    }
 
-                    <ul class="navbar-nav">
-                        @{
-                            var userId = Context.Session.GetInt32("USER_ID");
-                            var userName = Context.Session.GetString("USER_NAME");
-                            var adminId = Context.Session.GetInt32("ADMIN_ID");
-                            var adminRole = Context.Session.GetString("ADMIN_ROLE");
-                        }
-
-                        @* ===== CHƯA ĐĂNG NHẬP ===== *@
-                        @if (userId == null && adminId == null)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Auth" asp-action="Login">Đăng nhập</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Auth" asp-action="Register">Đăng ký</a>
-                            </li>
-                        }
-
-                        @* ===== USER ===== *@
-                        @if (userId != null)
-                        {
-                            <li class="nav-item">
-                                <span class="nav-link">
-                                    Xin chào, <strong>@userName</strong>
-                                </span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Cart" asp-action="Index">
-                                    🛒 Giỏ hàng
-                                    <span id="cart-count">
-                                        @await Component.InvokeAsync("CartCount")
-                                    </span>
-                                </a>
-
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" asp-controller="Auth" asp-action="Logout">
-                                    Đăng xuất
-                                </a>
-                            </li>
-                        }
-
-                        @* ===== ADMIN / STAFF ===== *@
-                        @if (adminId != null)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-danger fw-bold"
-                                   asp-controller="NqnAdminHome" asp-action="Index">
-                                    🛠 Quản trị (@adminRole)
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" asp-controller="Auth" asp-action="Logout">
-                                    Đăng xuất
-                                </a>
-                            </li>
-                        }
-                    </ul>
-                </div>
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                Chào mừng bạn đến Website Công ty Cổ phần văn phòng phẩm Twinkle |
+                Email: dvkh@Twinkle.com.vn
             </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+            <div class="top-right">
+                @if (userId != null)
+                {
+                    <span>Xin chào <strong>@userName</strong></span>
+                    <a asp-controller="Auth" asp-action="Logout">Đăng xuất</a>
+                }
+                else
+                {
+                    <a asp-controller="Auth" asp-action="Login">Đăng nhập</a>
+                }
+                <a href="#">Liên hệ</a>
+            </div>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- ===== MAIN HEADER ===== -->
+    <div class="main-header">
         <div class="container">
-            &copy; 2025 - vpp_shop
-        </div>
-    </footer>
+            <div class="row align-items-center">
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+                <!-- LOGO -->
+                <div class="col-lg-2 d-flex align-items-center">
+                    <a asp-controller="Home" asp-action="Index" class="logo-wrap">
+                        <img src="~/images/logo/Twinkle.png" alt="Twinkle" class="logo-img">
+                    </a>
+                </div>
+
+
+                <!-- SEARCH -->
+                <div class="col-lg-6">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- HOTLINE + CART -->
+                <div class="col-lg-4 d-flex justify-content-end align-items-center gap-4">
+
+                    <!-- HOTLINE -->
+                    <div class="hotline">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div class="hotline-info">
+                            <span class="hotline-label">Gọi đặt hàng</span>
+                            <span class="hotline-number">070.7431804</span>
+                        </div>
+                    </div>
+
+                    <!-- GIỎ HÀNG -->
+                    <a asp-controller="Cart"
+                       asp-action="Index"
+                       class="cart-simple">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-text">Giỏ hàng</span>
+                        <span class="cart-count">
+                            @await Component.InvokeAsync("CartCount")
+                        </span>
+
+                    </a>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MENU ===== -->
+    <div class="menu-bar">
+        <div class="container">
+            <ul class="menu-list">
+                <li><a href="#">Trang Chủ</a></li>
+                <li class="menu-item has-dropdown">
+                    <a href="#">Sản phẩm</a>
+                    @await Component.InvokeAsync("CategoryMenu")
+                </li>
+
+
+                <li><a href="#">HỌA CỤ SAKURA</a></li>
+                <li><a href="#">STEAM/STEM</a></li>
+                <li><a href="#">KHUYẾN MÃI</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">SHOWROOM 360</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<script>
+    document.querySelectorAll('.mega-tab').forEach(tab => {
+        tab.addEventListener('mouseenter', function () {
+
+            document.querySelectorAll('.mega-tab')
+                .forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.mega-content')
+                .forEach(c => c.classList.remove('active'));
+
+            this.classList.add('active');
+            document.getElementById(this.dataset.tab)
+                .classList.add('active');
+        });
+    });
+</script>
+
