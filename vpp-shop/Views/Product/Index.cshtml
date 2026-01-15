@@ -1,0 +1,126 @@
+﻿@model List<vpp_shop.Models.Product>
+
+<div class="container mt-4">
+    <div class="row">
+
+        <!-- ===== CỘT TRÁI: DANH MỤC ===== -->
+        <div class="col-md-3">
+            <div class="category-sidebar">
+                <h6 class="sidebar-title">
+                    <a href="/Product/Index">SẢN PHẨM</a>
+                </h6>
+
+                @foreach (var group in ViewBag.CategoryGroups)
+                {
+                    bool isActiveGroup = ViewBag.ActiveGroupId != null
+                        && ViewBag.ActiveGroupId == group.Id;
+
+                    <div class="category-group">
+                        <a href="/Product/Index?groupId=@group.Id"
+                           class="category-group-name @(isActiveGroup ? "active" : "")">
+                            @group.Name
+                        </a>
+
+                        <ul class="category-children">
+                            @foreach (var cate in group.Categories)
+                            {
+                                bool isActiveCate = ViewBag.ActiveCategoryId != null
+                                    && ViewBag.ActiveCategoryId == cate.Id;
+
+                                <li>
+                                    <a href="/Product/Index?categoryId=@cate.Id"
+                                       class="@(isActiveCate ? "active" : "")">
+                                        @cate.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- ===== CỘT PHẢI: SẢN PHẨM ===== -->
+        <div class="col-md-9">
+
+            <!-- ===== THANH TIÊU ĐỀ + SẮP XẾP ===== -->
+            <div class="product-toolbar">
+                <div class="product-toolbar-left">
+                    <h5>@ViewBag.CurrentTitle</h5>
+                </div>
+
+                <div class="product-toolbar-right">
+                    <span>Sắp xếp:</span>
+
+                    <form method="get">
+                        <input type="hidden" name="groupId" value="@ViewBag.ActiveGroupId" />
+                        <input type="hidden" name="categoryId" value="@ViewBag.ActiveCategoryId" />
+
+                        <select name="sort" onchange="this.form.submit()">
+                            <option value="">Thứ tự</option>
+                            <option value="name_asc" selected="@(ViewBag.Sort == "name_asc")">
+                                Tên A-Z
+                            </option>
+
+                            <option value="name_desc" selected="@(ViewBag.Sort == "name_desc")">
+                                Tên Z-A
+                            </option>
+
+                            <option value="price_asc" selected="@(ViewBag.Sort == "price_asc")">
+                                Giá thấp đến cao
+                            </option>
+
+                            <option value="price_desc" selected="@(ViewBag.Sort == "price_desc")">
+                                Giá cao xuống thấp
+                            </option>
+
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ===== GRID SẢN PHẨM ===== -->
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-product mb-4">
+                        <div class="product-item">
+
+                            <!-- ẢNH + HOVER -->
+                            <div class="product-thumb">
+                                <a href="/Product/Detail/@item.Id">
+                                    <img src="~/images/products/@item.Image" alt="@item.Name">
+                                </a>
+
+                                <!-- NÚT HOVER -->
+                                <div class="product-actions">
+                                    <a asp-controller="Cart"
+                                       asp-action="AddToCart"
+                                       asp-route-productId="@item.Id"
+                                       class="btn-cart">
+                                        Thêm vào giỏ
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <!-- THÔNG TIN -->
+                            <div class="product-info">
+                                <a href="/Product/Detail/@item.Id" class="product-name">
+                                    @item.Name
+                                </a>
+
+                                <p class="product-price">
+                                    @item.Price.ToString("N0") đ
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

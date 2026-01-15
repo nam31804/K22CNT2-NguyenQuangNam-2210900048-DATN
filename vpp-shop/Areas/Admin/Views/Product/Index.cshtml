@@ -5,12 +5,9 @@
 
 <h1 class="h3 mb-4 text-gray-800">Quản lý sản phẩm</h1>
 
-<a asp-area="Admin"
-   asp-controller="Product"
-   asp-action="Create"
-   class="btn btn-primary mb-3">
+<button class="btn btn-primary mb-3" onclick="openCreateModal()">
     + Thêm sản phẩm
-</a>
+</button>
 
 <table class="table table-bordered align-middle">
     <thead class="table-light">
@@ -19,10 +16,10 @@
             <th>Tên</th>
             <th>Slug</th>
             <th>Giá</th>
-            <th>Số lượng tồn</th>
+            <th>SL tồn</th>
             <th>Mô tả</th>
             <th>Ảnh</th>
-            <th>Thao tác</th>
+            <th width="140">Thao tác</th>
         </tr>
     </thead>
     <tbody>
@@ -30,22 +27,10 @@
         {
             <tr>
                 <td>@p.Id</td>
+                <td class="fw-semibold">@p.Name</td>
+                <td><code>@p.Slug</code></td>
+                <td>@p.Price.ToString("N0")</td>
 
-                <td class="fw-semibold">
-                    @p.Name
-                </td>
-
-                <!-- SLUG -->
-                <td>
-                    <code>@p.Slug</code>
-                </td>
-
-                <!-- GIÁ -->
-                <td>
-                    @p.Price.ToString("N0")
-                </td>
-
-                <!-- STOCK -->
                 <td>
                     @if (p.Stock.HasValue && p.Stock > 0)
                     {
@@ -57,36 +42,30 @@
                     }
                 </td>
 
-                <!-- MÔ TẢ (RÚT GỌN) -->
-                <td style="max-width:250px">
+                <td style="max-width:260px">
                     @if (!string.IsNullOrEmpty(p.Description))
                     {
                         @p.Description.Substring(0, Math.Min(p.Description.Length, 80))
+                
                         <text>...</text>
                     }
                 </td>
 
-                <!-- ẢNH -->
                 <td>
                     @if (!string.IsNullOrEmpty(p.Image))
                     {
                         <img src="~/images/products/@p.Image"
-                             width="60"
-                             height="60"
+                             width="60" height="60"
                              class="border rounded"
                              style="object-fit:contain" />
                     }
                 </td>
 
-                <!-- ACTION -->
                 <td>
-                    <a asp-area="Admin"
-                       asp-controller="Product"
-                       asp-action="Edit"
-                       asp-route-id="@p.Id"
-                       class="btn btn-sm btn-warning mb-1">
+                    <button class="btn btn-sm btn-warning mb-1"
+                            onclick="openEditModal(@p.Id)">
                         Sửa
-                    </a>
+                    </button>
 
                     <form asp-area="Admin"
                           asp-controller="Product"
@@ -94,10 +73,8 @@
                           method="post"
                           style="display:inline"
                           onsubmit="return confirm('Bạn có chắc muốn xoá sản phẩm này?');">
-
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="id" value="@p.Id" />
-
                         <button type="submit" class="btn btn-sm btn-danger">
                             Xoá
                         </button>
@@ -107,3 +84,108 @@
         }
     </tbody>
 </table>
+
+<!-- ================= MODAL ================= -->
+<div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <form id="productForm"
+                  method="post"
+                  enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="Id" id="productId" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Thêm sản phẩm</h5>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- DANH MỤC (BẮT BUỘC) -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Danh mục</label>
+                        <select class="form-select"
+                                name="CategoryId"
+                                id="categoryId"
+                                required>
+                            <option value="">-- Chọn danh mục --</option>
+                            @foreach (var c in ViewBag.Categories)
+                            {
+                                <option value="@c.Id">@c.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Tên sản phẩm</label>
+                        <input class="form-control"
+                               name="Name"
+                               id="name"
+                               required />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Giá</label>
+                            <input type="number"
+                                   class="form-control"
+                                   name="Price"
+                                   id="price"
+                                   required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Số lượng tồn</label>
+                            <input type="number"
+                                   class="form-control"
+                                   name="Stock"
+                                   id="stock"
+                                   value="0" />
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Mô tả</label>
+                        <textarea class="form-control"
+                                  rows="4"
+                                  name="Description"
+                                  id="description"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Ảnh sản phẩm</label>
+
+                        <input type="file"
+                               class="form-control mb-2"
+                               name="imageFile"
+                               id="imageFile"
+                               accept="image/*"
+                               onchange="previewImage(this)" />
+
+                        <img id="imagePreview"
+                             style="max-width:150px;display:none;border:1px solid #ddd;padding:4px;border-radius:6px" />
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">
+                        Lưu
+                    </button>
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin/admin-product.js"></script>
+}

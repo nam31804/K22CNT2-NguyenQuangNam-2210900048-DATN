@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/web/product.css" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
@@ -53,13 +55,28 @@
 
                 <!-- SEARCH -->
                 <div class="col-lg-6">
-                    <div class="search-box">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <form asp-controller="Product"
+                          asp-action="Index"
+                          method="get"
+                          class="search-box position-relative">
+
+                        <input type="text"
+                               name="keyword"
+                               id="searchInput"
+                               placeholder="Tìm kiếm sản phẩm..."
+                               autocomplete="off" />
+
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
-                    </div>
+
+                        <!-- GỢI Ý -->
+                        <div id="searchSuggest" class="search-suggest"></div>
+
+                    </form>
                 </div>
+
+
 
                 <!-- HOTLINE + CART -->
                 <div class="col-lg-4 d-flex justify-content-end align-items-center gap-4">
@@ -100,12 +117,9 @@
         <div class="container">
             <ul class="menu-list">
                 <li><a href="#">Trang Chủ</a></li>
-                <li class="menu-item has-dropdown">
-                    <a href="#">Sản phẩm</a>
-                    @await Component.InvokeAsync("CategoryMenu")
+                <li>
+                    <a href="/Product/Index">Sản phẩm</a>
                 </li>
-
-
                 <li><a href="#">HỌA CỤ SAKURA</a></li>
                 <li><a href="#">STEAM/STEM</a></li>
                 <li><a href="#">KHUYẾN MÃI</a></li>
@@ -120,22 +134,9 @@
     </div>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-<script>
-    document.querySelectorAll('.mega-tab').forEach(tab => {
-        tab.addEventListener('mouseenter', function () {
-
-            document.querySelectorAll('.mega-tab')
-                .forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.mega-content')
-                .forEach(c => c.classList.remove('active'));
-
-            this.classList.add('active');
-            document.getElementById(this.dataset.tab)
-                .classList.add('active');
-        });
-    });
-</script>
 

@@ -18,7 +18,7 @@ namespace vpp_shop.Areas.Admin.Controllers
         }
 
         // =========================
-        // HÀM TẠO SLUG (TỰ ĐỘNG)
+        // TẠO SLUG
         // =========================
         private string GenerateSlug(string text)
         {
@@ -47,41 +47,37 @@ namespace vpp_shop.Areas.Admin.Controllers
         // =========================
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.ToListAsync());
+            ViewBag.Categories = await _context.Categories.ToListAsync();
+            var products = await _context.Products.ToListAsync();
+            return View(products);
         }
 
         // =========================
-        // CREATE (GET)
+        // LẤY PRODUCT (JSON) – EDIT MODAL
         // =========================
-        public IActionResult Create()
+        [HttpGet]
+        public async Task<IActionResult> GetProduct(int id)
         {
-            ViewBag.Categories = _context.Categories.ToList();
-            return View();
+            var product = await _context.Products.FindAsync(id);
+            if (product == null) return NotFound();
+
+            return Json(product);
         }
 
         // =========================
-        // CREATE (POST)
+        // CREATE (POST) – MODAL
         // =========================
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Product product, IFormFile imageFile)
         {
-            // BẮT BUỘC CHỌN THỂ LOẠI
             if (product.CategoryId == 0)
             {
-                ModelState.AddModelError("CategoryId", "Vui lòng chọn thể loại");
+                return BadRequest("Chưa chọn thể loại");
             }
 
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Categories = _context.Categories.ToList();
-                return View(product);
-            }
-
-            // TẠO SLUG TỰ ĐỘNG
             product.Slug = GenerateSlug(product.Name);
 
-            // UPLOAD ẢNH
             if (imageFile != null)
             {
                 var fileName = Guid.NewGuid() + Path.GetExtension(imageFile.FileName);
@@ -91,59 +87,33 @@ namespace vpp_shop.Areas.Admin.Controllers
                     fileName
                 );
 
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await imageFile.CopyToAsync(stream);
-                }
+                using var stream = new FileStream(path, FileMode.Create);
+                await imageFile.CopyToAsync(stream);
 
                 product.Image = fileName;
             }
 
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+
             return RedirectToAction("Index");
         }
 
         // =========================
-        // EDIT (GET)
-        // =========================
-        public async Task<IActionResult> Edit(int id)
-        {
-            var product = await _context.Products.FindAsync(id);
-            if (product == null) return NotFound();
-
-            ViewBag.Categories = _context.Categories.ToList();
-            return View(product);
-        }
-
-        // =========================
-        // EDIT (POST)
+        // EDIT (POST) – MODAL
         // =========================
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Product product, IFormFile imageFile)
+        public async Task<IActionResult> Edit(Product product, IFormFile imageFile)
         {
-            if (product.CategoryId == 0)
-            {
-                ModelState.AddModelError("CategoryId", "Vui lòng chọn thể loại");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Categories = _context.Categories.ToList();
-                return View(product);
-            }
-
             var oldProduct = await _context.Products
                 .AsNoTracking()
-                .FirstOrDefaultAsync(p => p.Id == id);
+                .FirstOrDefaultAsync(p => p.Id == product.Id);
 
             if (oldProduct == null) return NotFound();
 
-            // TẠO LẠI SLUG NẾU ĐỔI TÊN
             product.Slug = GenerateSlug(product.Name);
 
-            // XỬ LÝ ẢNH
             if (imageFile != null)
             {
                 if (!string.IsNullOrEmpty(oldProduct.Image))
@@ -164,10 +134,8 @@ namespace vpp_shop.Areas.Admin.Controllers
                     fileName
                 );
 
-                using (var stream = new FileStream(newPath, FileMode.Create))
-                {
-                    await imageFile.CopyToAsync(stream);
-                }
+                using var stream = new FileStream(newPath, FileMode.Create);
+                await imageFile.CopyToAsync(stream);
 
                 product.Image = fileName;
             }
@@ -178,17 +146,17 @@ namespace vpp_shop.Areas.Admin.Controllers
 
             _context.Update(product);
             await _context.SaveChangesAsync();
+
             return RedirectToAction("Index");
         }
 
         // =========================
-        // DELETE (POST) – XOÁ TEST
+        // DELETE
         // =========================
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            // XOÁ order_items TRƯỚC (TEST)
             var orderItems = _context.OrderItems
                 .Where(o => o.ProductId == id);
             _context.OrderItems.RemoveRange(orderItems);
@@ -196,7 +164,6 @@ namespace vpp_shop.Areas.Admin.Controllers
             var product = await _context.Products.FindAsync(id);
             if (product == null) return NotFound();
 
-            // XOÁ ẢNH
             if (!string.IsNullOrEmpty(product.Image))
             {
                 var path = Path.Combine(

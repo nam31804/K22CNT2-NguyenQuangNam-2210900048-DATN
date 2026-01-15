@@ -1,24 +1,210 @@
 ﻿@model vpp_shop.Models.Product
 
-<h2>@Model.Name</h2>
+<div class="container mt-4">
+    <div class="row">
 
-<img src="~/images/products/@Model.Image" style="width:300px" />
+        
+        <div class="row justify-content-center">
+        <!-- ===== ẢNH SẢN PHẨM ===== -->
+        <div class="col-md-5">
+
+            <div class="d-flex gap-3 align-items-start">
+
+                <!-- ẢNH CHÍNH (BÊN TRÁI) -->
+                <div class="product-main-image">
+                    <img id="mainImage"
+                         src="~/images/products/@Model.Image"
+                         alt="@Model.Name" />
+                </div>
+
+                <!-- ẢNH PHỤ (BÊN PHẢI) -->
+                <div class="product-thumbs d-flex flex-column gap-2">
+                    <img src="~/images/products/@Model.Image"
+                         class="img-thumbnail thumb-img active"
+                         onclick="changeImage(this)" />
+
+                    @foreach (var img in Model.ProductImages)
+                    {
+                        <img src="~/images/products/sub/@img.ImageUrl"
+                             class="img-thumbnail thumb-img"
+                             onclick="changeImage(this)" />
+                    }
+                </div>
+
+            </div>
+        </div>
 
 
-<p>
-    <strong>Giá:</strong>
-    @Model.Price.ToString("N0") đ
-</p>
+        <!-- ===== THÔNG TIN ===== -->
+        <div class="col-md-4">
+            <h4 class="fw-bold">@Model.Name</h4>
 
-<p>
-    <strong>Mô tả:</strong><br />
-    @Model.Description
-</p>
+            <p class="text-danger fs-3 fw-bold">
+                @Model.Price.ToString("N0") đ
+            </p>
 
-<button disabled>
-    Thêm vào giỏ hàng (làm sau)
-</button>
+            <p>
+                <strong>Danh mục:</strong> @Model.Category.Name
+            </p>
 
-<br />
-<br />
-<a asp-controller="Home" asp-action="Index">← Quay lại</a>
+            <hr />
+
+            <!-- MÔ TẢ GIỮ XUỐNG DÒNG -->
+            <div class="product-description mb-4">
+                @Html.Raw(Model.Description?.Replace("\n", "<br />"))
+            </div>
+
+            <!-- ADD TO CART – KHÔNG SỐ LƯỢNG -->
+            <form asp-controller="Cart"
+                  asp-action="AddToCart"
+                  method="post">
+
+                <input type="hidden" name="productId" value="@Model.Id" />
+
+                <button type="submit" class="btn btn-danger px-4">
+                    Thêm vào giỏ hàng
+                </button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <hr />
+</div>
+<div class="product-policy mt-4">
+    <div class="row g-0 policy-wrap">
+
+        <a href="#" class="col-md-3 col-6 policy-box">
+            <i class="fa-solid fa-truck-fast text-warning"></i>
+            <div class="policy-text">
+                <strong>Giao hàng nhanh chóng</strong>
+                <span>Chỉ trong 24h đồng hồ</span>
+            </div>
+        </a>
+
+        <a href="#" class="col-md-3 col-6 policy-box">
+            <i class="fa-solid fa-shield-halved text-primary"></i>
+            <div class="policy-text">
+                <strong>Sản phẩm chính hãng</strong>
+                <span>Sản phẩm uy tín, chất lượng</span>
+            </div>
+        </a>
+
+        <a href="#" class="col-md-3 col-6 policy-box">
+            <i class="fa-solid fa-rotate-left text-success"></i>
+            <div class="policy-text">
+                <strong>Đổi trả cực kì dễ dàng</strong>
+                <span>Đổi trả trong 2 ngày đầu tiên</span>
+            </div>
+        </a>
+
+        <a href="#" class="col-md-3 col-6 policy-box">
+            <i class="fa-solid fa-hand-holding-dollar text-warning"></i>
+            <div class="policy-text">
+                <strong>Mua hàng tiết kiệm</strong>
+                <span>Tiết kiệm hơn từ 10% – 30%</span>
+            </div>
+        </a>
+
+    </div>
+</div>
+<div class="row mt-4">
+
+    <!-- LEFT: MÔ TẢ SẢN PHẨM -->
+    <div class="col-md-9">
+        <div class="product-detail-box">
+            <h5 class="detail-title">
+                Mô tả sản phẩm: @Model.Name
+            </h5>
+
+            <div class="product-detail-content">
+                @Html.Raw(Model.Description?.Replace("\n", "<br />"))
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT: SẢN PHẨM GỢI Ý -->
+    <div class="col-md-3">
+        <div class="related-box">
+            <h6 class="related-title">Có thể bạn thích</h6>
+
+            @if (ViewBag.RelatedProducts != null && ViewBag.RelatedProducts.Count > 0)
+            {
+                foreach (var p in ViewBag.RelatedProducts)
+                {
+                    <a href="/Product/Detail/@p.Id" class="related-item">
+                        <img src="~/images/products/@p.Image" />
+                        <div class="related-info">
+                            <span class="related-name">@p.Name</span>
+                            <span class="related-price">@p.Price.ToString("N0") đ</span>
+                        </div>
+                    </a>
+                }
+            }
+            else
+            {
+                <div class="text-muted">Chưa có sản phẩm gợi ý</div>
+            }
+        </div>
+    </div>
+
+</div>
+
+@if (ViewBag.SameCategoryProducts != null && ViewBag.SameCategoryProducts.Count > 0)
+{
+    <div class="same-category-wrapper">
+
+        <h5 class="same-category-title">Sản phẩm cùng loại</h5>
+
+        <div class="row justify-content-center">
+            @foreach (var item in ViewBag.SameCategoryProducts)
+            {
+                <div class="col-product mb-4">
+                    <div class="product-item">
+
+                        <div class="product-thumb">
+                            <a href="/Product/Detail/@item.Id">
+                                <img src="~/images/products/@item.Image" alt="@item.Name">
+                            </a>
+
+                            <div class="product-actions">
+                                <a asp-controller="Cart"
+                                   asp-action="AddToCart"
+                                   asp-route-productId="@item.Id"
+                                   class="btn-cart">
+                                    Thêm vào giỏ
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-info">
+                            <a href="/Product/Detail/@item.Id" class="product-name">
+                                @item.Name
+                            </a>
+
+                            <p class="product-price">
+                                @item.Price.ToString("N0") đ
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+}
+
+
+
+@section Scripts {
+    <script>
+        function changeImage(el) {
+            document.getElementById('mainImage').src = el.src;
+
+            document.querySelectorAll('.thumb-img')
+                .forEach(i => i.classList.remove('active'));
+
+            el.classList.add('active');
+        }
+    </script>
+}
