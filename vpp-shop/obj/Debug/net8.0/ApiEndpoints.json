@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "vpp_shop.Controllers.VoucherController",
+    "Method": "Apply",
+    "RelativePath": "Voucher/Apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "vpp_shop.Controllers.VoucherRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

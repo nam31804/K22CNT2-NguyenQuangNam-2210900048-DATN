@@ -1,0 +1,135 @@
+﻿.checkout-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.checkout-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.checkout-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.checkout-left .form-control,
+.checkout-left select,
+.checkout-left textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.row-2 {
+    display: flex;
+    gap: 10px;
+}
+
+.radio {
+    display: block;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.checkout-right {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.summary-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.summary-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+    .summary-item img {
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+    .summary-item .name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .summary-item .price {
+        font-size: 13px;
+        color: #666;
+    }
+
+.voucher-box {
+    margin: 15px 0;
+}
+
+    .voucher-box input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .voucher-box button {
+        margin-top: 8px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background: #5cb85c;
+        color: #fff;
+        border: none;
+    }
+
+#voucher-msg {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.summary-total {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a8f3c;
+}
+
+.btn-order {
+    width: 100%;
+    padding: 14px;
+    background: #1a8f3c;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.back-cart {
+    display: block;
+    margin-top: 12px;
+    color: #1a8f3c;
+    text-align: center;
+}

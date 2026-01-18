@@ -6,6 +6,8 @@
 
 @Html.AntiForgeryToken()
 
+<link rel="stylesheet" href="~/css/admin/admin-order.css" />
+
 <!-- SEARCH + FILTER -->
 <div class="d-flex flex-wrap gap-2 mb-3 align-items-center">
 
@@ -31,8 +33,9 @@
         <tr>
             <th>ID</th>
             <th>Khách hàng</th>
-            <th>Tổng tiền</th>
-            <th>Trạng thái</th>
+            <th class="text-end">Tổng tiền</th>
+            <th class="text-center">Thanh toán</th>   @* ✅ MỚI *@
+            <th class="text-center">Trạng thái</th>
             <th>Ngày tạo</th>
             <th></th>
         </tr>
@@ -46,14 +49,27 @@
 
                 <td>@o.Id</td>
                 <td>@o.ShippingName</td>
-                <td>@o.TotalMoney.ToString("N0")</td>
-                <td>
-                    <span class="badge bg-info"
+
+                <td class="text-end fw-bold">
+                    @o.TotalMoney.ToString("N0")
+                </td>
+
+                <!-- ✅ THANH TOÁN -->
+                <td class="text-center">
+                    <span class="payment-method @o.PaymentMethod?.ToLower()">
+                        @o.PaymentMethod
+                    </span>
+                </td>
+
+                <td class="text-center">
+                    <span class="order-status @o.Status.ToLower()"
                           id="status-badge-@o.Id">
                         @o.Status
                     </span>
                 </td>
+
                 <td>@o.CreatedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+
                 <td>
                     <button class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
@@ -84,8 +100,17 @@
                     <p>
                         <strong>Tên:</strong> @o.ShippingName <br />
                         <strong>SĐT:</strong> @o.ShippingPhone <br />
-                        <strong>Địa chỉ:</strong> @o.ShippingAddress
+                        <strong>Địa chỉ:</strong> @o.ShippingAddress <br />
+                        <strong>Thanh toán:</strong> @o.PaymentMethod
                     </p>
+
+                    @if (!string.IsNullOrWhiteSpace(o.Note))
+                    {
+                        <div class="order-note">
+                            <strong>📝 Ghi chú khách hàng:</strong>
+                            <div>@o.Note</div>
+                        </div>
+                    }
 
                     <hr />
 
@@ -104,13 +129,10 @@
                             {
                                 <tr>
                                     <td style="width:70px">
-                                        @if (!string.IsNullOrEmpty(i.Product.Image))
-                                        {
-                                            <img src="~/images/products/@i.Product.Image"
-                                                 width="60" height="60"
-                                                 class="border rounded"
-                                                 style="object-fit:contain" />
-                                        }
+                                        <img src="~/images/products/@i.Product.Image"
+                                             width="60" height="60"
+                                             class="border rounded"
+                                             style="object-fit:contain" />
                                     </td>
                                     <td>@i.Product.Name</td>
                                     <td>@i.Quantity</td>
@@ -122,23 +144,24 @@
 
                     <hr />
 
-                    <!-- UPDATE STATUS -->
                     <div class="d-flex gap-2 align-items-center">
                         <select id="status-@o.Id"
                                 class="form-select w-auto"
                                 @(o.Status == "COMPLETED" || o.Status == "CANCELLED" ? "disabled" : "")>
-                            <option value="PENDING">PENDING</option>
-                            <option value="PAID">PAID</option>
-                            <option value="SHIPPING">SHIPPING</option>
-                            <option value="COMPLETED">COMPLETED</option>
-                            <option value="CANCELLED">CANCELLED</option>
+
+                            <option value="PENDING" selected="@(o.Status == "PENDING")">PENDING</option>
+                            <option value="PAID" selected="@(o.Status == "PAID")">PAID</option>
+                            <option value="SHIPPING" selected="@(o.Status == "SHIPPING")">SHIPPING</option>
+                            <option value="COMPLETED" selected="@(o.Status == "COMPLETED")">COMPLETED</option>
+                            <option value="CANCELLED" selected="@(o.Status == "CANCELLED")">CANCELLED</option>
+
                         </select>
+
 
                         <button type="button"
                                 class="btn btn-success"
                                 id="btn-update-@o.Id"
-                                onclick="updateStatus(@o.Id)"
-                                @(o.Status == "COMPLETED" || o.Status == "CANCELLED" ? "disabled" : "")>
+                                onclick="updateStatus(@o.Id)">
                             Cập nhật
                         </button>
                     </div>
@@ -160,83 +183,6 @@
     </div>
 }
 
-<script>
-    let currentStatus = 'ALL';
-
-    function getToken() {
-        return document.querySelector('input[name="__RequestVerificationToken"]').value;
-    }
-
-    function setStatus(status) {
-        currentStatus = status;
-        filterOrders();
-    }
-
-    function filterOrders() {
-        const keyword = document.getElementById('orderSearch').value.toLowerCase();
-        const rows = document.querySelectorAll('tbody tr');
-
-        rows.forEach(row => {
-            const matchStatus =
-                currentStatus === 'ALL' || row.dataset.status === currentStatus;
-
-            const matchSearch =
-                keyword === '' || row.dataset.search.toLowerCase().includes(keyword);
-
-            row.style.display = (matchStatus && matchSearch) ? '' : 'none';
-        });
-    }
-
-    function updateStatus(orderId) {
-        const status = document.getElementById(`status-${orderId}`).value;
-        const token  = getToken();
-
-        fetch('/Admin/Order/UpdateStatus', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `id=${orderId}&status=${status}&__RequestVerificationToken=${token}`
-        })
-        .then(r => r.json())
-        .then(d => {
-            if (!d.success) return;
-
-            document.getElementById(`status-badge-${orderId}`).innerText = d.status;
-
-            // 🔥 CẬP NHẬT DATA-STATUS ĐỂ FILTER ĐÚNG
-            document.getElementById(`row-${orderId}`).dataset.status = d.status;
-
-            filterOrders();
-
-            if (d.status === 'COMPLETED' || d.status === 'CANCELLED') {
-                document.getElementById(`status-${orderId}`).disabled = true;
-                document.getElementById(`btn-update-${orderId}`).disabled = true;
-            }
-        });
-    }
-
-    function deleteOrder(orderId) {
-        if (!confirm('Xoá đơn hàng này?')) return;
-
-        const token = getToken();
-
-        fetch('/Admin/Order/Delete', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `id=${orderId}&__RequestVerificationToken=${token}`
-        })
-        .then(r => r.json())
-        .then(d => {
-            if (!d.success) return;
-
-            const modalEl = document.getElementById(`orderModal-${orderId}`);
-            const modal = bootstrap.Modal.getInstance(modalEl);
-            modal.hide();
-
-            modalEl.addEventListener('hidden.bs.modal', () => {
-                document.getElementById(`row-${orderId}`).remove();
-                document.body.classList.remove('modal-open');
-                document.querySelectorAll('.modal-backdrop').forEach(e => e.remove());
-            }, { once: true });
-        });
-    }
-</script>
+@section Scripts {
+    <script src="~/js/admin/admin-order.js"></script>
+}

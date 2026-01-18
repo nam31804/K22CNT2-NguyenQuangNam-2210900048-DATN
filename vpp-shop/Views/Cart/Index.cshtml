@@ -1,29 +1,30 @@
 ﻿@model vpp_shop.Models.Cart
 
-<h2>Giỏ hàng</h2>
+<link rel="stylesheet" href="~/css/web/cart.css" />
 
-@if (Model == null || !Model.CartItems.Any())
+<h2 class="cart-title">Giỏ hàng của bạn</h2>
+
+@if (!Model.CartItems.Any())
 {
-    <p>Giỏ hàng trống</p>
+    <p class="text-center">Giỏ hàng trống</p>
 }
 else
 {
-    <table class="table table-bordered align-middle">
+    <table class="cart-table">
         <thead>
             <tr>
                 <th></th>
                 <th>Sản phẩm</th>
-                <th>Giá</th>
-                <th style="width:180px">Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
                 <th>Thành tiền</th>
-                <th style="width:80px"></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.CartItems)
             {
                 <tr id="row-@item.Id">
-                    <!-- CHECKBOX -->
                     <td class="text-center">
                         <input type="checkbox"
                                class="item-check"
@@ -32,196 +33,53 @@ else
                                onchange="updateGrandTotal()" />
                     </td>
 
-                    <!-- TÊN -->
                     <td>
-                        <div class="d-flex align-items-center gap-2">
-                            <img src="~/images/products/@item.Product.Image"
-                                 alt="@item.Product.Name"
-                                 style="width:60px;height:60px;object-fit:cover;border-radius:6px" />
-
-                            <span>@item.Product.Name</span>
+                        <div class="cart-product">
+                            <img src="~/images/products/@item.Product.Image" alt="">
+                            <div>@item.Product.Name</div>
                         </div>
                     </td>
 
-
-                    <!-- GIÁ -->
-                    <td>@item.Product.Price.ToString("N0") đ</td>
-
-                    <!-- SỐ LƯỢNG -->
-                    <td class="text-center">
-                        <button class="btn btn-sm btn-secondary"
-                                onclick="decrease(@item.Id)">
-                            -
-                        </button>
-
-                        <span id="qty-@item.Id" class="mx-2 fw-bold">
-                            @item.Quantity
-                        </span>
-
-                        <button class="btn btn-sm btn-secondary"
-                                onclick="increase(@item.Id)">
-                            +
-                        </button>
+                    <td class="cart-price">
+                        @item.Product.Price.ToString("N0") đ
                     </td>
 
-                    <!-- THÀNH TIỀN -->
                     <td>
-                        <span id="total-@item.Id"
-                              data-unit="@item.Product.Price">
+                        <div class="cart-qty">
+                            <button type="button" onclick="decrease(@item.Id)">-</button>
+                            <span id="qty-@item.Id">@item.Quantity</span>
+                            <button type="button" onclick="increase(@item.Id)">+</button>
+                        </div>
+                    </td>
+
+                    <td class="cart-total">
+                        <span id="total-@item.Id">
                             @((item.Product.Price * item.Quantity).ToString("N0"))
                         </span> đ
                     </td>
 
-                    <!-- XÓA -->
-                    <td class="text-center">
-                        <button class="btn btn-sm btn-danger"
-                                onclick="removeItem(@item.Id)">
-                            Xóa
-                        </button>
+                    <td class="cart-remove">
+                        <button type="button" onclick="removeItem(@item.Id)">🗑</button>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 
-    <!-- TỔNG TIỀN -->
-    <div class="text-end mt-3">
-        <h4>
-            Tổng thanh toán:
-            <span id="grand-total" class="text-danger fw-bold">0</span> đ
-        </h4>
-    </div>
+    <div class="cart-summary">
+        <table>
+            <tr>
+                <td class="label">Tạm tính</td>
+                <td class="total">
+                    <span id="grand-total">0</span> đ
+                </td>
+            </tr>
+        </table>
 
-    <div class="mt-4 p-3 border rounded">
-        <p>
-            💰 <strong>Số dư ví:</strong>
-            <span class="text-success">
-                @ViewBag.WalletBalance.ToString("N0") đ
-            </span>
-        </p>
-
-        <button class="btn btn-primary"
-                onclick="checkout()">
-            Thanh toán bằng ví
+        <button class="checkout-btn" onclick="checkout()">
+            TIẾN HÀNH THANH TOÁN
         </button>
     </div>
-    <div class="mt-3 text-end">
-        <a href="/Orders/History" class="btn btn-outline-secondary">
-            📦 Xem lịch sử đơn hàng
-        </a>
-    </div>
-
-
 }
 
-
-@section Scripts {
-    <script>
-        // =========================
-        // RELOAD CART COUNT (LAYOUT)
-        // =========================
-        function reloadCartCount() {
-            fetch('/Cart/CartCountPartial')
-                .then(res => res.text())
-                .then(html => {
-                    const el = document.getElementById('cart-count');
-                    if (el) el.innerHTML = html;
-                });
-        }
-
-        // =========================
-        // UPDATE GRAND TOTAL
-        // =========================
-        function updateGrandTotal() {
-            let total = 0;
-
-            document.querySelectorAll('.item-check:checked').forEach(cb => {
-                const id = cb.dataset.id;
-                const price = parseFloat(cb.dataset.price);
-                const qty = parseInt(document.getElementById('qty-' + id).innerText);
-                total += price * qty;
-            });
-
-            document.getElementById('grand-total').innerText =
-                total.toLocaleString();
-        }
-
-        // =========================
-        // INCREASE
-        // =========================
-        function increase(id) {
-            fetch('/Cart/Increase', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: 'id=' + id
-            })
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById('qty-' + id).innerText = data.quantity;
-                document.getElementById('total-' + id).innerText =
-                    data.itemTotal.toLocaleString();
-
-                updateGrandTotal();
-                reloadCartCount();
-            });
-        }
-
-        // =========================
-        // DECREASE
-        // =========================
-        function decrease(id) {
-            fetch('/Cart/Decrease', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: 'id=' + id
-            })
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById('qty-' + id).innerText = data.quantity;
-                document.getElementById('total-' + id).innerText =
-                    data.itemTotal.toLocaleString();
-
-                updateGrandTotal();
-                reloadCartCount();
-            });
-        }
-
-        // =========================
-        // REMOVE ITEM
-        // =========================
-        function removeItem(id) {
-            if (!confirm('Xóa sản phẩm này?')) return;
-
-            fetch('/Cart/Remove', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: 'id=' + id
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('row-' + id).remove();
-                    updateGrandTotal();
-                    reloadCartCount();
-                }
-            });
-        }
-
-        // =========================
-        // CHECKOUT
-        // =========================
-        function checkout() {
-            const checkedItems = document.querySelectorAll('.item-check:checked');
-
-            if (checkedItems.length === 0) {
-                alert('⚠️ Vui lòng chọn ít nhất 1 sản phẩm để thanh toán');
-                return;
-            }
-
-            let ids = [];
-            checkedItems.forEach(cb => ids.push(cb.dataset.id));
-
-            window.location.href = '/Checkout/Index?itemIds=' + ids.join(',');
-        }
-    </script>
-}
+<script src="~/js/cart.js"></script>

@@ -2,8 +2,11 @@ wwwroot\css\admin-common.css
 wwwroot\css\admin-product-image.css
 wwwroot\css\admin\admin-category.css
 wwwroot\css\admin\admin-common.css
+wwwroot\css\admin\admin-order.css
 wwwroot\css\admin\admin-product.css
 wwwroot\css\site.css
+wwwroot\css\web\cart.css
+wwwroot\css\web\checkout.css
 wwwroot\css\web\product.css
 wwwroot\favicon.ico
 wwwroot\images\logo\Twinkle.png
@@ -22,8 +25,13 @@ wwwroot\images\products\vo-campus.jpg
 wwwroot\js\admin-reload.js
 wwwroot\js\admin-staff.js
 wwwroot\js\admin\admin-category.js
+wwwroot\js\admin\admin-order.js
 wwwroot\js\admin\admin-product.js
 wwwroot\js\admin\admin-reload.js
+wwwroot\js\cart.js
+wwwroot\js\checkout.js
+wwwroot\js\site.js
+wwwroot\js\vn-location.json
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -1907,4 +1915,3 @@ wwwroot\sb-admin-2\vendor\jquery\jquery.min.map
 wwwroot\sb-admin-2\vendor\jquery\jquery.slim.js
 wwwroot\sb-admin-2\vendor\jquery\jquery.slim.min.js
 wwwroot\sb-admin-2\vendor\jquery\jquery.slim.min.map
-wwwroot\js\site.js

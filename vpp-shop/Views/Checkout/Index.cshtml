@@ -1,75 +1,131 @@
 ﻿@model vpp_shop.Models.ViewModels.CheckoutViewModel
 
-<h2>Thanh toán</h2>
-
-<div class="card mb-3">
-    <div class="card-header fw-bold">📍 Thông tin nhận hàng</div>
-    <div class="card-body">
-        <input class="form-control mb-2" asp-for="ReceiverName" placeholder="Họ tên" />
-        <input class="form-control mb-2" asp-for="Phone" placeholder="Số điện thoại" />
-        <textarea class="form-control" asp-for="Address" placeholder="Địa chỉ"></textarea>
-    </div>
-</div>
-
-<div class="card mb-3">
-    <div class="card-header fw-bold">🛒 Sản phẩm</div>
-    <div class="card-body">
-        @foreach (var item in Model.Items)
-        {
-            <div class="d-flex gap-2 mb-2 align-items-center">
-                <img src="~/images/products/@item.Product.Image"
-                     style="width:50px;height:50px;border-radius:6px" />
-                <div>
-                    @item.Product.Name <br />
-                    <small>SL: @item.Quantity × @item.Product.Price.ToString("N0") đ</small>
-                </div>
-            </div>
-        }
-    </div>
-</div>
-
-<h4 class="text-end text-danger">
-    Tổng tiền: @Model.TotalMoney.ToString("N0") đ
-</h4>
+<link rel="stylesheet" href="~/css/web/checkout.css" />
 
 <form method="post" asp-action="Confirm">
-    @foreach (var item in Model.Items)
-    {
-        <input type="hidden" name="itemIds" value="@item.Id" />
-    }
-    @if (Model.SavedAddresses != null && Model.SavedAddresses.Any())
-    {
-        <div class="card mb-3">
-            <div class="card-header fw-bold">
-                📍 Địa chỉ đã lưu
-            </div>
-            <div class="card-body">
-                @foreach (var a in Model.SavedAddresses)
-                {
-                    <div class="border rounded p-2 mb-2">
-                        <strong>@a.ReceiverName</strong> |
-                        @a.Phone <br />
-                        <small>@a.Address</small>
 
-                        @if (a.IsDefault == true)
-                        {
-                            <span class="badge bg-success ms-2">
-                                Mặc định
-                            </span>
-                        }
-                    </div>
-                }
+    <div class="checkout-wrapper">
+
+        <!-- ================= LEFT ================= -->
+        <div class="checkout-left">
+
+            <div class="checkout-card">
+                <div class="checkout-title">📍 Thông tin mua hàng</div>
+
+                <input class="form-control"
+                       asp-for="ReceiverName"
+                       placeholder="Họ và tên"
+                       required />
+
+                <input class="form-control"
+                       asp-for="Phone"
+                       placeholder="Số điện thoại"
+                       required />
+
+                <input class="form-control"
+                       asp-for="Address"
+                       placeholder="Địa chỉ cụ thể (số nhà, ngõ...)"
+                       required />
+
+                <div class="row-2">
+                    <select id="city" name="City" required>
+                        <option value="">Tỉnh / Thành phố</option>
+                    </select>
+
+                    <select id="district" name="District" required>
+                        <option value="">Quận / Huyện</option>
+                    </select>
+                </div>
+
+                <textarea class="form-control"
+                          asp-for="Note"
+                          placeholder="Ghi chú đơn hàng (tuỳ chọn)">
+                </textarea>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">💳 Thanh toán</div>
+
+                <label class="radio">
+                    <input type="radio" name="PaymentMethod" value="COD" checked />
+                    Thanh toán khi nhận hàng (COD)
+                </label>
+                <label class="radio">
+                    <input type="radio"
+                           name="PaymentMethod"
+                           value="WALLET" />
+                    Thanh toán bằng ví
+                </label>
+                <label class="radio">
+                    <input type="radio" name="PaymentMethod" value="VNPAY" />
+                    Thanh toán qua VNPAY
+                </label>
             </div>
         </div>
-    }
 
-    <input type="hidden" asp-for="ReceiverName" />
-    <input type="hidden" asp-for="Phone" />
-    <input type="hidden" asp-for="Address" />
+        <!-- ================= RIGHT ================= -->
+        <div class="checkout-right">
 
-    <div class="text-end">
-        <button class="btn btn-primary btn-lg">
-            Xác nhận đặt hàng
-        </button>
+            <h4 class="summary-title">
+                Đơn hàng (@Model.Items.Count sản phẩm)
+            </h4>
+
+            @foreach (var item in Model.Items)
+            {
+                <div class="summary-item">
+                    <img src="~/images/products/@item.Product.Image" />
+                    <div>
+                        <div class="name">@item.Product.Name</div>
+                        <div class="price">
+                            SL: @item.Quantity × @item.Product.Price.ToString("N0") đ
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" name="itemIds" value="@item.Id" />
+            }
+
+            <!-- VOUCHER -->
+            <div class="voucher-box">
+                <input type="text"
+                       id="voucherCode"
+                       placeholder="Nhập mã giảm giá" />
+
+                <button type="button" onclick="applyVoucher()">
+                    Áp dụng
+                </button>
+
+                <div id="voucher-msg"></div>
+            </div>
+
+            <input type="hidden" name="VoucherCode" id="VoucherCode" />
+            <input type="hidden" name="DiscountAmount" id="DiscountAmount" />
+
+            <div class="summary-row">
+                <span>Tạm tính</span>
+                <span id="subTotal">@Model.TotalMoney.ToString("N0") đ</span>
+            </div>
+
+            <div class="summary-total">
+                Tổng cộng:
+                <span id="totalMoney">
+                    @Model.TotalMoney.ToString("N0")
+                </span> đ
+            </div>
+
+            <button class="btn-order">
+                ĐẶT HÀNG
+            </button>
+
+            <a href="/Cart" class="back-cart">
+                ← Quay về giỏ hàng
+            </a>
+
+        </div>
     </div>
+
 </form>
+
+@section Scripts {
+    <script src="~/js/checkout.js"></script>
+}

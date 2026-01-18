@@ -1,0 +1,101 @@
+﻿/* =========================
+   CĂN CHỈNH BẢNG
+========================= */
+
+/* Tổng tiền luôn bên phải */
+.table td.text-end,
+.table th.text-end {
+    text-align: right !important;
+    font-weight: 600;
+}
+
+/* Trạng thái luôn ở giữa */
+.table td.text-center,
+.table th.text-center {
+    text-align: center !important;
+}
+
+
+/* =========================
+   NOTE KHÁCH HÀNG
+========================= */
+.order-note {
+    background: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TRẠNG THÁI ĐƠN HÀNG
+========================= */
+.order-status {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 999px;
+    min-width: 110px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    /* PENDING – vàng */
+    .order-status.pending {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+    }
+
+    /* PAID – xanh dương nhạt */
+    .order-status.paid {
+        background-color: #d1ecf1;
+        color: #0c5460;
+        border: 1px solid #bee5eb;
+    }
+
+    /* SHIPPING – tím nhạt */
+    .order-status.shipping {
+        background-color: #e2e3ff;
+        color: #383d7a;
+        border: 1px solid #cfd1ff;
+    }
+
+    /* COMPLETED – xanh lá */
+    .order-status.completed {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    /* CANCELLED – đỏ */
+    .order-status.cancelled {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+.payment-method {
+    font-weight: 600;
+}
+
+    .payment-method.COD {
+        color: #856404;
+    }
+
+    .payment-method.WALLET {
+        color: #198754;
+    }
+
+    .payment-method.VNPAY {
+        color: #0d6efd;
+    }
+
+.order-note {
+    background: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
