@@ -61,15 +61,18 @@ namespace vpp_shop.Controllers
         // POST: XÁC NHẬN ĐẶT HÀNG
         // =========================
         [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Confirm(
-     CheckoutViewModel model,
-     List<int> itemIds)
+    CheckoutViewModel model,
+    List<int> itemIds)
         {
             var userId = HttpContext.Session.GetInt32("USER_ID");
             if (userId == null)
                 return RedirectToAction("Login", "Auth");
 
-            // ===== LẤY CART ITEMS =====
+            // =============================
+            // 1️⃣ LẤY CART ITEMS
+            // =============================
             var items = await _context.CartItems
                 .Include(ci => ci.Product)
                 .Where(ci => itemIds.Contains(ci.Id))
@@ -78,12 +81,14 @@ namespace vpp_shop.Controllers
             if (!items.Any())
                 return RedirectToAction("Index", "Cart");
 
+            // 🔥 TÍNH TỔNG TIỀN TỪ SERVER (KHÔNG TIN CLIENT)
             decimal total = items.Sum(i => i.Product.Price * i.Quantity);
 
-            // ===== XỬ LÝ ĐỊA CHỈ (QUAN TRỌNG) =====
+            // =============================
+            // 2️⃣ XỬ LÝ ĐỊA CHỈ GIAO HÀNG
+            // =============================
             UserAddress shippingAddress;
 
-            // 1️⃣ Chọn địa chỉ đã lưu
             if (model.SelectedAddressId.HasValue)
             {
                 shippingAddress = await _context.UserAddresses
@@ -96,7 +101,6 @@ namespace vpp_shop.Controllers
             }
             else
             {
-                // 2️⃣ Nhập địa chỉ mới
                 shippingAddress = new UserAddress
                 {
                     ReceiverName = model.ReceiverName,
@@ -106,7 +110,6 @@ namespace vpp_shop.Controllers
                     District = model.District
                 };
 
-                // 👉 CHỈ LƯU KHI TICK
                 if (model.SaveAddress)
                 {
                     shippingAddress.UserId = userId.Value;
@@ -117,16 +120,24 @@ namespace vpp_shop.Controllers
                 }
             }
 
-            // ===== TẠO ORDER (LUÔN LẤY TỪ shippingAddress) =====
+            // =============================
+            // 3️⃣ TÍNH TỔNG THANH TOÁN CUỐI
+            // =============================
+            decimal orderTotal = total - model.DiscountAmount;
+            if (orderTotal < 0) orderTotal = 0;
+
+            // =============================
+            // 4️⃣ TẠO ORDER (CHUẨN)
+            // =============================
             var order = new Order
             {
                 UserId = userId.Value,
                 ShippingName = shippingAddress.ReceiverName,
                 ShippingPhone = shippingAddress.Phone,
                 ShippingAddress =
-        $"{shippingAddress.Address}, {shippingAddress.District}, {shippingAddress.City}",
+                    $"{shippingAddress.Address}, {shippingAddress.District}, {shippingAddress.City}",
 
-                TotalMoney = model.TotalMoney - model.DiscountAmount,
+                TotalMoney = orderTotal,           // ✅ QUAN TRỌNG NHẤT
                 VoucherCode = model.VoucherCode,
                 DiscountAmount = model.DiscountAmount,
 
@@ -136,23 +147,21 @@ namespace vpp_shop.Controllers
                 CreatedAt = DateTime.Now
             };
 
-
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 
-            // ===== ORDER ITEMS =====
+            // =============================
+            // 5️⃣ ORDER ITEMS + TRỪ TỒN
+            // =============================
             foreach (var item in items)
             {
-                // Nếu chưa set stock → coi như 0
                 var stock = item.Product.Stock ?? 0;
-
                 if (stock < item.Quantity)
                 {
                     TempData["Error"] = $"Sản phẩm {item.Product.Name} không đủ số lượng";
                     return RedirectToAction("Index", "Cart");
                 }
 
-                // 🔻 TRỪ TỒN KHO
                 item.Product.Stock = stock - item.Quantity;
 
                 _context.OrderItems.Add(new OrderItem
@@ -164,10 +173,14 @@ namespace vpp_shop.Controllers
                 });
             }
 
-            // ===== XÓA GIỎ HÀNG =====
+            // =============================
+            // 6️⃣ XÓA GIỎ HÀNG
+            // =============================
             _context.CartItems.RemoveRange(items);
 
-            // ===== THANH TOÁN VÍ (NẾU CHỌN) =====
+            // =============================
+            // 7️⃣ THANH TOÁN WALLET (NẾU CÓ)
+            // =============================
             if (model.PaymentMethod == "WALLET")
             {
                 var wallet = await _context.Wallets
@@ -181,12 +194,24 @@ namespace vpp_shop.Controllers
 
                 wallet.Balance -= order.TotalMoney;
                 wallet.UpdatedAt = DateTime.Now;
+
                 order.Status = "PAID";
+
+                // 🔥 GHI LỊCH SỬ GIAO DỊCH VÍ (RẤT NÊN)
+                _context.WalletTransactions.Add(new WalletTransaction
+                {
+                    UserId = userId.Value,
+                    Type = "PAYMENT",
+                    Amount = order.TotalMoney,
+                    Description = $"Thanh toán đơn #{order.Id}",
+                    CreatedAt = DateTime.Now
+                });
             }
 
             await _context.SaveChangesAsync();
 
             return RedirectToAction("History", "Orders");
         }
+
     }
-    }
+}

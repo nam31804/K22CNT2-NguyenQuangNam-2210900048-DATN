@@ -13,8 +13,14 @@ namespace vpp_shop.Controllers
             _context = context;
         }
 
-        // ===== TRANG SẢN PHẨM (DANH SÁCH + DANH MỤC + SORT) =====
-        public async Task<IActionResult> Index(int? groupId, int? categoryId, string? sort, string? keyword)
+        // ===== TRANG SẢN PHẨM (DANH SÁCH + DANH MỤC + SORT + PHÂN TRANG) =====
+        public async Task<IActionResult> Index(
+            int? groupId,
+            int? categoryId,
+            string? sort,
+            string? keyword,
+            int page = 1
+        )
         {
             // 1. Lấy tất cả CategoryGroup + Category con
             var groups = await _context.CategoryGroups
@@ -30,17 +36,16 @@ namespace vpp_shop.Controllers
             // 3. LỌC THEO DANH MỤC
             if (categoryId.HasValue)
             {
-                // Lọc theo category con
                 productsQuery = productsQuery
                     .Where(p => p.CategoryId == categoryId.Value);
             }
             else if (groupId.HasValue)
             {
-                // Lọc theo category group (cha)
                 productsQuery = productsQuery
                     .Where(p => p.Category.CategoryGroupId == groupId.Value);
             }
-            // 3.5. TÌM KIẾM THEO TỪ KHÓA
+
+            // 3.5. TÌM KIẾM
             if (!string.IsNullOrWhiteSpace(keyword))
             {
                 productsQuery = productsQuery
@@ -60,7 +65,18 @@ namespace vpp_shop.Controllers
                 };
             }
 
-            // 5. TIÊU ĐỀ CHO THANH TRÊN
+            // ===== 🔥 PHÂN TRANG =====
+            int pageSize = 15;
+
+            int totalProduct = await productsQuery.CountAsync();
+            int totalPage = (int)Math.Ceiling((double)totalProduct / pageSize);
+
+            var products = await productsQuery
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            // 5. TIÊU ĐỀ
             string title = "TẤT CẢ SẢN PHẨM";
 
             if (categoryId.HasValue)
@@ -88,7 +104,10 @@ namespace vpp_shop.Controllers
             ViewBag.CurrentTitle = title;
             ViewBag.Sort = sort;
 
-            var products = await productsQuery.ToListAsync();
+            // 🔥 ViewBag phân trang
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPage = totalPage;
+
             return View(products);
         }
 
@@ -105,19 +124,22 @@ namespace vpp_shop.Controllers
             {
                 return NotFound();
             }
+
             ViewBag.RelatedProducts = _context.Products
-            .Where(p => p.Id != id)   // loại trừ sản phẩm đang xem
-            .OrderBy(x => Guid.NewGuid())
-            .Take(5)
-            .ToList();
+                .Where(p => p.Id != id)
+                .OrderBy(x => Guid.NewGuid())
+                .Take(5)
+                .ToList();
+
             ViewBag.SameCategoryProducts = _context.Products
-            .Where(p => p.CategoryId == product.CategoryId && p.Id != id)
-            .Take(5)
-            .ToList();
+                .Where(p => p.CategoryId == product.CategoryId && p.Id != id)
+                .Take(5)
+                .ToList();
 
             return View(product);
         }
-        // tìm kiếm 
+
+        // ===== SEARCH SUGGEST =====
         [HttpGet]
         public IActionResult SearchSuggest(string q)
         {
@@ -140,7 +162,5 @@ namespace vpp_shop.Controllers
 
             return Json(result);
         }
-
     }
-
 }

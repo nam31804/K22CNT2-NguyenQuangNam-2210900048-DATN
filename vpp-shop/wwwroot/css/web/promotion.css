@@ -1,0 +1,34 @@
+﻿/* ================= PROMOTION DETAIL ================= */
+
+.promo-detail {
+    width: 100%;
+}
+
+/* TIÊU ĐỀ */
+.promo-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+/* NGÀY */
+.promo-meta {
+    font-size: 14px;
+    color: #888;
+}
+
+/* ẢNH */
+.promo-image img {
+    width: 520px; /* 🔥 to hơn */
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* NỘI DUNG */
+.promo-content {
+    max-width: 720px; /* 🔥 chữ cân */
+    margin: 0 auto;
+    font-size: 15.5px;
+    line-height: 1.9;
+}

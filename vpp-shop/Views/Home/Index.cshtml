@@ -1,29 +1,131 @@
 ﻿@model List<vpp_shop.Models.Product>
+@{
+    var promotions = ViewBag.Promotions as List<vpp_shop.Models.ProductPromotion>;
+}
 
-<h2>Sản phẩm mới</h2>
 
-<div style="display:flex; flex-wrap:wrap; gap:20px">
-    @foreach (var item in Model)
-    {
-        <div style="border:1px solid #ccc; padding:10px; width:200px">
-            <img src="~/images/products/@item.Image"
-                 style="width:100%; height:150px; object-fit:cover" />
+<!-- ================= BANNER ================= -->
+<div class="home-banner">
+    <div class="banner-slide active">
+        <img src="~/images/banners/slider_3.png" />
+    </div>
+    <div class="banner-slide">
+        <img src="~/images/banners/slider_5.png" />
+    </div>
+    <div class="banner-slide">
+        <img src="~/images/banners/slider_7.png" />
+    </div>
 
-            <h4>@item.Name</h4>
-            <p>@item.Price.ToString("N0") đ</p>
-
-            <a asp-controller="Product"
-               asp-action="Detail"
-               asp-route-id="@item.Id">
-                Xem chi tiết
-            </a>
-            <a asp-controller="Cart"
-               asp-action="AddToCart"
-               asp-route-productId="@item.Id"
-               class="btn btn-sm btn-primary">
-                Thêm vào giỏ
-            </a>
-
-        </div>
-    }
+    <div class="banner-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
 </div>
+
+<!-- ================= KHUYẾN MÃI ================= -->
+<div class="container mt-5">
+    <h3 class="home-title">Khuyến mãi nổi bật</h3>
+
+    <div class="promotion-list">
+        @foreach (var p in promotions.Take(4))
+        {
+            <div class="promotion-item">
+
+                <!-- ẢNH -->
+               <!-- ẢNH -->
+<div class="promotion-thumb">
+    <a asp-controller="Promotion"
+       asp-action="Detail"
+       asp-route-id="@p.Id">
+        <img src="~/images/products/@p.Product.Image"
+             alt="@p.Title" />
+    </a>
+</div>
+
+<!-- NỘI DUNG -->
+<div class="promotion-content">
+
+    <h4 class="promotion-title">
+        <a asp-controller="Promotion"
+           asp-action="Detail"
+           asp-route-id="@p.Id">
+            @p.Title
+        </a>
+    </h4>
+
+    <div class="promotion-meta">
+        <i class="fa fa-calendar"></i>
+        @DateTime.Now.ToString("dddd, dd/MM/yyyy")
+    </div>
+
+    <p class="promotion-desc">
+        @{
+            var text = System.Text.RegularExpressions.Regex
+                .Replace(p.Content ?? "", "<.*?>", "");
+
+            if (text.Length > 180)
+            {
+                @text.Substring(0, 180)<text>...</text>
+            }
+            else
+            {
+                @text
+            }
+        }
+    </p>
+
+
+
+
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+
+
+<!-- ================= SẢN PHẨM NỔI BẬT ================= -->
+<div class="container mt-5">
+    <h3 class="home-title">Sản phẩm nổi bật</h3>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-product mb-4">
+                <div class="product-item">
+
+                    <div class="product-thumb">
+                        <a href="/Product/Detail/@item.Id">
+                            <img src="~/images/products/@item.Image" alt="@item.Name">
+                        </a>
+
+                        <div class="product-actions">
+                            <a asp-controller="Cart"
+                               asp-action="AddToCart"
+                               asp-route-productId="@item.Id"
+                               class="btn-cart">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <a href="/Product/Detail/@item.Id" class="product-name">
+                            @item.Name
+                        </a>
+
+                        <p class="product-price">
+                            @item.Price.ToString("N0") đ
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/home.js"></script>
+}

@@ -3,16 +3,256 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\vpp-shop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-product.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-product.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\shared\\_adminsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\shared\\_adminsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-ds.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-ds.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\shared\\_admintopbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\shared\\_admintopbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-ds.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\admin\\admin-ds.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-ds.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-ds.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\admindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\admindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\viewmodels\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\viewmodels\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\productpromotion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\productpromotion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-ds.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\admin\\admin-ds.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\categorygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\categorygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\promotion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\promotion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\promotion\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\promotion\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-reload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin-reload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-staff.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin-staff.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\admin\\admin-product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\productpromotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\productpromotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\data\\vanphongphamdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\data\\vanphongphamdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\productpromotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\productpromotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-promotion.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-promotion.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\productimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\productimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\vn-location.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\vn-location.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +263,12 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\admin\\admin-order.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\cart.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\cart.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\staff\\_stafftable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -47,24 +279,8 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\checkout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -75,18 +291,6 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\checkout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\viewmodels\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\viewmodels\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-staff.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin-staff.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-product.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-product.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-reload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin\\admin-reload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -95,24 +299,12 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\vn-location.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\vn-location.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\useraddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\useraddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\components\\cartcount\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -127,76 +319,12 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\web\\product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\admin\\admin-product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\categorygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\categorygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -219,20 +347,8 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\data\\vanphongphamdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\data\\vanphongphamdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\productimage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -243,24 +359,8 @@
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\productimage\\_productimagetable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\productimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\productimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin-product-image.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\css\\admin-product-image.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-reload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\wwwroot\\js\\admin-reload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\shared\\_admintopbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\shared\\_admintopbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\shared\\_adminsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\shared\\_adminsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin-common.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -269,30 +369,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\staff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\staff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|solutionrelative:vpp-shop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{002192DA-03A6-4956-BCC0-0E74C9B5F167}|vpp-shop\\vpp-shop.csproj|c:\\users\\admin\\documents\\vpp-shop\\vpp-shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -310,150 +386,220 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "cart.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\cart.css",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\cart.css",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\cart.css",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\cart.css",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAowHYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-18T10:40:53.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "admin-order.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-18T10:23:24.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "admin-order.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAqwGQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-18T10:22:08.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T01:37:37.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAACwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-15T17:24:41.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJ4AAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAAAJ4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T15:01:33.344Z",
+              "WhenOpened": "2026-01-14T14:01:48.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-15T17:51:28.088Z",
+              "WhenOpened": "2026-01-13T09:25:13.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminSidebar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T13:57:25.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "admin-product.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-15T17:04:02.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Wallet.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Wallet.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\Wallet.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Wallet.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\Wallet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T08:01:30.725Z",
+              "WhenOpened": "2025-12-31T01:39:57.158Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "cart.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\cart.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\cart.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\cart.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\cart.js",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-18T10:41:15.124Z"
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Product.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\Product.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T02:09:11.514Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "_StaffTable.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAAAOgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-04T19:56:36.571Z"
+              "WhenOpened": "2025-12-30T13:57:13.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "admin-ds.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-22T14:21:00.83Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "admin-ds.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-22T13:25:13.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_AdminTopbar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T13:57:16.856Z"
+              "WhenOpened": "2025-12-31T01:44:10.281Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "admin-ds.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-ds.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-22T13:25:02.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAuwHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T19:40:08.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Order.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\Order.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:27:14.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminDashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\AdminDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\AdminDashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\AdminDashboardViewModel.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\AdminDashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T12:26:54.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "vpp-shop\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAANYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:02:03.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "vpp-shop\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T14:07:46.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "vpp-shop\\Controllers\\CartController.cs",
@@ -465,223 +611,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "vpp-shop\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAUwG8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T10:15:04.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CheckoutController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\CheckoutController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\CheckoutController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\CheckoutController.cs",
-              "RelativeToolTip": "vpp-shop\\Controllers\\CheckoutController.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T08:02:03.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Checkout\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Checkout\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Checkout\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Checkout\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-15T17:51:06.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "checkout.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\checkout.css",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\checkout.css",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\checkout.css",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\checkout.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-18T08:34:48.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "checkout.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\checkout.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\checkout.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\checkout.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\checkout.js",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-18T09:03:15.505Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 18,
               "Title": "CheckoutViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ViewModels\\CheckoutViewModel.cs",
               "RelativeDocumentMoniker": "vpp-shop\\Models\\ViewModels\\CheckoutViewModel.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ViewModels\\CheckoutViewModel.cs",
               "RelativeToolTip": "vpp-shop\\Models\\ViewModels\\CheckoutViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwBkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-18T08:30:28.676Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "admin-staff.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-staff.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin-staff.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-staff.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin-staff.js",
-              "ViewState": "AgIAABUAAAAAAAAAAAAkwCEAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-04T20:03:18.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Product.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\Product.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAYwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T02:09:11.514Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Checkout\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Checkout\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Checkout\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Checkout\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T17:51:06.718Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "admin-product.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-product.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-15T17:04:02.772Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T17:51:28.088Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "admin-reload.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-15T17:23:55.294Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductPromotion\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\ProductPromotion\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductPromotion\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\ProductPromotion\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T18:39:01.951Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "VoucherController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\VoucherController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\VoucherController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\VoucherController.cs",
-              "RelativeToolTip": "vpp-shop\\Controllers\\VoucherController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T09:15:02.01Z"
+              "Title": "admin-ds.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\admin\\admin-ds.css",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-22T12:31:35.938Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "vn-location.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\vn-location.json",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\vn-location.json",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\vn-location.json",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\vn-location.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMXVAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-18T09:01:03.692Z"
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\Admin.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Admin.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T14:30:53.535Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "UserAddress.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\UserAddress.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\UserAddress.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\UserAddress.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\UserAddress.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Title": "CategoryGroup.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\CategoryGroup.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\CategoryGroup.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\CategoryGroup.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\CategoryGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T08:45:46.139Z"
+              "WhenOpened": "2026-01-14T14:06:16.68Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-13T09:25:13.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ViewModels.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ViewModels.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\ViewModels.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ViewModels.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\ViewModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T08:29:54.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Order.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\Order.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T08:27:14.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Voucher.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Voucher.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\Voucher.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Voucher.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\Voucher.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T08:01:38.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "vpp-shop\\Models\\CartItem.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\CartItem.cs",
               "RelativeToolTip": "vpp-shop\\Models\\CartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-18T08:00:59.475Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 26,
               "Title": "Cart.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Cart.cs",
               "RelativeDocumentMoniker": "vpp-shop\\Models\\Cart.cs",
@@ -693,79 +719,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CartCountViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
-              "RelativeToolTip": "vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:52:28.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-13T18:06:32.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 31,
               "Title": "product.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\product.css",
               "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\product.css",
               "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\product.css",
               "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\product.css",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK4BAAAAAAAAAAAkwLgBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-14T14:25:09.4Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\home.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\home.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\home.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\home.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-04T17:15:24.134Z"
+              "WhenOpened": "2026-01-22T01:58:18.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "vpp-shop\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T14:07:46.046Z"
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAwIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T14:07:51.3Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 29,
+              "Title": "promotion.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\promotion.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\promotion.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\promotion.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\promotion.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-22T02:44:37.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Promotion\\Detail.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Promotion\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Promotion\\Detail.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Promotion\\Detail.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvygAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-22T03:40:30.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Product\\Detail.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Views\\Product\\Detail.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Product\\Detail.cshtml",
               "RelativeToolTip": "vpp-shop\\Views\\Product\\Detail.cshtml",
-              "ViewState": "AgIAALIAAAAAAAAAAAAAANAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAwNIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-14T14:07:20.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAGgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T14:15:57.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "admin-reload.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-reload.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin-reload.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-reload.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin-reload.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-04T17:16:13.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PromotionController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\PromotionController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\PromotionController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\PromotionController.cs",
+              "RelativeToolTip": "vpp-shop\\Controllers\\PromotionController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T02:41:13.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "admin-product.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-product.css",
               "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin\\admin-product.css",
@@ -777,99 +839,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\login.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\login.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\login.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\login.css",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAiwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-20T16:35:14.354Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-14T14:15:57.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAD0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-15T20:18:32.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "vpp-shop\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAYwIQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T14:07:09.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-14T14:07:51.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "vpp-shop\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\AuthController.cs",
               "RelativeToolTip": "vpp-shop\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAASwCMAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T19:36:21.546Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "admin-staff.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-staff.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin-staff.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-staff.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin-staff.js",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-04T20:03:18.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "footer.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\footer.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\footer.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\footer.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\footer.css",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAiwKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-20T16:55:27.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "home.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\home.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\home.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\home.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\home.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-22T01:59:24.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ProductPromotion.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductPromotion.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\ProductPromotion.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductPromotion.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\ProductPromotion.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAcwJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:33:19.377Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 43,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "vpp-shop\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-14T14:26:03.854Z"
+              "Title": "VanPhongPhamDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Data\\VanPhongPhamDBContext.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Data\\VanPhongPhamDBContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Data\\VanPhongPhamDBContext.cs",
+              "RelativeToolTip": "vpp-shop\\Data\\VanPhongPhamDBContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA/wC8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:59:03.758Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 44,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAAAL8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-14T14:01:48.057Z"
+              "Title": "ProductPromotion.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ProductPromotion.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\ProductPromotion.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ProductPromotion.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\ProductPromotion.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA6wCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:03:22.587Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 45,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAUwLgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T01:39:57.158Z"
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T16:24:21.652Z"
             },
             {
               "$type": "Document",
@@ -885,115 +959,139 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "CategoryGroup.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\CategoryGroup.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\CategoryGroup.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\CategoryGroup.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\CategoryGroup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T14:06:16.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "admin-category.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-04T19:22:10.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-04T18:44:28.279Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 47,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Category.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T18:33:05.821Z"
+              "WhenOpened": "2025-12-31T01:37:37.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T13:50:34.25Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 49,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAUwLEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T13:51:21.357Z"
+              "Title": "admin-promotion.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-promotion.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-promotion.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-promotion.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-promotion.js",
+              "ViewState": "AgIAACUAAAAAAAAAAAAiwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-21T18:51:24.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "_CategoryTable.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-04T19:10:35.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAACYAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 50,
+              "Title": "ProductImageController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T18:43:54.95Z"
+              "WhenOpened": "2026-01-05T02:10:05.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T19:49:01.152Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 54,
-              "Title": "VanPhongPhamDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Data\\VanPhongPhamDBContext.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Data\\VanPhongPhamDBContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Data\\VanPhongPhamDBContext.cs",
-              "RelativeToolTip": "vpp-shop\\Data\\VanPhongPhamDBContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:59:03.758Z"
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\_Footer.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_Footer.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Shared\\_Footer.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T16:52:59.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 56,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAALwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T02:22:11.989Z"
+              "WhenOpened": "2025-12-30T15:01:33.344Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 55,
+              "Title": "admin-order.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-order.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-18T10:23:24.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-15T20:18:32.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-04T17:15:24.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "vpp-shop\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T14:07:09.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -1005,7 +1103,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T16:24:39.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\Error.cshtml",
@@ -1017,7 +1127,319 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 62,
+              "Title": "vn-location.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\vn-location.json",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\vn-location.json",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\vn-location.json",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\vn-location.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAMXVAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-18T09:01:03.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Wallet.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\Wallet.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Wallet.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\Wallet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:01:30.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\User.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\User.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T13:48:45.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "admin-order.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\admin\\admin-order.css",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAqwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-18T10:22:08.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "cart.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\cart.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\cart.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\cart.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\cart.css",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAowHYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-18T10:40:53.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "cart.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\cart.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\cart.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\cart.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\cart.js",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-18T10:41:15.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "_StaffTable.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Staff\\_StaffTable.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T19:56:36.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T13:57:16.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "vpp-shop\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAUwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T10:15:04.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "checkout.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\checkout.css",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\web\\checkout.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\web\\checkout.css",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\css\\web\\checkout.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-18T08:34:48.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "checkout.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\checkout.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\checkout.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\checkout.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\checkout.js",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-18T09:03:15.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "admin-reload.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-reload.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-15T17:23:55.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "VoucherController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\VoucherController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Controllers\\VoucherController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Controllers\\VoucherController.cs",
+              "RelativeToolTip": "vpp-shop\\Controllers\\VoucherController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:15:02.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "UserAddress.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\UserAddress.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\UserAddress.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\UserAddress.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\UserAddress.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:45:46.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "ViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ViewModels.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\ViewModels.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\ViewModels.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\ViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:29:54.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "Voucher.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Voucher.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\Voucher.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Voucher.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\Voucher.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:01:38.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "CartCountViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
+              "RelativeToolTip": "vpp-shop\\ViewComponents\\CartCountViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T17:52:28.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Shared\\Components\\CartCount\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-13T18:06:32.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "vpp-shop\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T14:26:03.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "admin-category.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
+              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
+              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin\\admin-category.js",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-04T19:22:10.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T18:44:28.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Category.cs",
+              "RelativeToolTip": "vpp-shop\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T18:33:05.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAUwLEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T13:51:21.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "_CategoryTable.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Category\\_CategoryTable.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T19:10:35.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAACYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T18:43:54.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T02:22:11.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Views\\_ViewImports.cshtml",
@@ -1029,7 +1451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 88,
               "Title": "_ProductImageTable.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\ProductImage\\_ProductImageTable.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\ProductImage\\_ProductImageTable.cshtml",
@@ -1041,19 +1463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "ProductImageController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\ProductImageController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T02:10:05.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 89,
               "Title": "admin-product-image.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin-product-image.css",
               "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin-product-image.css",
@@ -1065,43 +1475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "admin-reload.js",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-reload.js",
-              "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\js\\admin-reload.js",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\js\\admin-reload.js",
-              "RelativeToolTip": "vpp-shop\\wwwroot\\js\\admin-reload.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-04T17:16:13.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "_AdminTopbar.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminTopbar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T01:44:10.281Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "_AdminSidebar.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Shared\\_AdminSidebar.cshtml",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAADYAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T13:57:25.338Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 90,
               "Title": "admin-common.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\wwwroot\\css\\admin-common.css",
               "RelativeDocumentMoniker": "vpp-shop\\wwwroot\\css\\admin-common.css",
@@ -1113,31 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T19:40:08.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "StaffController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\StaffController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T19:49:01.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 91,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Staff\\Index.cshtml",
               "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Staff\\Index.cshtml",
@@ -1149,55 +1499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Admin.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\Admin.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\Admin.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\Admin.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T14:30:53.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAUwHsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T13:50:34.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "vpp-shop\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T13:57:13.633Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\User.cs",
-              "RelativeDocumentMoniker": "vpp-shop\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Models\\User.cs",
-              "RelativeToolTip": "vpp-shop\\Models\\User.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T13:48:45.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 93,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\appsettings.json",
               "RelativeDocumentMoniker": "vpp-shop\\appsettings.json",
@@ -1209,7 +1511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 92,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\vpp-shop\\vpp-shop\\Program.cs",
               "RelativeDocumentMoniker": "vpp-shop\\Program.cs",

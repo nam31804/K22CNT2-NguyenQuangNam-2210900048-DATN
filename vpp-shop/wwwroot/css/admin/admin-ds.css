@@ -1,0 +1,44 @@
+﻿.page-title {
+    margin: 20px 0;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+    .card h4 {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .card p {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+/* màu */
+.green {
+    border-left: 5px solid #2ecc71;
+}
+
+.blue {
+    border-left: 5px solid #3498db;
+}
+
+.orange {
+    border-left: 5px solid #f39c12;
+}
+
+.success {
+    border-left: 5px solid #27ae60;
+}

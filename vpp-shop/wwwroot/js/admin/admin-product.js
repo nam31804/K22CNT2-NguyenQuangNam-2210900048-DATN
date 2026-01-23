@@ -59,3 +59,43 @@ function previewImage(input) {
         img.style.display = "block";
     }
 }
+//
+window.filterProducts = function () {
+    const keyword = document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+    document.querySelectorAll("tbody tr").forEach(row => {
+        const searchText =
+            row.getAttribute("data-search")?.toLowerCase() || "";
+
+        row.style.display = searchText.includes(keyword)
+            ? ""
+            : "none";
+    });
+};
+
+
+
+@section Scripts {
+    
+
+    <script>
+        function blockNegative(input) {
+            if (input.value < 0) {
+                input.value = 0;
+            }
+        }
+
+        document.getElementById("price").addEventListener("input", function () {
+            blockNegative(this);
+        });
+
+        document.getElementById("stock").addEventListener("input", function () {
+            blockNegative(this);
+        });
+    </script>
+}
+

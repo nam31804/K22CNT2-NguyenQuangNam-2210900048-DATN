@@ -435,3 +435,24 @@
     font-weight: 700;
     margin-bottom: 20px;
 }
+.pagination-wrap {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.page-item {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .page-item.active,
+    .page-item:hover {
+        background: #d70018;
+        color: #fff;
+        border-color: #d70018;
+    }

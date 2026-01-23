@@ -1,0 +1,178 @@
+﻿/* ===== RESET ===== */
+.site-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== NEWSLETTER BANNER ===== */
+.newsletter-banner {
+    background: #e30613;
+}
+
+.banner-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.banner-left img {
+    height: 140px;
+    transform: translateY(-10px);
+}
+
+.banner-center h2 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.banner-center p {
+    margin: 4px 0 0;
+    font-size: 20px;
+    color: #ffd400;
+    font-weight: 600;
+}
+
+.btn-click {
+    background: #c40000;
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+    .btn-click:hover {
+        background: #fff;
+        color: #e30613;
+    }
+
+/* ===== FOOTER MAIN ===== */
+.footer-main {
+    background: #fff;
+    padding: 45px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    font-size: 13px;
+}
+
+/* ===== FOOTER COL ===== */
+.footer-logo {
+    width: 140px;
+    margin-bottom: 12px;
+}
+
+.company-info p {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.footer-col h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+
+        .footer-col ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+            .footer-col ul li a:hover {
+                color: #e30613;
+            }
+
+/* ===== HOTLINE ===== */
+.hotline-box {
+    margin-bottom: 15px;
+}
+
+.phone-number {
+    display: block;
+    color: #e30613;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hotline-box p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== SOCIAL ===== */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 15px;
+}
+
+    .social-icons img {
+        width: 34px;
+        transition: 0.3s;
+    }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+/* ===== STORE ===== */
+.store-list p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-flex {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .banner-left img {
+        height: 120px;
+        transform: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+

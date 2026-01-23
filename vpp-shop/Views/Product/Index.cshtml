@@ -120,6 +120,19 @@
 
                 }
             </div>
+            @if (ViewBag.TotalPage > 1)
+            {
+                <div class="pagination-wrap">
+                    @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                    {
+                        <a href="?page=@i"
+                           class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                            @i
+                        </a>
+                    }
+                </div>
+            }
+
 
         </div>
     </div>

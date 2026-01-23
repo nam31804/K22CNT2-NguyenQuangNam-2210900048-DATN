@@ -1,0 +1,40 @@
+﻿@model ProductPromotion
+
+<div class="container mt-4 mb-5">
+    <div class="row justify-content-center">
+
+        <!-- ===== CỘT NỘI DUNG (CĂN GIỮA) ===== -->
+        <div class="col-md-9 mx-auto">
+
+            <div class="promo-detail text-center">
+
+                <!-- TIÊU ĐỀ -->
+                <h1 class="promo-title">
+                    @Model.Title
+                </h1>
+
+                <!-- NGÀY -->
+                <div class="promo-meta mb-4">
+                    @Model.CreatedAt.ToString("dd/MM/yyyy")
+                </div>
+
+                <!-- ẢNH SẢN PHẨM -->
+                <div class="promo-image mb-4">
+                    <a asp-controller="Product"
+                       asp-action="Detail"
+                       asp-route-id="@Model.Product.Id">
+                        <img src="~/images/products/@Model.Product.Image"
+                             alt="@Model.Title" />
+                    </a>
+                </div>
+
+                <!-- NỘI DUNG -->
+                <div class="promo-content text-start mx-auto">
+                    @Html.Raw((Model.Content ?? "").Replace("\n", "<br/>"))
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

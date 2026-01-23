@@ -8,6 +8,14 @@
 <button class="btn btn-primary mb-3" onclick="openCreateModal()">
     + Thêm sản phẩm
 </button>
+<input type="text"
+       id="searchBox"
+       class="form-control mb-3"
+       placeholder="Gõ ID hoặc tên sản phẩm..."
+       onkeyup="filterProducts()" />
+
+
+
 
 <table class="table table-bordered align-middle">
     <thead class="table-light">
@@ -25,7 +33,9 @@
     <tbody>
         @foreach (var p in Model)
         {
-            <tr>
+            <tr data-search="@($"{p.Id} {p.Name} {p.Slug}")">
+
+
                 <td>@p.Id</td>
                 <td class="fw-semibold">@p.Name</td>
                 <td><code>@p.Slug</code></td>
@@ -134,6 +144,8 @@
                                    class="form-control"
                                    name="Price"
                                    id="price"
+                                   min="0"
+                                   step="1000"
                                    required />
                         </div>
                         <div class="col-md-6 mb-3">
@@ -142,6 +154,8 @@
                                    class="form-control"
                                    name="Stock"
                                    id="stock"
+                                   min="0"
+                                   step="1"
                                    value="0" />
                         </div>
                     </div>
@@ -185,6 +199,22 @@
         </div>
     </div>
 </div>
+@if (ViewBag.TotalPage > 1)
+{
+    <nav>
+        <ul class="pagination">
+            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+            {
+                <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                    <a class="page-link"
+                       href="?page=@i&search=@ViewBag.Search">
+                        @i
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
 
 @section Scripts {
     <script src="~/js/admin/admin-product.js"></script>

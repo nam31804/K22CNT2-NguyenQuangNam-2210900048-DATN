@@ -1,0 +1,138 @@
+﻿@model List<vpp_shop.Models.ProductPromotion>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 class="mb-3">Quản lý bài viết / khuyến mãi</h3>
+
+<p class="text-muted">
+    • Bài mới tạo sẽ <b>tự động lên đầu</b><br />
+    • Số <b>thứ tự nhỏ hơn</b> hiển thị trước<br />
+    • Chỉ bài <b>Bật</b> mới xuất hiện ngoài trang chủ
+</p>
+
+<button class="btn btn-primary mb-3" onclick="openCreateModal()">
+    + Thêm bài viết
+</button>
+
+<table class="table table-bordered align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>ID</th>
+            <th>Tiêu đề</th>
+            <th>Sản phẩm</th>
+            <th style="width:90px">Thứ tự</th>
+            <th>Hiển thị</th>
+            <th width="150">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Title</td>
+                <td>@p.Product?.Name</td>
+
+                <td>
+                    <input type="number"
+                           class="form-control form-control-sm text-center"
+                           value="@p.Position"
+                           onchange="updatePosition(@p.Id, this.value)" />
+                </td>
+
+                <td>
+                    <button class="btn btn-sm @(p.IsActive ? "btn-success" : "btn-secondary")"
+                            onclick="togglePromotion(@p.Id, this)">
+                        @(p.IsActive ? "Bật" : "Tắt")
+                    </button>
+                </td>
+
+                <td>
+                    <button class="btn btn-sm btn-warning"
+                            onclick="openEditModal(@p.Id)">
+                        Sửa
+                    </button>
+
+                    <form asp-area="Admin"
+                          asp-controller="ProductPromotion"
+                          asp-action="Delete"
+                          method="post"
+                          style="display:inline"
+                          onsubmit="return confirm('Xoá bài viết này?');">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@p.Id" />
+                        <button class="btn btn-sm btn-danger">Xoá</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- ================= MODAL ================= -->
+<div class="modal fade" id="promotionModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <form id="promotionForm" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="Id" id="promotionId" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label>Sản phẩm</label>
+                        <select class="form-select"
+                                name="ProductId"
+                                id="productId"
+                                required>
+                            <option value="">-- Chọn sản phẩm --</option>
+                            @foreach (var pr in ViewBag.Products)
+                            {
+                                <option value="@pr.Id">@pr.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Tiêu đề</label>
+                        <input class="form-control"
+                               name="Title"
+                               id="title" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Nội dung</label>
+                        <textarea class="form-control"
+                                  rows="4"
+                                  name="Content"
+                                  id="promotionContent"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-success" type="submit">Lưu</button>
+                    <button class="btn btn-secondary"
+                            type="button"
+                            data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin/admin-promotion.js"></script>
+}

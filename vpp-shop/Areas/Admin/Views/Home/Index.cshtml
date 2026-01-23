@@ -1,6 +1,233 @@
-﻿@{
+﻿@model vpp_shop.Models.ViewModels.AdminDashboardViewModel
+
+@{
     Layout = "_AdminLayout";
 }
 
-<h1>Nqn Admin Dashboard</h1>
-<p>Chào mừng bạn đến trang quản trị</p>
+<div class="container-fluid mt-3">
+
+    <!-- ================= THẺ THỐNG KÊ ================= -->
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Người dùng</h6>
+                        <h3 class="fw-bold mb-0">@Model.TotalUsers</h3>
+                    </div>
+                    <i class="bi bi-people-fill fs-1 text-success opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Nhân viên</h6>
+                        <h3 class="fw-bold mb-0">@Model.TotalAdmins</h3>
+                    </div>
+                    <i class="bi bi-person-badge-fill fs-1 text-primary opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Tổng đơn</h6>
+                        <h3 class="fw-bold mb-0">@Model.TotalOrders</h3>
+                    </div>
+                    <i class="bi bi-cart-check-fill fs-1 text-warning opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Hoàn thành</h6>
+                        <h3 class="fw-bold mb-0">@Model.CompletedOrders</h3>
+                    </div>
+                    <i class="bi bi-check-circle-fill fs-1 text-success opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= DOANH THU ================= -->
+    <div class="row g-4 mt-4">
+
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Doanh thu hoàn thành</h6>
+                        <h3 class="fw-bold text-success mb-0">
+                            @Model.RevenueCompleted.ToString("N0") đ
+                        </h3>
+                    </div>
+                    <i class="bi bi-cash-stack fs-1 text-success opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Doanh thu đang xử lý</h6>
+                        <h3 class="fw-bold text-warning mb-0">
+                            @Model.RevenueProcessing.ToString("N0") đ
+                        </h3>
+                    </div>
+                    <i class="bi bi-hourglass-split fs-1 text-warning opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= BIỂU ĐỒ TRÊN (KHÔNG SCROLL) ================= -->
+    <div class="row g-4 mt-4">
+
+        <!-- 📈 Doanh thu theo ngày -->
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <h6 class="mb-3">Doanh thu theo ngày (tháng hiện tại)</h6>
+                    <canvas id="dailyRevenueChart" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🥧 Trạng thái đơn hàng -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <h6 class="mb-3">Trạng thái đơn hàng</h6>
+                    <canvas id="orderStatusPie" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= BIỂU ĐỒ DƯỚI (FULL WIDTH) ================= -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="mb-3">Doanh thu theo tháng (năm hiện tại)</h6>
+                    <canvas id="monthlyRevenueChart" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    /* ================= BIỂU ĐỒ DOANH THU THEO NGÀY ================= */
+    new Chart(document.getElementById('dailyRevenueChart'), {
+        type: 'line',
+        data: {
+            labels: @Html.Raw(Json.Serialize(Model.DailyLabels)),
+            datasets: [{
+                data: @Html.Raw(Json.Serialize(Model.DailyRevenue)),
+                borderColor: '#3498db',
+                backgroundColor: 'rgba(52,152,219,0.15)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 3
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        maxTicksLimit: 7   // 👈 chỉ hiện ~ 1–5–10–15–20–25–cuối tháng
+                    }
+                },
+                y: {
+                    ticks: { display: false },
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+
+
+    /* ================= BIỂU ĐỒ TRẠNG THÁI ĐƠN HÀNG ================= */
+    new Chart(document.getElementById('orderStatusPie'), {
+        type: 'pie',
+        data: {
+            labels: ['Chờ xác nhận', 'Đã thanh toán', 'Đang giao', 'Hoàn thành', 'Huỷ'],
+            datasets: [{
+                data: [
+                    @Model.PendingOrders,
+                    @Model.PaidOrders,
+                    @Model.ShippingOrders,
+                    @Model.CompletedOrders,
+                    @Model.CancelledOrders
+                ],
+                backgroundColor: [
+                    '#f1c40f',
+                    '#3498db',
+                    '#e67e22',
+                    '#2ecc71',
+                    '#e74c3c'
+                ]
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+
+    /* ================= BIỂU ĐỒ DOANH THU THEO THÁNG ================= */
+    new Chart(document.getElementById('monthlyRevenueChart'), {
+        type: 'line',
+        data: {
+            labels: @Html.Raw(Json.Serialize(Model.MonthlyLabels)),
+            datasets: [{
+                data: @Html.Raw(Json.Serialize(Model.MonthlyRevenue)),
+                borderColor: '#2ecc71',
+                backgroundColor: 'rgba(46,204,113,0.15)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 4
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        autoSkip: false   // 👈 luôn hiện đủ Tháng 1 → 12
+                    }
+                },
+                y: {
+                    ticks: { display: false },
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+</script>
