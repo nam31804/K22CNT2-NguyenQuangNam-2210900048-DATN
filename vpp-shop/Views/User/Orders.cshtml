@@ -1,0 +1,110 @@
+﻿@model List<vpp_shop.Models.Order>
+
+<h3 class="mb-3">Đơn hàng của tôi</h3>
+
+<div class="order-filter">
+    <a asp-action="Orders"
+       asp-route-type="pending"
+       class="@(ViewBag.Type == "pending" || ViewBag.Type == null ? "active" : "")">
+        Chưa giao
+    </a>
+
+    <a asp-action="Orders"
+       asp-route-type="completed"
+       class="@(ViewBag.Type == "completed" ? "active" : "")">
+        Hoàn thành
+    </a>
+
+    <a asp-action="Orders"
+       asp-route-type="cancelled"
+       class="@(ViewBag.Type == "cancelled" ? "active" : "")">
+        Đã huỷ
+    </a>
+</div>
+
+
+@if (!Model.Any())
+{
+    <p>Bạn chưa có đơn hàng nào.</p>
+}
+else
+{
+    <table class="table order-table align-middle">
+        <thead>
+            <tr>
+                <th>Mã đơn</th>
+                <th>Ngày đặt</th>
+                <th>Sản phẩm</th>
+                <th>Tổng tiền</th>
+                <th>Thanh toán</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var o in Model)
+            {
+                <tr>
+                    <td>#@o.Id</td>
+
+                    <td>
+                        @o.CreatedAt?.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                    <!-- SẢN PHẨM -->
+                    <td>
+                        @foreach (var item in o.OrderItems)
+                        {
+                            <div class="d-flex gap-2 mb-2 align-items-center">
+                                <img src="~/images/products/@item.Product.Image"
+                                     class="order-product-img" />
+
+                                <div>
+                                    <div>@item.Product.Name</div>
+                                    <small class="text-muted">
+                                        SL: @item.Quantity × @item.Price.ToString("N0") đ
+                                    </small>
+                                </div>
+                            </div>
+                        }
+                    </td>
+
+                    <td class="text-danger fw-bold">
+                        @o.TotalMoney.ToString("N0") đ
+                    </td>
+
+                    <td>@o.PaymentMethod</td>
+
+                    <td>
+                        <span class="badge status-@o.Status.ToLower()">
+                            @o.Status
+                        </span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- PHÂN TRANG -->
+    @if (ViewBag.TotalPages > 1)
+    {
+        <div class="order-pagination">
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                if (i == ViewBag.CurrentPage)
+                {
+                    <span class="page-number active">@i</span>
+                }
+                else
+                {
+                    <a class="page-number"
+                       asp-action="Orders"
+                       asp-route-type="@ViewBag.Type"
+                       asp-route-page="@i">
+                        @i
+                    </a>
+                }
+            }
+        </div>
+    }
+
+}

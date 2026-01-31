@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Kết quả thanh toán";
+    var code = ViewBag.ResponseCode as string;
+    var orderId = ViewBag.OrderId as string;
+}
+
+<div class="container mt-5 text-center">
+    @if (code == "00")
+    {
+        <h2 class="text-success">🎉 Thanh toán thành công</h2>
+        <p>Đơn hàng #@orderId đã được ghi nhận.</p>
+        <p class="text-muted">Hệ thống đang xác nhận giao dịch.</p>
+    }
+    else
+    {
+        <h2 class="text-danger">❌ Thanh toán thất bại</h2>
+        <p>Vui lòng thử lại hoặc chọn phương thức khác.</p>
+    }
+
+    <div class="mt-4">
+        <a href="/Orders/History" class="btn btn-primary">Xem đơn hàng</a>
+        <a href="/" class="btn btn-secondary">Về trang chủ</a>
+    </div>
+</div>

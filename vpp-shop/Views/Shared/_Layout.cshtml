@@ -13,8 +13,19 @@
     <link rel="stylesheet" href="~/css/web/footer.css" />
     <link rel="stylesheet" href="~/css/web/home.css" />
     <link rel="stylesheet" href="~/css/web/promotion.css" />
+    <link rel="stylesheet" href="~/css/web/cart.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
+<!-- GLOBAL CART ERROR POPUP -->
+<div id="cartErrorPopup" class="cart-error-overlay" style="display:none">
+    <div class="cart-error-box">
+        <h3>⚠️ Thông báo</h3>
+        <p id="cartErrorMessage"></p>
+        <button onclick="closeCartError()">Đóng</button>
+    </div>
+</div>
+
+
 <body>
 
     @{
@@ -32,7 +43,14 @@
             <div class="top-right">
                 @if (userId != null)
                 {
-                    <span>Xin chào <strong>@userName</strong></span>
+                    <span>
+                        Xin chào
+                        <a asp-controller="User" asp-action="Index"
+                           style="font-weight:600; text-decoration:none;">
+                            @userName
+                        </a>
+
+                    </span>
                     <a asp-controller="Auth" asp-action="Logout">Đăng xuất</a>
                 }
                 else
@@ -43,6 +61,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- ===== MAIN HEADER ===== -->

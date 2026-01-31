@@ -21,21 +21,31 @@ else
                 <th></th>
             </tr>
         </thead>
+
         <tbody>
             @foreach (var item in Model.CartItems)
             {
-                <tr id="row-@item.Id">
+                var isOut = item.Product.Stock <= 0;
+
+                <tr id="row-@item.Id" class="@(isOut ? "out-stock" : "")">
                     <td class="text-center">
                         <input type="checkbox"
                                class="item-check"
                                data-id="@item.Id"
                                data-price="@item.Product.Price"
-                               onchange="updateGrandTotal()" />
+                               onchange="updateGrandTotal()"
+                               @(isOut ? "disabled" : "") />
                     </td>
 
                     <td>
                         <div class="cart-product">
-                            <img src="~/images/products/@item.Product.Image" alt="">
+                            <div class="cart-img @(isOut ? "out-stock" : "")">
+                                <img src="~/images/products/@item.Product.Image" alt="">
+                                @if (isOut)
+                                {
+                                    <span class="sold-out-ribbon">HẾT HÀNG</span>
+                                }
+                            </div>
                             <div>@item.Product.Name</div>
                         </div>
                     </td>
@@ -46,9 +56,19 @@ else
 
                     <td>
                         <div class="cart-qty">
-                            <button type="button" onclick="decrease(@item.Id)">-</button>
+                            <button type="button"
+                                    onclick="decrease(@item.Id)"
+                                    @(isOut ? "disabled" : "")>
+                                -
+                            </button>
+
                             <span id="qty-@item.Id">@item.Quantity</span>
-                            <button type="button" onclick="increase(@item.Id)">+</button>
+
+                            <button type="button"
+                                    onclick="increase(@item.Id)"
+                                    @(isOut ? "disabled" : "")>
+                                +
+                            </button>
                         </div>
                     </td>
 
@@ -64,6 +84,7 @@ else
                 </tr>
             }
         </tbody>
+
     </table>
 
     <div class="cart-summary">
@@ -82,4 +103,6 @@ else
     </div>
 }
 
-<script src="~/js/cart.js"></script>
+
+<script src="~/js/cart.js?v=@DateTime.Now.Ticks"></script>
+

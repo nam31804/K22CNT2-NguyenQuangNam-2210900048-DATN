@@ -126,10 +126,10 @@ namespace vpp_shop.Controllers
             }
 
             ViewBag.RelatedProducts = _context.Products
-                .Where(p => p.Id != id)
-                .OrderBy(x => Guid.NewGuid())
-                .Take(5)
-                .ToList();
+            .Where(p => p.Id != id)
+            .OrderBy(x => Guid.NewGuid())
+            .ToList();
+
 
             ViewBag.SameCategoryProducts = _context.Products
                 .Where(p => p.CategoryId == product.CategoryId && p.Id != id)

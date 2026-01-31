@@ -1,0 +1,34 @@
+﻿@model Wallet
+@{
+    var transactions = ViewBag.Transactions as List<WalletTransaction>;
+}
+
+<h3>Ví của tôi</h3>
+
+<div class="alert alert-info">
+    <b>Số dư:</b> @(Model?.Balance?.ToString("N0") ?? "0") đ
+</div>
+
+<h4>Lịch sử giao dịch</h4>
+
+<table class="table">
+    <tr>
+        <th>Thời gian</th>
+        <th>Loại</th>
+        <th>Số tiền</th>
+        <th>Mô tả</th>
+    </tr>
+
+    @if (transactions != null)
+    {
+        foreach (var t in transactions)
+        {
+            <tr>
+                <td>@(t.CreatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "")</td>
+                <td>@t.Type</td>
+                <td>@t.Amount.ToString("N0") đ</td>
+                <td>@t.Description</td>
+            </tr>
+        }
+    }
+</table>

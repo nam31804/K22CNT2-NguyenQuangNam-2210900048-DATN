@@ -6,7 +6,6 @@ wwwroot\css\admin\admin-ds.css
 wwwroot\css\admin\admin-order.css
 wwwroot\css\admin\admin-product.css
 wwwroot\css\site.css
-wwwroot\css\web\cart.css
 wwwroot\css\web\checkout.css
 wwwroot\css\web\footer.css
 wwwroot\css\web\home.css
@@ -30,12 +29,12 @@ wwwroot\images\products\194557a3-fa44-4ec0-ab1b-eb8cb9464e0b.jpg
 wwwroot\images\products\1b273eb3-c1c8-4479-823d-fbe59500beef.jpg
 wwwroot\images\products\3995facc-1d50-4f7f-be37-35c15669b9ce.jpg
 wwwroot\images\products\4874f749-ace3-47e8-bcef-6db04f025d00.jpg
+wwwroot\images\products\5cb5a5df-6ed4-4633-a706-8cee46985e0a.jpg
 wwwroot\images\products\5f9dc565-79d1-4919-9466-df67c9e79e0d.jpg
 wwwroot\images\products\7ecf5c2b-ac20-46ce-8cab-143888380963.jpg
 wwwroot\images\products\9b6d4064-6138-4d93-82b4-442e717b25a3.jpg
 wwwroot\images\products\a97f6f02-83a2-40d6-b62f-fbde33da50be.jpg
 wwwroot\images\products\but-bi-tl027.jpg
-wwwroot\images\products\but-pentel.jpg
 wwwroot\images\products\dd82e65c-bfcd-4012-b187-70165d19bdb7.jpg
 wwwroot\images\products\e8f858cb-4da0-4a3a-975f-e95026c8d3fb.jpg
 wwwroot\images\products\so-bujo.jpg
@@ -51,8 +50,8 @@ wwwroot\images\products\vo-campus.jpg
 wwwroot\js\admin-reload.js
 wwwroot\js\admin-staff.js
 wwwroot\js\admin\admin-category.js
-wwwroot\js\admin\admin-ds.css
 wwwroot\js\admin\admin-order.js
+wwwroot\js\admin\admin-product.js
 wwwroot\js\admin\admin-promotion.js
 wwwroot\js\admin\admin-reload.js
 wwwroot\js\cart.js
@@ -1943,4 +1942,4 @@ wwwroot\sb-admin-2\vendor\jquery\jquery.min.map
 wwwroot\sb-admin-2\vendor\jquery\jquery.slim.js
 wwwroot\sb-admin-2\vendor\jquery\jquery.slim.min.js
 wwwroot\sb-admin-2\vendor\jquery\jquery.slim.min.map
-wwwroot\js\admin\admin-product.js
+wwwroot\css\web\cart.css

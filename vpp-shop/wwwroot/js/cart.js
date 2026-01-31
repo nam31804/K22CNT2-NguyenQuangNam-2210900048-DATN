@@ -26,10 +26,24 @@ function increase(id) {
     })
         .then(res => res.json())
         .then(data => {
-            document.getElementById('qty-' + id).innerText = data.quantity;
-            document.getElementById('total-' + id).innerText =
-                data.itemTotal.toLocaleString();
+
+            // 🔥 NẾU LỖI → CHỈ HIỆN POPUP, KHÔNG ĐỤNG UI
+            if (data.success === false) {
+                showError(data.message);
+                return; // ⛔ DỪNG NGAY TẠI ĐÂY
+            }
+
+            // ✅ TỚI ĐÂY CHẮC CHẮN CÓ itemTotal
+            const qtyEl = document.getElementById('qty-' + id);
+            const totalEl = document.getElementById('total-' + id);
+
+            qtyEl.innerText = data.quantity;
+            totalEl.innerText = Number(data.itemTotal).toLocaleString();
+
             updateGrandTotal();
+        })
+        .catch(() => {
+            showCartError("Có lỗi xảy ra");
         });
 }
 
@@ -84,4 +98,33 @@ function checkout() {
     let ids = [];
     checked.forEach(i => ids.push(i.dataset.id));
     window.location.href = '/Checkout/Index?itemIds=' + ids.join(',');
+}
+let cartErrorTimer = null;
+
+function showCartError(message) {
+    const popup = document.getElementById("cartErrorPopup");
+    const msg = document.getElementById("cartErrorMessage");
+
+    msg.innerText = message;
+    popup.style.display = "flex";
+
+    // clear timer cũ nếu có
+    if (cartErrorTimer) {
+        clearTimeout(cartErrorTimer);
+    }
+
+    // 🔥 tự đóng sau 5 giây
+    cartErrorTimer = setTimeout(() => {
+        closeCartError();
+    }, 5000);
+}
+
+function closeCartError() {
+    const popup = document.getElementById("cartErrorPopup");
+    popup.style.display = "none";
+
+    if (cartErrorTimer) {
+        clearTimeout(cartErrorTimer);
+        cartErrorTimer = null;
+    }
 }

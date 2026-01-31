@@ -1,0 +1,79 @@
+﻿@model User
+@using vpp_shop.Models
+@{
+    var address = ViewBag.DefaultAddress as UserAddress;
+}
+
+<div class="container mt-5">
+    <div class="profile-card mx-auto">
+
+        <h4 class="mb-4">Thông tin cá nhân</h4>
+
+        <!-- FORM THÔNG TIN -->
+        <form asp-action="UpdateProfile" method="post">
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Họ tên</label>
+                    <input asp-for="FullName" class="form-control form-control-sm" />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Số điện thoại</label>
+                    <input asp-for="Phone" class="form-control form-control-sm" />
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label>Email</label>
+                <input asp-for="Email" class="form-control form-control-sm" readonly />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm px-4">
+                Lưu thay đổi
+            </button>
+        </form>
+
+        <hr class="my-4" />
+
+        <!-- ĐỊA CHỈ GIAO HÀNG -->
+        <h5 class="mb-3">Địa chỉ giao hàng</h5>
+
+        @if (address != null)
+        {
+            <div class="address-box">
+                <div class="fw-semibold">
+                    @address.ReceiverName - @address.Phone
+                </div>
+                <div class="text-muted">
+                    @address.Address
+                    @if (!string.IsNullOrEmpty(address.District))
+                    {
+                        <span>, @address.District</span>
+                    }
+                    @if (!string.IsNullOrEmpty(address.City))
+                    {
+                        <span>, @address.City</span>
+                    }
+                </div>
+
+                <a asp-controller="Address"
+                   asp-action="Edit"
+                   asp-route-id="@address.Id"
+                   class="btn btn-link p-0 mt-2">
+                    Thay đổi địa chỉ
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="text-muted">
+                Bạn chưa có địa chỉ giao hàng.
+                <a asp-controller="Address" asp-action="Create">
+                    Thêm địa chỉ
+                </a>
+            </div>
+        }
+
+    </div>
+</div>

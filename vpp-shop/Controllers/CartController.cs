@@ -94,14 +94,26 @@ namespace vpp_shop.Controllers
 
             if (item == null) return NotFound();
 
+            // ❌ VƯỢT QUÁ TỒN KHO → KHÔNG CHO TĂNG
+            if (item.Quantity + 1 > item.Product.Stock)
+            {
+                return Json(new
+                {
+                    success = false,
+                    message = "Số lượng kho không đủ"
+                });
+            }
+
             item.Quantity += 1;
             await _context.SaveChangesAsync();
 
             return Json(new
             {
+                success = true,
                 quantity = item.Quantity,
                 itemTotal = item.Quantity * item.Product.Price
             });
+
         }
 
         // ============================
@@ -168,6 +180,29 @@ namespace vpp_shop.Controllers
 
             if (!selectedItems.Any())
                 return Json(new { success = false, message = "Không có sản phẩm hợp lệ" });
+            // 🔥 CHECK TỒN KHO TRƯỚC KHI TÍNH TIỀN
+            foreach (var item in selectedItems)
+            {
+                if (item.Product == null)
+                {
+                    return Json(new
+                    {
+                        success = false,
+                        message = "Có sản phẩm không tồn tại"
+                    });
+                }
+
+                if (item.Quantity > item.Product.Stock)
+                {
+                    return Json(new
+                    {
+                        success = false,
+                        message =
+                            $"Sản phẩm \"{item.Product.Name}\" chỉ còn {item.Product.Stock} sản phẩm trong kho, " +
+                            $"bạn đang chọn {item.Quantity}."
+                    });
+                }
+            }
 
             decimal total = selectedItems.Sum(i => i.Product.Price * i.Quantity);
 

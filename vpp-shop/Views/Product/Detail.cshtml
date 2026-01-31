@@ -1,5 +1,5 @@
 ﻿@model vpp_shop.Models.Product
-
+<link rel="stylesheet" href="~/css/web/product.css" />
 <div class="container mt-4">
     <div class="row">
 
@@ -11,11 +11,13 @@
             <div class="d-flex gap-3 align-items-start">
 
                 <!-- ẢNH CHÍNH (BÊN TRÁI) -->
-                <div class="product-main-image">
-                    <img id="mainImage"
-                         src="~/images/products/@Model.Image"
-                         alt="@Model.Name" />
-                </div>
+                    <div class="product-main-image out-of-stock-main @(Model.Stock == 0 ? "show-ribbon" : "")">
+
+                        <img id="mainImage"
+                             src="~/images/products/@Model.Image"
+                             alt="@Model.Name" />
+                    </div>
+
 
                 <!-- ẢNH PHỤ (BÊN PHẢI) -->
                 <div class="product-thumbs d-flex flex-column gap-2">
@@ -55,16 +57,26 @@
             </div>
 
             <!-- ADD TO CART – KHÔNG SỐ LƯỢNG -->
-            <form asp-controller="Cart"
-                  asp-action="AddToCart"
-                  method="post">
+                @if (Model.Stock > 0)
+                {
+                    <form asp-controller="Cart"
+                          asp-action="AddToCart"
+                          method="post">
 
-                <input type="hidden" name="productId" value="@Model.Id" />
+                        <input type="hidden" name="productId" value="@Model.Id" />
 
-                <button type="submit" class="btn btn-danger px-4">
-                    Thêm vào giỏ hàng
-                </button>
-            </form>
+                        <button type="submit" class="btn btn-danger px-4">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <button class="btn btn-secondary px-4" disabled>
+                        Hết hàng
+                    </button>
+                }
+
         </div>
     </div>
     </div>
@@ -107,11 +119,13 @@
 
     </div>
 </div>
-<div class="row mt-4">
+<div class="row mt-4 align-items-start">
+
 
     <!-- LEFT: MÔ TẢ SẢN PHẨM -->
     <div class="col-md-9">
-        <div class="product-detail-box">
+        <div class="product-detail-box" id="product-description">
+
             <h5 class="detail-title">
                 Mô tả sản phẩm: @Model.Name
             </h5>
@@ -124,28 +138,33 @@
 
     <!-- RIGHT: SẢN PHẨM GỢI Ý -->
     <div class="col-md-3">
-        <div class="related-box">
+        <div class="related-box" id="related-box">
+
             <h6 class="related-title">Có thể bạn thích</h6>
 
-            @if (ViewBag.RelatedProducts != null && ViewBag.RelatedProducts.Count > 0)
-            {
-                foreach (var p in ViewBag.RelatedProducts)
+            <div class="related-list">
+                @if (ViewBag.RelatedProducts != null && ViewBag.RelatedProducts.Count > 0)
                 {
-                    <a href="/Product/Detail/@p.Id" class="related-item">
-                        <img src="~/images/products/@p.Image" />
-                        <div class="related-info">
-                            <span class="related-name">@p.Name</span>
-                            <span class="related-price">@p.Price.ToString("N0") đ</span>
-                        </div>
-                    </a>
+                    foreach (var p in ViewBag.RelatedProducts)
+                    {
+                        <a href="/Product/Detail/@p.Id" class="related-item">
+                            <img src="~/images/products/@p.Image" />
+                            <div class="related-info">
+                                <span class="related-name">@p.Name</span>
+                                <span class="related-price">@p.Price.ToString("N0") đ</span>
+                            </div>
+                        </a>
+                    }
                 }
-            }
-            else
-            {
-                <div class="text-muted">Chưa có sản phẩm gợi ý</div>
-            }
+                else
+                {
+                    <div class="text-muted">Chưa có sản phẩm gợi ý</div>
+                }
+            </div>
+
         </div>
     </div>
+
 
 </div>
 
@@ -159,7 +178,8 @@
             @foreach (var item in ViewBag.SameCategoryProducts)
             {
                 <div class="col-product mb-4">
-                    <div class="product-item">
+                    <div class="product-item @(item.Stock == 0 ? "out-of-stock" : "")">
+
 
                         <div class="product-thumb">
                             <a href="/Product/Detail/@item.Id">
@@ -167,13 +187,23 @@
                             </a>
 
                             <div class="product-actions">
-                                <a asp-controller="Cart"
-                                   asp-action="AddToCart"
-                                   asp-route-productId="@item.Id"
-                                   class="btn-cart">
-                                    Thêm vào giỏ
-                                </a>
+                                @if (item.Stock > 0)
+                                {
+                                    <a asp-controller="Cart"
+                                       asp-action="AddToCart"
+                                       asp-route-productId="@item.Id"
+                                       class="btn-cart">
+                                        Thêm vào giỏ
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="btn-cart disabled">
+                                        Hết hàng
+                                    </span>
+                                }
                             </div>
+
                         </div>
 
                         <div class="product-info">
@@ -184,7 +214,12 @@
                             <p class="product-price">
                                 @item.Price.ToString("N0") đ
                             </p>
+
+                            <p class="product-stock @(item.Stock == 0 ? "out-stock" : "")">
+                                @(item.Stock > 0 ? $"Còn {item.Stock} sản phẩm" : "Hết hàng")
+                            </p>
                         </div>
+
 
                     </div>
                 </div>
@@ -207,4 +242,44 @@
             el.classList.add('active');
         }
     </script>
+    <script>
+        window.addEventListener('load', function () {
+            const desc = document.getElementById('product-description');
+            const related = document.getElementById('related-box');
+
+            if (desc && related) {
+                related.style.maxHeight = desc.offsetHeight + 'px';
+                related.style.overflowY = 'auto';
+            }
+        });
+    </script>
+    @* <script>
+        function syncRelatedHeight() {
+            const desc = document.getElementById('product-description');
+            const relatedBox = document.getElementById('related-box');
+            const relatedList = relatedBox?.querySelector('.related-list');
+
+            if (!desc || !relatedBox || !relatedList) return;
+
+            // chiều cao tiêu đề
+            const titleHeight = relatedBox.querySelector('.related-title').offsetHeight;
+
+            // padding trên + dưới của box
+            const style = window.getComputedStyle(relatedBox);
+            const padding =
+                parseInt(style.paddingTop) + parseInt(style.paddingBottom);
+
+            // chiều cao list = mô tả - title - padding
+            const listHeight = desc.offsetHeight - titleHeight - padding;
+
+            relatedList.style.maxHeight = listHeight + 'px';
+            relatedList.style.overflowY = 'auto';
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(syncRelatedHeight, 100); // 🔥 CHỜ ẢNH + FONT
+        });
+
+        window.addEventListener('resize', syncRelatedHeight);
+    </script> *@
 }

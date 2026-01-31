@@ -79,23 +79,5 @@ window.filterProducts = function () {
 
 
 
-@section Scripts {
-    
 
-    <script>
-        function blockNegative(input) {
-            if (input.value < 0) {
-                input.value = 0;
-            }
-        }
-
-        document.getElementById("price").addEventListener("input", function () {
-            blockNegative(this);
-        });
-
-        document.getElementById("stock").addEventListener("input", function () {
-            blockNegative(this);
-        });
-    </script>
-}
 
