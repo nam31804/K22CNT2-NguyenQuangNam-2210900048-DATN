@@ -32,3 +32,153 @@
     font-size: 15.5px;
     line-height: 1.9;
 }
+/* ================== LAYOUT ================== */
+.promo-page {
+    display: grid;
+    grid-template-columns: 4fr 1.2fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* ================== CỘT ================== */
+.promo-main {
+    flex: 3;
+}
+
+.promo-sidebar {
+    flex: 1;
+}
+
+/* ================== BLOG LIST ================== */
+.promo-blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.promo-blog-item {
+    display: flex;
+    gap: 14px;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    border-radius: 6px;
+    background: #fff;
+}
+
+/* ================== IMAGE ================== */
+.promo-blog-thumb img {
+    width: 130px;
+    height: auto;
+    max-height: 130px;
+    object-fit: contain;
+    background: #f8f8f8;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+/* ================== CONTENT ================== */
+.promo-blog-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+    .promo-blog-title a {
+        color: #000;
+        text-decoration: none;
+    }
+
+.promo-blog-meta {
+    font-size: 12px;
+    color: #888;
+    margin: 4px 0 6px;
+}
+
+.promo-blog-desc {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.45;
+}
+
+/* ================== SIDEBAR ================== */
+.sidebar-box {
+    border: 1px solid #eee;
+    padding: 14px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.sidebar-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+/* ================== BÀI VIẾT LIÊN QUAN ================== */
+.sidebar-post {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #000;
+}
+
+    .sidebar-post img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+.sidebar-post-title {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sidebar-post-date {
+    font-size: 11px;
+    color: #888;
+}
+
+/* ================== SẢN PHẨM GỢI Ý ================== */
+.sidebar-product {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+    .sidebar-product img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+.sidebar-product-name {
+    font-size: 13px;
+}
+
+.sidebar-product-price {
+    color: #c00;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 992px) {
+    .promo-page {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-blog-item {
+        flex-direction: column;
+    }
+
+    .promo-blog-thumb img {
+        width: 100%;
+        max-height: none;
+    }
+}

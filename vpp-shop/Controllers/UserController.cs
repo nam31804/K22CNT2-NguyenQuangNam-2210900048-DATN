@@ -186,4 +186,101 @@ public class UserController : Controller
         ViewBag.Transactions = transactions;
         return View(wallet);
     }
+    [HttpGet]
+    public IActionResult GetOrderDetail(int id)
+    {
+        int userId = GetUserId();
+        if (userId == 0)
+            return Unauthorized();
+
+        var order = _context.Orders
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+            .FirstOrDefault(o => o.Id == id && o.UserId == userId);
+
+        if (order == null)
+            return NotFound();
+
+        return Json(new
+        {
+            order.Id,
+            order.ShippingName,
+            order.ShippingPhone,
+            order.ShippingAddress,
+            order.PaymentMethod,
+            order.Status,
+            order.TotalMoney,
+            Items = order.OrderItems.Select(i => new
+            {
+                i.Product.Name,
+                i.Product.Image,
+                i.Quantity,
+                i.Price
+            })
+        });
+    }
+    [HttpPost]
+    public IActionResult CancelOrderAjax(int orderId)
+    {
+        int userId = GetUserId();
+        if (userId == 0)
+            return Unauthorized();
+
+        using var tran = _context.Database.BeginTransaction();
+        try
+        {
+            var order = _context.Orders
+                .Include(o => o.OrderItems)
+                .FirstOrDefault(o => o.Id == orderId && o.UserId == userId);
+
+            if (order == null)
+                return Json(new { success = false });
+
+            if (order.Status != "PENDING" && order.Status != "PAID")
+                return Json(new { success = false });
+
+            // ✅ HOÀN KHO
+            foreach (var item in order.OrderItems)
+            {
+                var product = _context.Products.First(p => p.Id == item.ProductId);
+                product.Stock += item.Quantity;
+            }
+
+            // ✅ HOÀN TIỀN VÍ
+            if (order.PaymentMethod == "WALLET")
+            {
+                var wallet = _context.Wallets.First(w => w.UserId == userId);
+                wallet.Balance += order.TotalMoney;
+                wallet.UpdatedAt = DateTime.Now;
+
+                _context.WalletTransactions.Add(new WalletTransaction
+                {
+                    UserId = userId,
+                    Type = "REFUND",
+                    Amount = order.TotalMoney,
+                    Description = $"Hoàn tiền huỷ đơn #{order.Id}"
+                });
+            }
+
+            order.Status = "CANCELLED";
+
+            _context.OrderStatusHistories.Add(new OrderStatusHistory
+            {
+                OrderId = order.Id,
+                Status = "CANCELLED",
+                Note = "Khách hàng huỷ đơn"
+            });
+
+            _context.SaveChanges();
+            tran.Commit();
+
+            return Json(new { success = true });
+        }
+        catch
+        {
+            tran.Rollback();
+            return Json(new { success = false });
+        }
+    }
+
 }

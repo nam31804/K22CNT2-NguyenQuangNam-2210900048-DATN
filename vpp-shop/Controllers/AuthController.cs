@@ -26,6 +26,7 @@ namespace vpp_shop.Controllers
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             // ================= ADMIN / STAFF =================
+            // ================= ADMIN / STAFF =================
             var admin = await _context.Admins
                 .FirstOrDefaultAsync(a => a.Username == model.Email
                                        && a.Password == model.Password);
@@ -39,12 +40,25 @@ namespace vpp_shop.Controllers
                     return View();
                 }
 
-                HttpContext.Session.SetInt32("ADMIN_ID", admin.Id);
+                // ❗ XOÁ SESSION CŨ (RẤT QUAN TRỌNG)
+                HttpContext.Session.Remove("ADMIN_ID");
+                HttpContext.Session.Remove("STAFF_ID");
+
+                if (admin.Role == "ADMIN")
+                {
+                    HttpContext.Session.SetInt32("ADMIN_ID", admin.Id);
+                }
+                else if (admin.Role == "STAFF")
+                {
+                    HttpContext.Session.SetInt32("STAFF_ID", admin.Id);
+                }
+
                 HttpContext.Session.SetString("ADMIN_NAME", admin.FullName ?? "Admin");
                 HttpContext.Session.SetString("ADMIN_ROLE", admin.Role);
 
                 return RedirectToAction("Index", "Home", new { area = "Admin" });
             }
+
 
             // ================= USER =================
             var user = await _context.Users

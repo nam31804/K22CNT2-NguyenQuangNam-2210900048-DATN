@@ -6,7 +6,7 @@ using vpp_shop.Models;
 namespace vpp_shop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProductImageController : Controller
+    public class ProductImageController : AdminBaseController
     {
         private readonly VanPhongPhamDBContext _context;
 

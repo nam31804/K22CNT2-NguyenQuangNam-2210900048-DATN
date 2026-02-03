@@ -1,0 +1,192 @@
+﻿@model List<vpp_shop.Models.Voucher>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<link rel="stylesheet" href="~/css/admin/admin-voucher.css" />
+<!-- ===== HEADER ===== -->
+<h3 class="mb-2">Quản lý Voucher</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" onclick="openAddModal()">
+        + Thêm voucher
+    </button>
+</div>
+
+<!-- ===== SEARCH ===== -->
+<div class="row mb-4">
+    <div class="col-md-4">
+        <input type="text"
+               id="searchCode"
+               class="form-control"
+               placeholder="Gõ mã voucher..."
+               onkeyup="filterVoucher()" />
+    </div>
+</div>
+
+<!-- ===== TABLE ===== -->
+<table class="table table-bordered table-hover align-middle voucher-table">
+    <thead class="table-light">
+        <tr>
+            <th>Mã</th>
+            <th class="money">Giảm</th>
+            <th class="money">Đơn tối thiểu</th>
+            <th>Thời gian</th>
+            <th class="text-center">Lượt dùng</th>
+            <th>Trạng thái</th>
+            <th width="180">Thao tác</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var v in Model)
+        {
+            bool expired = v.EndDate != null && v.EndDate < DateTime.Now;
+
+            <tr class="voucher-row"
+                data-code="@v.Code.ToLower()"
+                data-active="@(v.IsActive == true)"
+                data-expired="@expired">
+
+                <td><b>@v.Code</b></td>
+
+                <td class="money text-end">
+                    @(v.DiscountType == "PERCENT"
+                                    ? $"{Convert.ToInt32(v.DiscountValue)}%"
+                                    : $"{v.DiscountValue:N0} đ")
+
+                </td>
+
+                <td class="money text-end">
+                    @((v.MinOrderValue ?? 0) % 1 == 0
+                                    ? $"{Convert.ToInt64(v.MinOrderValue ?? 0)}"
+                                    : $"{v.MinOrderValue}")
+                </td>
+
+                
+
+                <td>
+                    @v.StartDate?.ToString("dd/MM/yyyy")
+                    -
+                    @v.EndDate?.ToString("dd/MM/yyyy")
+                </td>
+
+                <td class="text-center">
+                    @(v.UsedCount ?? 0) / @(v.UsageLimit ?? 0)
+                </td>
+
+                <td class="status-col">
+                    @if (v.IsActive == false)
+                    {
+                        <span class="badge bg-danger">Khoá</span>
+                    }
+                    else if (expired)
+                    {
+                        <span class="badge bg-warning text-dark">Hết hạn</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                </td>
+
+
+                <td class="action-col">
+    <div class="action-group">
+        <button class="btn btn-warning btn-sm"
+                onclick="openEditModal(
+                    @v.Id,
+                    '@v.Code',
+                    '@v.DiscountType',
+                    '@v.DiscountValue',
+                    '@v.MinOrderValue',
+                    '@v.UsageLimit',
+                    '@(v.StartDate?.ToString("yyyy-MM-dd"))',
+                    '@(v.EndDate?.ToString("yyyy-MM-dd"))'
+                )">
+            Sửa
+        </button>
+
+        <a asp-action="Toggle"
+           asp-route-id="@v.Id"
+           class="btn btn-secondary btn-sm">
+            @(v.IsActive == true ? "Khoá" : "Mở")
+        </a>
+
+        <a asp-action="Delete"
+           asp-route-id="@v.Id"
+           onclick="return confirm('Xoá voucher này?')"
+           class="btn btn-danger btn-sm">
+            Xoá
+        </a>
+    </div>
+</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- ================= MODAL THÊM ================= -->
+<div class="modal fade" id="addModal">
+    <div class="modal-dialog">
+        <form asp-action="Create" method="post" class="modal-content">
+            <div class="modal-header">
+                <h5>Thêm Voucher</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input name="Code" class="form-control mb-2" placeholder="Mã voucher" required />
+
+                <select name="DiscountType" class="form-select mb-2">
+                    <option value="PERCENT">%</option>
+                    <option value="FIXED">Tiền</option>
+                </select>
+
+                <input name="DiscountValue" type="number" class="form-control mb-2" placeholder="Giá trị giảm" />
+                <input name="MinOrderValue" type="number" class="form-control mb-2" placeholder="Đơn tối thiểu" />
+                <input name="UsageLimit" type="number" class="form-control mb-2" placeholder="Giới hạn lượt dùng" />
+                <input name="StartDate" type="date" class="form-control mb-2" />
+                <input name="EndDate" type="date" class="form-control mb-2" />
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary">Lưu</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ================= MODAL SỬA ================= -->
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog">
+        <form asp-action="Update" method="post" class="modal-content">
+            <input type="hidden" id="editId" name="Id" />
+
+            <div class="modal-header">
+                <h5>Sửa Voucher</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input id="editCode" name="Code" class="form-control mb-2" />
+                <select id="editType" name="DiscountType" class="form-select mb-2">
+                    <option value="PERCENT">%</option>
+                    <option value="FIXED">Tiền</option>
+                </select>
+                <input id="editValue" name="DiscountValue" type="number" class="form-control mb-2" />
+                <input id="editMin" name="MinOrderValue" type="number" class="form-control mb-2" />
+                <input id="editLimit" name="UsageLimit" type="number" class="form-control mb-2" />
+                <input id="editStart" name="StartDate" type="date" class="form-control mb-2" />
+                <input id="editEnd" name="EndDate" type="date" class="form-control mb-2" />
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary">Cập nhật</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="~/js/admin/admin-voucher.js"></script>

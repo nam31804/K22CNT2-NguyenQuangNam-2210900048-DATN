@@ -5,7 +5,7 @@ using vpp_shop.Data;
 namespace vpp_shop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class UserController : Controller
+    public class UserController : AdminBaseController
     {
         private readonly VanPhongPhamDBContext _context;
 

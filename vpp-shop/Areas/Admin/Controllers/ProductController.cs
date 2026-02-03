@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 namespace vpp_shop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProductController : Controller
+    public class ProductController : AdminBaseController
     {
         private readonly VanPhongPhamDBContext _context;
 

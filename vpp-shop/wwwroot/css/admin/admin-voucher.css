@@ -1,0 +1,41 @@
+﻿.voucher-table th {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.voucher-table td {
+    vertical-align: middle;
+}
+
+.voucher-table td.money {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.voucher-table td.text-center {
+    text-align: center;
+}
+
+.voucher-table .badge {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+/* ===== CĂN GIỮA CỘT TRẠNG THÁI ===== */
+.voucher-table td.status-col {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* ===== CĂN GIỮA CỘT THAO TÁC ===== */
+.voucher-table td.action-col {
+    vertical-align: middle;
+}
+
+/* Nhóm nút */
+.voucher-table .action-group {
+    display: flex;
+    justify-content: center; /* giữa ngang */
+    align-items: center; /* giữa dọc */
+    gap: 6px;
+}

@@ -1,4 +1,9 @@
-﻿<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+﻿@{
+    var isAdmin = Context.Session.GetInt32("ADMIN_ID") != null;
+    var isStaff = Context.Session.GetInt32("STAFF_ID") != null;
+}
+
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center"
@@ -13,92 +18,144 @@
 
     <hr class="sidebar-divider my-0">
 
-    <!-- Dashboard -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="Home"
-           asp-action="Index">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-        </a>
-    </li>
+    <!-- Dashboard (Admin + Staff) -->
+    @if (isAdmin || isStaff)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="Home"
+               asp-action="Index">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+    }
 
     <hr class="sidebar-divider">
 
-    <!-- Categories -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="Category"
-           asp-action="Index">
-            <i class="fas fa-fw fa-tags"></i>
-            <span>Thể loại</span>
-        </a>
-    </li>
+    <!-- Thống kê sản phẩm (Admin + Staff) -->
+    @if (isAdmin || isStaff)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="ProductStats"
+               asp-action="Index">
+                <i class="fas fa-fw fa-chart-line"></i>
+                <span>Thống kê sản phẩm</span>
+            </a>
+        </li>
+    }
 
-    <!-- Products -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="Product"
-           asp-action="Index">
-            <i class="fas fa-fw fa-box"></i>
-            <span>Sản phẩm</span>
-        </a>
-        <!-- ảnh Products -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="ProductImage"
-           asp-action="Index">
-            <i class="fas fa-fw fa-images"></i>
-            <span>Ảnh sản phẩm</span>
-        </a>
-    </li>
+    <!-- Thể loại (Admin only) -->
+    @if (isAdmin)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="Category"
+               asp-action="Index">
+                <i class="fas fa-fw fa-tags"></i>
+                <span>Thể loại</span>
+            </a>
+        </li>
+    }
 
+    <!-- Sản phẩm (Admin + Staff) -->
+    @if (isAdmin || isStaff)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="Product"
+               asp-action="Index">
+                <i class="fas fa-fw fa-box"></i>
+                <span>Sản phẩm</span>
+            </a>
+        </li>
+    }
 
+    <!-- Ảnh sản phẩm (Admin + Staff) -->
+    @if (isAdmin || isStaff)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="ProductImage"
+               asp-action="Index">
+                <i class="fas fa-fw fa-images"></i>
+                <span>Ảnh sản phẩm</span>
+            </a>
+        </li>
+    }
 
-    <!-- Orders -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="Order"
-           asp-action="Index">
-            <i class="fas fa-fw fa-shopping-cart"></i>
-            <span>Đơn hàng</span>
-        </a>
-    </li>
+    <!-- Đơn hàng (Admin + Staff) -->
+    @if (isAdmin || isStaff)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="Order"
+               asp-action="Index">
+                <i class="fas fa-fw fa-shopping-cart"></i>
+                <span>Đơn hàng</span>
+            </a>
+        </li>
+    }
 
-    <!-- Users -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="User"
-           asp-action="Index">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Người dùng</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="ProductPromotion"
-           asp-action="Index">
-            <i class="fas fa-fw fa-bullhorn"></i>
-            <span>Bài viết</span>
-        </a>
-    </li>
+    <!-- Người dùng (Admin only) -->
+    @if (isAdmin)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="User"
+               asp-action="Index">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Người dùng</span>
+            </a>
+        </li>
+    }
 
-    <!-- Staff -->
-    <li class="nav-item">
-        <a class="nav-link"
-           asp-area="Admin"
-           asp-controller="Staff"
-           asp-action="Index">
-            <i class="fas fa-fw fa-user-tie"></i>
-            <span>Nhân viên</span>
-        </a>
-    </li>
+    <!-- Bài viết (Admin only) -->
+    @if (isAdmin)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="ProductPromotion"
+               asp-action="Index">
+                <i class="fas fa-fw fa-bullhorn"></i>
+                <span>Bài viết</span>
+            </a>
+        </li>
+    }
+
+    <!-- Nhân viên (Admin only) -->
+    @if (isAdmin)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="Staff"
+               asp-action="Index">
+                <i class="fas fa-fw fa-user-tie"></i>
+                <span>Nhân viên</span>
+            </a>
+        </li>
+    }
+    @if (isAdmin || isStaff)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Admin"
+               asp-controller="Voucher"
+               asp-action="Index">
+                <i class="fas fa-fw fa-ticket-alt"></i>
+                <span>Voucher</span>
+            </a>
+        </li>
+    }
 
 </ul>

@@ -3,6 +3,9 @@
     var promotions = ViewBag.Promotions as List<vpp_shop.Models.ProductPromotion>;
 }
 
+@{
+    var bestSellers = ViewBag.BestSellers as List<vpp_shop.Models.Product>;
+}
 
 <!-- ================= BANNER ================= -->
 <div class="home-banner">
@@ -22,6 +25,66 @@
         <span class="dot"></span>
     </div>
 </div>
+@if (bestSellers != null && bestSellers.Any())
+{
+    <div class="container mt-5">
+        <h3 class="home-title">🔥 Sản phẩm bán chạy</h3>
+
+        <div class="row">
+            @foreach (var item in bestSellers)
+            {
+                <div class="col-product mb-4">
+                    <div class="product-item @(item.Stock == 0 ? "out-of-stock" : "")">
+
+                        <div class="product-thumb">
+                            <a href="/Product/Detail/@item.Id">
+                                <img src="~/images/products/@item.Image" alt="@item.Name">
+
+                                @if (item.Stock == 0)
+                                {
+                                    <!-- ✅ GẠCH / OVERLAY HẾT HÀNG -->
+                                    <div class="sold-out-badge">HẾT</div>
+                                }
+                            </a>
+
+                            <div class="product-actions">
+                                @if (item.Stock > 0)
+                                {
+                                    <a asp-controller="Cart"
+                                       asp-action="AddToCart"
+                                       asp-route-productId="@item.Id"
+                                       class="btn-cart">
+                                        Thêm vào giỏ
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="btn-cart disabled">Hết hàng</span>
+                                }
+                            </div>
+                        </div>
+
+
+                        <div class="product-info">
+                            <a href="/Product/Detail/@item.Id" class="product-name">
+                                @item.Name
+                            </a>
+
+                            <p class="product-price">
+                                @item.Price.ToString("N0") đ
+                            </p>
+
+                            <p class="product-stock @(item.Stock == 0 ? "out-stock" : "")">
+                                @(item.Stock > 0 ? $"Còn {item.Stock} sản phẩm" : "Hết hàng")
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
 
 <!-- ================= KHUYẾN MÃI ================= -->
 <div class="container mt-5">
@@ -118,6 +181,9 @@
 
                         <p class="product-price">
                             @item.Price.ToString("N0") đ
+                        </p>
+                        <p class="product-stock @(item.Stock == 0 ? "out-stock" : "")">
+                            @(item.Stock > 0 ? $"Còn {item.Stock} sản phẩm" : "Hết hàng")
                         </p>
                     </div>
 

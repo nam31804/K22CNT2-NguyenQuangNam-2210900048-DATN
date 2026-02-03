@@ -5,7 +5,7 @@ using vpp_shop.Models.ViewModels;
 namespace vpp_shop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class HomeController : Controller
+    public class HomeController : AdminBaseController
     {
         private readonly VanPhongPhamDBContext _context;
 
@@ -16,10 +16,7 @@ namespace vpp_shop.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            if (HttpContext.Session.GetInt32("ADMIN_ID") == null)
-            {
-                return RedirectToAction("Login", "Auth", new { area = "" });
-            }
+            
 
             var model = new AdminDashboardViewModel();
 

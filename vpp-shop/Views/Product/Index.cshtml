@@ -142,16 +142,25 @@
             </div>
             @if (ViewBag.TotalPage > 1)
             {
-                <div class="pagination-wrap">
+                <div class="order-pagination">
                     @for (int i = 1; i <= ViewBag.TotalPage; i++)
                     {
-                        <a href="?page=@i"
-                           class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
-                            @i
-                        </a>
+                        if (i == ViewBag.CurrentPage)
+                        {
+                            <span class="page-number active">@i</span>
+                        }
+                        else
+                        {
+                            <a class="page-number"
+                               asp-action="Index"
+                               asp-route-page="@i">
+                                @i
+                            </a>
+                        }
                     }
                 </div>
             }
+
 
 
         </div>

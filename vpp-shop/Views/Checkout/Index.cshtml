@@ -1,4 +1,5 @@
-﻿@model vpp_shop.Models.ViewModels.CheckoutViewModel
+﻿
+@model vpp_shop.Models.ViewModels.CheckoutViewModel
 
 <link rel="stylesheet" href="~/css/web/checkout.css" />
 
@@ -9,6 +10,70 @@
         <!-- ================= LEFT ================= -->
         <div class="checkout-left">
 
+            @* ===== CHỌN ĐỊA CHỈ ĐÃ LƯU ===== *@
+            @if (Model.SavedAddresses != null && Model.SavedAddresses.Any())
+            {
+                <div class="checkout-card">
+
+                    <div class="checkout-title address-toggle" id="toggleAddress">
+                        📦 Chọn địa chỉ giao hàng
+                        
+                    </div>
+
+                    <!-- MẶC ĐỊNH ẨN -->
+                    <div id="addressList" class="address-list hidden">
+
+                        <!-- 🔥 NHẬP ĐỊA CHỈ MỚI (LÊN ĐẦU) -->
+                        <div class="address-item new-address">
+                            <label class="address-radio">
+                                <input type="radio"
+                                       name="SelectedAddressId"
+                                       value="" />
+                                <div class="address-content">
+                                    <div class="address-name">+Nhập địa chỉ mới</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        @foreach (var addr in Model.SavedAddresses)
+                        {
+                            <div class="address-item">
+                                <label class="address-radio">
+                                    <input type="radio"
+                                           name="SelectedAddressId"
+                                           value="@addr.Id"
+                                           data-name="@addr.ReceiverName"
+                                           data-phone="@addr.Phone"
+                                           data-address="@addr.Address"
+                                           data-city="@addr.City"
+                                           data-district="@addr.District" />
+
+                                    <div class="address-content">
+                                        <div class="address-name">
+                                            @addr.ReceiverName - @addr.Phone
+                                        </div>
+                                        <div class="address-detail">
+                                            @addr.Address, @addr.District, @addr.City
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <button type="button"
+                                        class="delete-address"
+                                        data-id="@addr.Id"
+                                        title="Xoá địa chỉ">
+                                    ✕
+                                </button>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+
+            }
+
+            @* ===== THÔNG TIN MUA HÀNG ===== *@
             <div class="checkout-card">
                 <div class="checkout-title">📍 Thông tin mua hàng</div>
 
@@ -28,11 +93,11 @@
                        required />
 
                 <div class="row-2">
-                    <select id="city" name="City" required>
+                    <select class="form-control" asp-for="City" id="city" required>
                         <option value="">Tỉnh / Thành phố</option>
                     </select>
 
-                    <select id="district" name="District" required>
+                    <select class="form-control" asp-for="District" id="district" required>
                         <option value="">Quận / Huyện</option>
                     </select>
                 </div>
@@ -41,8 +106,14 @@
                           asp-for="Note"
                           placeholder="Ghi chú đơn hàng (tuỳ chọn)">
                 </textarea>
+
+                <label style="margin-top:10px; display:block;">
+                    <input type="checkbox" asp-for="SaveAddress" checked />
+                    Lưu địa chỉ này cho lần sau
+                </label>
             </div>
 
+            @* ===== THANH TOÁN ===== *@
             <div class="checkout-card">
                 <div class="checkout-title">💳 Thanh toán</div>
 
@@ -50,12 +121,12 @@
                     <input type="radio" name="PaymentMethod" value="COD" checked />
                     Thanh toán khi nhận hàng (COD)
                 </label>
+
                 <label class="radio">
-                    <input type="radio"
-                           name="PaymentMethod"
-                           value="WALLET" />
+                    <input type="radio" name="PaymentMethod" value="WALLET" />
                     Thanh toán bằng ví
                 </label>
+
                 <label class="radio">
                     <input type="radio" name="PaymentMethod" value="BANK" />
                     Thanh toán qua VNPAY
@@ -85,7 +156,7 @@
                 <input type="hidden" name="itemIds" value="@item.Id" />
             }
 
-            <!-- VOUCHER -->
+            @* ===== VOUCHER ===== *@
             <div class="voucher-box">
                 <input type="text"
                        id="voucherCode"
@@ -127,5 +198,5 @@
 </form>
 
 @section Scripts {
-    <script src="~/js/checkout.js"></script>
+    <script src="~/js/checkout.js?v=@DateTime.Now.Ticks"></script>
 }

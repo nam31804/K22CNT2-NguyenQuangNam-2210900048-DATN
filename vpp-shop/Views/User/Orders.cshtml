@@ -38,13 +38,22 @@ else
                 <th>Tổng tiền</th>
                 <th>Thanh toán</th>
                 <th>Trạng thái</th>
+                <th>Hành động</th>
             </tr>
         </thead>
+
         <tbody>
             @foreach (var o in Model)
             {
                 <tr>
-                    <td>#@o.Id</td>
+                    <td>
+                        <a href="javascript:void(0)"
+                           onclick="viewOrder(@o.Id)"
+                           class="fw-bold text-decoration-none">
+                            #@o.Id
+                        </a>
+                    </td>
+
 
                     <td>
                         @o.CreatedAt?.ToString("dd/MM/yyyy HH:mm")
@@ -79,7 +88,15 @@ else
                             @o.Status
                         </span>
                     </td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary"
+                                onclick="viewOrder(@o.Id)">
+                            Xem
+                        </button>
+                    </td>
                 </tr>
+            
+
             }
         </tbody>
     </table>
@@ -108,3 +125,79 @@ else
     }
 
 }
+<div class="modal fade" id="orderDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chi tiết đơn hàng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body" id="orderDetailContent">
+                <!-- JS render -->
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function viewOrder(orderId) {
+        fetch(`/User/GetOrderDetail?id=${orderId}`)
+            .then(res => res.json())
+            .then(data => {
+
+                let html = `
+                    <p><b>Người nhận:</b> ${data.shippingName}</p>
+                    <p><b>SĐT:</b> ${data.shippingPhone}</p>
+                    <p><b>Địa chỉ:</b> ${data.shippingAddress}</p>
+                    <p><b>Thanh toán:</b> ${data.paymentMethod}</p>
+                    <p><b>Trạng thái:</b> ${data.status}</p>
+                    <hr>
+                `;
+
+                data.items.forEach(i => {
+                    html += `
+                    <div class="d-flex gap-3 mb-2 align-items-center">
+                        <img src="/images/products/${i.image}" width="60">
+                        <div>
+                            <div>${i.name}</div>
+                            <small>SL: ${i.quantity} × ${i.price.toLocaleString()} đ</small>
+                        </div>
+                    </div>`;
+                });
+
+                if (data.status === "PENDING" || data.status === "PAID") {
+                    html += `
+                        <hr>
+                        <button class="btn btn-danger"
+                            onclick="cancelOrder(${data.id})">
+                            Huỷ đơn hàng
+                        </button>
+                    `;
+                }
+
+                document.getElementById("orderDetailContent").innerHTML = html;
+                new bootstrap.Modal(document.getElementById("orderDetailModal")).show();
+            });
+    }
+
+    function cancelOrder(orderId) {
+        if (!confirm("Bạn chắc chắn muốn huỷ đơn này?")) return;
+
+        fetch('/User/CancelOrderAjax', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `orderId=${orderId}`
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                alert("Huỷ đơn thành công!");
+                location.reload();
+            } else {
+                alert("Không thể huỷ đơn này!");
+            }
+        });
+    }
+</script>

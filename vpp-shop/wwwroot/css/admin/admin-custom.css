@@ -1,0 +1,36 @@
+﻿/* ===============================
+   FIX SIDEBAR CỐ ĐỊNH - SB ADMIN 2
+================================ */
+
+/* Ngăn body cuộn ngang */
+body {
+    overflow-x: hidden;
+}
+
+/* Wrapper không cuộn */
+#wrapper {
+    display: flex;
+}
+
+/* Sidebar đứng im */
+#wrapper .sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 224px;          /* CHUẨN SB-ADMIN-2 */
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1030;
+}
+
+/* Đẩy content sang phải */
+#wrapper #content-wrapper {
+    margin-left: 224px;    /* PHẢI = width sidebar */
+    width: calc(100% - 224px);
+}
+
+/* Chỉ cho content cuộn */
+#wrapper #content {
+    overflow-y: auto;
+    min-height: 100vh;
+}

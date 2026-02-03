@@ -1,0 +1,131 @@
+﻿@model List<vpp_shop.Models.ProductPromotion>
+
+<div class="container mt-5">
+    <h3 class="home-title">Bài viết</h3>
+
+    <div class="promo-page">
+
+        <!-- ===== CỘT TRÁI: DANH SÁCH BÀI VIẾT ===== -->
+        <div class="promo-main">
+
+            <div class="promo-blog-list">
+                @foreach (var p in Model)
+                {
+                    <div class="promo-blog-item">
+
+                        <div class="promo-blog-thumb">
+                            <a asp-controller="Promotion"
+                               asp-action="Detail"
+                               asp-route-id="@p.Id">
+                                <img src="~/images/products/@p.Product.Image"
+                                     alt="@p.Title" />
+                            </a>
+                        </div>
+
+                        <div class="promo-blog-content">
+                            <h4 class="promo-blog-title">
+                                <a asp-controller="Promotion"
+                                   asp-action="Detail"
+                                   asp-route-id="@p.Id">
+                                    @p.Title
+                                </a>
+                            </h4>
+
+
+                            <div class="promo-blog-meta">
+                                <i class="fa fa-calendar"></i>
+                                @p.CreatedAt.ToString("dd/MM/yyyy")
+                            </div>
+
+                            <p class="promo-blog-desc">
+                                @{
+                                    var text = System.Text.RegularExpressions.Regex
+                                        .Replace(p.Content ?? "", "<.*?>", "");
+
+                                    if (text.Length > 140)
+                                    {
+                                        @text.Substring(0, 140)<text>...</text>
+                                    }
+                                    else
+                                    {
+                                        @text
+                                    }
+                                }
+                            </p>
+                        </div>
+
+                    </div>
+                }
+            </div>
+
+            <!-- pagination giữ nguyên ở đây -->
+        </div>
+
+        <!-- ===== CỘT PHẢI: SIDEBAR ===== -->
+        <aside class="promo-sidebar">
+
+            <!-- BÀI VIẾT LIÊN QUAN -->
+            <div class="sidebar-box">
+                <h4 class="sidebar-title">Tin liên quan</h4>
+
+                @foreach (var p in ViewBag.RelatedPromotions)
+                {
+                    <a class="sidebar-post"
+                       asp-controller="Promotion"
+                       asp-action="Detail"
+                       asp-route-id="@p.Id">
+
+                        <img src="~/images/products/@p.Product.Image" />
+                        <div>
+                            <div class="sidebar-post-title">@p.Title</div>
+                            <span class="sidebar-post-date">
+                                @p.CreatedAt.ToString("dd/MM/yyyy")
+                            </span>
+                        </div>
+                    </a>
+                }
+            </div>
+
+            <!-- CÓ THỂ BẠN THÍCH -->
+            <div class="sidebar-box">
+                <h4 class="sidebar-title">Có thể bạn thích</h4>
+
+                @foreach (var pr in ViewBag.SuggestProducts)
+                {
+                    <div class="sidebar-product">
+                        <img src="~/images/products/@pr.Image" />
+                        <div>
+                            <div class="sidebar-product-name">@pr.Name</div>
+                            <div class="sidebar-product-price">
+                                @pr.Price.ToString("N0") đ
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </aside>
+    </div>
+</div>
+<!-- PHÂN TRANG -->
+@if (ViewBag.TotalPages > 1)
+{
+    <div class="order-pagination">
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            if (i == ViewBag.CurrentPage)
+            {
+                <span class="page-number active">@i</span>
+            }
+            else
+            {
+                <a class="page-number"
+                   asp-action="Index"
+                   asp-route-page="@i">
+                    @i
+                </a>
+            }
+        }
+    </div>
+}
+

@@ -1,0 +1,93 @@
+﻿@model vpp_shop.Models.ViewModels.DashboardProductVM
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/admin/admin-stats.css" />
+
+<div class="product-stats">
+
+
+
+    <!-- ===== PODIUM TOP 1–2–3 ===== -->
+    <h4>🏆 Top 3 sản phẩm bán chạy</h4>
+
+    <div class="podium">
+
+        @* TOP 2 (BÊN TRÁI) *@
+        @if (Model.Top3.Count > 1)
+        {
+            <div class="podium-item top2">
+                <div class="podium-rank">Top 2</div>
+                <img src="@Model.Top3[1].Image" alt="@Model.Top3[1].Name" />
+                <h5>@Model.Top3[1].Name</h5>
+                <p><b>@Model.Top3[1].TotalSold</b> đã bán</p>
+            </div>
+        }
+
+        @* TOP 1 (Ở GIỮA – CAO NHẤT) *@
+        @if (Model.Top3.Count > 0)
+        {
+            <div class="podium-item top1">
+                <div class="podium-rank">Top 1</div>
+                <img src="@Model.Top3[0].Image" alt="@Model.Top3[0].Name" />
+                <h5>@Model.Top3[0].Name</h5>
+                <p><b>@Model.Top3[0].TotalSold</b> đã bán</p>
+            </div>
+        }
+
+        @* TOP 3 (BÊN PHẢI) *@
+        @if (Model.Top3.Count > 2)
+        {
+            <div class="podium-item top3">
+                <div class="podium-rank">Top 3</div>
+                <img src="@Model.Top3[2].Image" alt="@Model.Top3[2].Name" />
+                <h5>@Model.Top3[2].Name</h5>
+                <p><b>@Model.Top3[2].TotalSold</b> đã bán</p>
+            </div>
+        }
+
+    </div>
+
+    <!-- ===== TOP 4–10 ===== -->
+    <h4>Top sản phẩm bán chạy</h4>
+    <ul class="top-list">
+        @foreach (var p in Model.Top4To10)
+        {
+            <li>
+                <span>@p.Name</span>
+                <b>@p.TotalSold</b>
+            </li>
+        }
+    </ul>
+
+    <!-- ===== LOW / NO SALES ===== -->
+    <div class="low-sales">
+        <h4>⚠️ Sản phẩm bán ít / không bán</h4>
+        <ul>
+            @foreach (var name in Model.LowOrNoSales)
+            {
+                <li>@name</li>
+            }
+        </ul>
+    </div>
+
+    <!-- ===== SUMMARY ===== -->
+    <div class="summary">
+        <div class="card hot">
+            🔥 Bán chạy<br />
+            <span>@Model.BanChay</span>
+        </div>
+        <div class="card medium">
+            ⚠️ Bán ít<br />
+            <span>@Model.BanIt</span>
+        </div>
+        <div class="card cold">
+            ❌ Không bán<br />
+            <span>@Model.KhongBan</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/js/admin/product-stats.js"></script>

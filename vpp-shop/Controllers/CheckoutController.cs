@@ -51,6 +51,8 @@ namespace vpp_shop.Controllers
                 Address = address?.Address ?? "",
                 TotalMoney = total,
                 SavedAddresses = addresses,
+                City = address?.City ?? "",
+                District = address?.District ?? "",
                 PaymentMethod = "COD" // mặc định
             };
 
@@ -60,7 +62,7 @@ namespace vpp_shop.Controllers
         // =========================
         // POST: XÁC NHẬN ĐẶT HÀNG
         // =========================
-        [HttpPost]
+
         [HttpPost]
         public async Task<IActionResult> Confirm(
     CheckoutViewModel model,
@@ -179,7 +181,7 @@ namespace vpp_shop.Controllers
             _context.CartItems.RemoveRange(items);
 
             // =============================
-            // 7️⃣ THANH TOÁN WALLET (NẾU CÓ)
+            // 7️⃣ THANH TOÁN WALLET
             // =============================
             if (model.PaymentMethod == "WALLET")
             {
@@ -197,7 +199,6 @@ namespace vpp_shop.Controllers
 
                 order.Status = "PAID";
 
-                // 🔥 GHI LỊCH SỬ GIAO DỊCH VÍ (RẤT NÊN)
                 _context.WalletTransactions.Add(new WalletTransaction
                 {
                     UserId = userId.Value,
@@ -207,11 +208,54 @@ namespace vpp_shop.Controllers
                     CreatedAt = DateTime.Now
                 });
             }
+            // =============================
+            // 8️⃣ THANH TOÁN VNPAY
+            // =============================
+            else if (model.PaymentMethod == "BANK")
+            {
+                // ❗ CHƯA PAID – CHỜ VNPAY CALLBACK
+                order.Status = "PENDING";
+                await _context.SaveChangesAsync();
 
+                return RedirectToAction(
+                    "CreateVnpayPayment",
+                    "Payment",
+                    new { orderId = order.Id }
+                );
+            }
+
+            // =============================
+            // 9️⃣ LƯU DB & KẾT THÚC
+            // =============================
             await _context.SaveChangesAsync();
 
+            // COD / WALLET → lịch sử đơn hàng
             return RedirectToAction("History", "Orders");
         }
+            [HttpPost]
+        public async Task<IActionResult> DeleteAddress([FromBody] DeleteAddressRequest model)
+        {
+            var userId = HttpContext.Session.GetInt32("USER_ID");
+            if (userId == null)
+                return Json(new { success = false });
+
+            var address = await _context.UserAddresses
+                .FirstOrDefaultAsync(a => a.Id == model.Id && a.UserId == userId);
+
+            if (address == null)
+                return Json(new { success = false });
+
+            _context.UserAddresses.Remove(address);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true });
+        }
+
+        public class DeleteAddressRequest
+        {
+            public int Id { get; set; }
+        }
+
 
     }
 }

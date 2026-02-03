@@ -6,7 +6,7 @@ using System.Linq;
 namespace vpp_shop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class StaffController : Controller
+    public class StaffController : AdminBaseController
     {
         private readonly VanPhongPhamDBContext _context;
 

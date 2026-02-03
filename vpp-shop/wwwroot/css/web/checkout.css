@@ -10,7 +10,7 @@
     background: #fff;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    
 }
 
 .checkout-title {
@@ -132,4 +132,111 @@
     margin-top: 12px;
     color: #1a8f3c;
     text-align: center;
+}
+/* ===============================
+   ADDRESS BOX – ĐỒNG BỘ CHECKOUT CARD
+================================ */
+
+/* kế thừa checkout-card */
+.address-box {
+    padding: 20px;                /* ✅ đồng bộ */
+    border-radius: 10px;          /* ✅ đồng bộ */
+    margin-bottom: 20px;          /* ✅ đồng bộ */
+}
+
+/* header chọn địa chỉ */
+.address-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+    margin-bottom: 0;             /* tránh bị thừa khoảng trắng */
+}
+
+/* danh sách xổ xuống */
+.address-list {
+    margin-top: 14px;
+    max-height: 240px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px;
+    background: #fff;
+}
+
+/* từng địa chỉ */
+.address-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.address-item:hover {
+    background: #f5fdf7;
+}
+
+/* radio + content */
+.address-radio {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.address-radio input[type="radio"] {
+    margin-top: 4px;
+}
+
+.address-content {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.address-name {
+    font-weight: 600;
+    color: #111;
+}
+
+.address-detail {
+    font-size: 13px;
+    color: #555;
+}
+
+/* nút xoá */
+.delete-address {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #f3f4f6;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.delete-address:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* nhập địa chỉ mới */
+.address-item.new-address {
+    border-top: 1px dashed #e5e7eb;
+    margin-top: 8px;
+    padding-top: 14px;
+}
+
+/* ẩn danh sách */
+.hidden {
+    display: none;
 }

@@ -1,0 +1,110 @@
+﻿<div class="contact-page container">
+    <h2 class="contact-title">LIÊN HỆ VỚI NAM SUPPLIES</h2>
+
+    <div class="contact-grid">
+        <!-- Thông tin công ty -->
+        <div class="contact-box">
+            <h3>Thông tin công ty</h3>
+            <p><strong>Công ty:</strong> Website văn phòng phẩm công ty Nam Supplies</p>
+            <p><strong>ĐKKD:</strong> 0100100216...</p>
+            <p><strong>Trụ sở:</strong> 25 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> 0707 431 804</p>
+            <p><strong>Email:</strong> dvkh@NamSupplies.com.vn</p>
+            <p><strong>Giờ làm việc:</strong> 08h00 – 17h00 (Thứ 2 – Thứ 6)</p>
+        </div>
+
+        <!-- Hotline -->
+        <div class="contact-box">
+            <h3>Hotline hỗ trợ</h3>
+            <p class="hotline">0707 431 804</p>
+            <p>Hỗ trợ đặt hàng & tư vấn</p>
+        </div>
+
+        <!-- Hệ thống cửa hàng -->
+        <div class="contact-box">
+            <h3>Hệ thống cửa hàng</h3>
+
+            <div class="store-list">
+                <div class="store-card active"
+                     onclick="selectStore(this, '25 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội')">
+                    <h4>Lý Thường Kiệt</h4>
+                    <p>25 Lý Thường Kiệt, P. Cửa Nam, Hoàn Kiếm, Hà Nội</p>
+                </div>
+
+                <div class="store-card"
+                     onclick="selectStore(this, 'Vincom Plaza Long Biên, Hà Nội')">
+                    <h4>Vincom Long Biên</h4>
+                    <p>Tầng 1, TTTM Vincom Plaza Long Biên, Hà Nội</p>
+                </div>
+
+                <div class="store-card"
+                     onclick="selectStore(this, 'Aeon Mall Hà Đông, Hà Nội')">
+                    <h4>Aeon Mall Hà Đông</h4>
+                    <p>Tầng 2, Aeon Mall Hà Đông, Hà Nội</p>
+                </div>
+
+                <div class="store-card"
+                     onclick="selectStore(this, 'Royal City, Hà Nội')">
+                    <h4>Royal City</h4>
+                    <p>B2, TTTM Royal City, Thanh Xuân, Hà Nội</p>
+                </div>
+
+                <div class="store-card"
+                     onclick="selectStore(this, 'Times City, Hà Nội')">
+                    <h4>Times City</h4>
+                    <p>Tầng 1, TTTM Times City, Hai Bà Trưng, Hà Nội</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kết nối -->
+        <div class="contact-box">
+            <h3>Kết nối với chúng tôi</h3>
+            <div class="contact-social vertical">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="~/images/banner/facebook.png" />
+                    <span>Facebook</span>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="~/images/banner/twitter.png" />
+                    <span>Twitter</span>
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <img src="~/images/banner/youtube.png" />
+                    <span>YouTube</span>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="~/images/banner/instar.png" />
+                    <span>Instagram</span>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div class="contact-map">
+        <iframe id="storeMap"
+                src="https://www.google.com/maps?q=25%20Lý%20Thường%20Kiệt%20Hà%20Nội&output=embed"
+                width="100%" height="380"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<script>
+    function selectStore(element, address) {
+        document.querySelectorAll('.store-card')
+            .forEach(x => x.classList.remove('active'));
+
+        element.classList.add('active');
+
+        document.getElementById("storeMap").src =
+            "https://www.google.com/maps?q=" +
+            encodeURIComponent(address) +
+            "&output=embed";
+    }
+</script>
