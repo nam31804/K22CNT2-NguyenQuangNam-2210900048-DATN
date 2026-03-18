@@ -48,3 +48,32 @@ function togglePassword(id) {
 $(function () {
     loadStaff();
 });
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadStaff();
+
+    // ===== LOAD LIST =====
+    function loadStaff(keyword = "") {
+        fetch(`/Admin/Staff/List?keyword=${encodeURIComponent(keyword)}`)
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("staffTable").innerHTML = html;
+            });
+    }
+
+    // ===== SEARCH =====
+    document.getElementById("searchStaff").addEventListener("input", function () {
+        loadStaff(this.value);
+    });
+
+    // ===== XOÁ =====
+    window.deleteStaff = function (id) {
+        if (!confirm("Xoá staff này?")) return;
+
+        fetch("/Admin/Staff/Delete?id=" + id, {
+            method: "POST"
+        }).then(() => loadStaff());
+    };
+
+
+});

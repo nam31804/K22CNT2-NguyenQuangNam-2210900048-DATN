@@ -2,10 +2,15 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
+<link rel="stylesheet" href="~/css/admin/admin-product.css" />
 <h3>Quản lý người dùng</h3>
 
-<input id="search" class="form-control mb-3" placeholder="Tìm ID hoặc tên" />
+<div class="search-wrap mb-3">
+    <input id="search"
+           class="form-control"
+           placeholder="Tìm ID hoặc tên" />
+</div>
+
 
 <table class="table table-bordered align-middle">
     <thead>

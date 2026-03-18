@@ -2,18 +2,21 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+<link rel="stylesheet" href="~/css/admin/admin-product.css" />
+<h1 class="h3 mb-4">Quản lý sản phẩm</h1>
 
-<h1 class="h3 mb-4 text-gray-800">Quản lý sản phẩm</h1>
-
-<button class="btn btn-primary mb-3" onclick="openCreateModal()">
-    + Thêm sản phẩm
-</button>
-<input type="text"
-       id="searchBox"
-       class="form-control mb-3"
-       placeholder="Gõ ID hoặc tên sản phẩm..."
-       onkeyup="filterProducts()" />
-
+    <button class="btn btn-primary" onclick="openCreateModal()">
+        + Thêm sản phẩm
+    </button>
+    <div class="product-toolbar mb-3">
+    <div class="search-wrap">
+        <input type="text"
+               id="searchBox"
+               class="form-control"
+               placeholder="Gõ ID hoặc tên sản phẩm..."
+               onkeyup="filterProducts()" />
+    </div>
+</div>
 
 
 
@@ -72,24 +75,29 @@
                 </td>
 
                 <td>
-                    <button class="btn btn-sm btn-warning mb-1"
-                            onclick="openEditModal(@p.Id)">
-                        Sửa
-                    </button>
-
-                    <form asp-area="Admin"
-                          asp-controller="Product"
-                          asp-action="Delete"
-                          method="post"
-                          style="display:inline"
-                          onsubmit="return confirm('Bạn có chắc muốn xoá sản phẩm này?');">
-                        @Html.AntiForgeryToken()
-                        <input type="hidden" name="id" value="@p.Id" />
-                        <button type="submit" class="btn btn-sm btn-danger">
-                            Xoá
+                    <div class="action-buttons">
+                        <button type="button"
+                                class="btn btn-sm btn-warning"
+                                onclick="openEditModal(@p.Id)">
+                            Sửa
                         </button>
-                    </form>
+
+                        <form asp-area="Admin"
+                              asp-controller="Product"
+                              asp-action="Delete"
+                              method="post"
+                              onsubmit="return confirm('Bạn có chắc muốn xoá sản phẩm này?');">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@p.Id" />
+                            <button type="submit"
+                                    class="btn btn-sm btn-danger">
+                                Xoá
+                            </button>
+                        </form>
+                    </div>
                 </td>
+
+
             </tr>
         }
     </tbody>

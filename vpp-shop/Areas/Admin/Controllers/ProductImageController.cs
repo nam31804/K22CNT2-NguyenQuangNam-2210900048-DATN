@@ -18,14 +18,23 @@ namespace vpp_shop.Areas.Admin.Controllers
         // =========================
         // INDEX: LIST SẢN PHẨM + ẢNH CHÍNH + ẢNH PHỤ
         // =========================
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string keyword)
         {
-            var products = await _context.Products
+            var query = _context.Products
                 .Include(p => p.ProductImages)
-                .ToListAsync();
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                query = query.Where(p => p.Name.Contains(keyword));
+            }
+
+            var products = await query.ToListAsync();
+            ViewBag.Keyword = keyword;
 
             return View(products);
         }
+
 
         // =========================
         // ADD MULTIPLE SUB IMAGES

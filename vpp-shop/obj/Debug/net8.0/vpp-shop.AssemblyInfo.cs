@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vpp-shop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7759d9f7b2f6cbd5c53b24c983e1f8638f4181bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21b6d7b15874882e5dc1dd5c2ecfee7ade2a6050")]
 [assembly: System.Reflection.AssemblyProductAttribute("vpp-shop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vpp-shop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

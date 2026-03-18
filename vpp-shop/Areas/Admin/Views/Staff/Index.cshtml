@@ -7,6 +7,11 @@
 <button class="btn btn-primary mb-3" onclick="toggleCreate()">
     + Thêm staff
 </button>
+<div class="mb-3" style="width:320px">
+    <input id="searchStaff"
+           class="form-control"
+           placeholder="Tìm ID hoặc tên staff..." />
+</div>
 
 <!-- Form thêm staff -->
 <div id="createBox" class="card mb-3" style="display:none;">
@@ -24,5 +29,5 @@
 <div id="staffTable"></div>
 
 @section Scripts {
-    <script src="~/js/admin-staff.js"></script>
+    <script src="~/js/admin/admin-staff.js"></script>
 }

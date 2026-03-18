@@ -108,3 +108,14 @@ async function deleteCategory(id) {
 
     await reloadCategoryTable();
 }
+async function reloadCategoryTable(keyword = "") {
+    const res = await fetch(`/Admin/Category/ReloadTable?keyword=${encodeURIComponent(keyword)}`);
+    const html = await res.text();
+    document.getElementById('categoryTable').innerHTML = html;
+}
+const searchInput = document.getElementById('searchCategory');
+if (searchInput) {
+    searchInput.addEventListener('input', function () {
+        reloadCategoryTable(this.value);
+    });
+}

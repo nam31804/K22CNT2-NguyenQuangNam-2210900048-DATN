@@ -10,3 +10,31 @@
 #productModal textarea {
     resize: none;
 }
+
+/* ===============================
+   TOOLBAR + SEARCH
+================================ */
+.product-toolbar {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    gap: 12px;
+}
+
+.search-wrap {
+    width: 320px; /* 👈 CHỈNH 280–360 tuỳ thích */
+    flex-shrink: 0;
+}
+
+    .search-wrap .form-control {
+        width: 100%;
+    }
+.action-buttons {
+    display: flex;
+    gap: 6px; /* khoảng cách giữa 2 nút */
+    align-items: center;
+}
+
+    .action-buttons form {
+        margin: 0; /* bỏ margin mặc định của form */
+    }

@@ -1,0 +1,143 @@
+﻿.related-box {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 10px;
+    position: sticky;
+    top: 90px;
+    max-height: 400px; /* 🔥 GIỚI HẠN CHIỀU CAO */
+    overflow: hidden; /* KHÔNG CUỘN CẢ BOX */
+}
+
+
+
+    /* Ẩn scrollbar – vẫn cuộn được */
+    .related-box::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+.related-box {
+    scrollbar-width: none; /* Firefox */
+}
+
+
+
+.related-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+
+.related-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #000;
+    align-items: center; /* 🔥 CANH GIỮA THEO CHIỀU DỌC */
+    min-height: 70px; /* 🔥 CỐ ĐỊNH → KHÔNG LỆCH */
+}
+
+    .related-item:last-child {
+        border-bottom: none;
+    }
+
+    .related-item img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        flex-shrink: 0; /* 🔥 KHÔNG BỊ ÉP NHỎ */
+    }
+
+
+.related-name {
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 🔥 TỐI ĐA 2 DÒNG */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.related-price {
+    font-size: 13px;
+    color: #d70018;
+    font-weight: 600;
+    display: block;
+    margin-top: 2px;
+}
+
+
+
+/* KHỐI BỌC CẢ 2 CỘT */
+.product-detail-row {
+    align-items: stretch; /* 2 cột cao bằng nhau */
+}
+
+/* MÔ TẢ */
+.product-detail-box {
+    height: 100%;
+    border: 1px solid #eee;
+    padding: 16px;
+    background: #fff;
+}
+
+/* ok */
+/* ===== SẢN PHẨM CÙNG LOẠI ===== */
+.same-category-wrapper {
+    max-width: 1100px; /* 🔥 THU NHỎ KHỐI */
+    margin: 0 auto 40px; /* CĂN GIỮA */
+    padding: 0 12px;
+    margin-top: 25px;
+}
+
+/* TIÊU ĐỀ */
+.same-category-title {
+    text-align: center; /* 🔥 CĂN GIỮA CHỮ */
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pagination-wrap {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.page-item {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .page-item.active,
+    .page-item:hover {
+        background: #d70018;
+        color: #fff;
+        border-color: #d70018;
+    }
+
+.product-stock {
+    font-size: 12px;
+    color: #777;
+}
+
+    .product-stock.out-stock {
+        color: #aaa;
+        font-style: italic;
+    }
+
+.category-sidebar {
+    position: sticky;
+    top: 90px; /* chỉnh theo chiều cao header/menu */
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 15px;
+}

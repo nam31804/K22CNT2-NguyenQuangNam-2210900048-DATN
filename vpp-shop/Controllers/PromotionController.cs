@@ -44,6 +44,7 @@ public class PromotionController : Controller
 
 
     // 🔹 ĐỌC BÀI VIẾT
+    // 🔹 ĐỌC BÀI VIẾT
     public IActionResult Detail(int id)
     {
         var promo = _context.ProductPromotions
@@ -53,6 +54,32 @@ public class PromotionController : Controller
         if (promo == null)
             return NotFound();
 
+        /* ===== CỘT TRÁI: DANH MỤC (GIỐNG PRODUCT) ===== */
+        var groups = _context.CategoryGroups
+            .Include(g => g.Categories)
+            .ToList();
+
+        ViewBag.CategoryGroups = groups;
+        ViewBag.ActiveGroupId = null;
+        ViewBag.ActiveCategoryId = promo.Product.CategoryId;
+
+        /* ===== CỘT PHẢI: CÓ THỂ BẠN THÍCH ===== */
+        ViewBag.RelatedProducts = _context.Products
+            .Where(p => p.Id != promo.Product.Id)
+            .OrderBy(x => Guid.NewGuid())
+            .Take(5)
+            .ToList();
+
+        /* ===== DƯỚI ĐÁY: SẢN PHẨM CÙNG LOẠI ===== */
+        ViewBag.SameCategoryProducts = _context.Products
+            .Where(p => p.CategoryId == promo.Product.CategoryId
+                        && p.Id != promo.Product.Id)
+            .Take(5)
+            .ToList();
+
         return View(promo);
     }
+
+
+
 }

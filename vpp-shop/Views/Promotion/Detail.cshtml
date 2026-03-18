@@ -1,36 +1,95 @@
 ﻿@model ProductPromotion
+<link rel="stylesheet" href="~/css/web/pproduct.css" />
 
-<div class="container mt-4 mb-5">
-    <div class="row justify-content-center">
+<div class="container-fluid mt-4 mb-5">
+    <div class="row">
 
-        <!-- ===== CỘT NỘI DUNG (CĂN GIỮA) ===== -->
-        <div class="col-md-9 mx-auto">
+        <!-- ===== CỘT TRÁI: DANH MỤC ===== -->
+        <div class="col-md-3">
+            <div class="category-sidebar">
+                <h6 class="sidebar-title">
+                    <a href="/Product/Index">SẢN PHẨM</a>
+                </h6>
 
+                @foreach (var group in ViewBag.CategoryGroups)
+                {
+                    bool isActiveGroup = ViewBag.ActiveGroupId != null
+                    && ViewBag.ActiveGroupId == group.Id;
+
+                    <div class="category-group">
+                        <a href="/Product/Index?groupId=@group.Id"
+                           class="category-group-name @(isActiveGroup ? "active" : "")">
+                            @group.Name
+                        </a>
+
+                        <ul class="category-children">
+                            @foreach (var cate in group.Categories)
+                            {
+                                bool isActiveCate = ViewBag.ActiveCategoryId != null
+                                && ViewBag.ActiveCategoryId == cate.Id;
+
+                                <li>
+                                    <a href="/Product/Index?categoryId=@cate.Id"
+                                       class="@(isActiveCate ? "active" : "")">
+                                        @cate.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- ===== CỘT GIỮA: NỘI DUNG KHUYẾN MÃI ===== -->
+        <div class="col-md-6">
             <div class="promo-detail text-center">
 
-                <!-- TIÊU ĐỀ -->
-                <h1 class="promo-title">
-                    @Model.Title
-                </h1>
+                <h1 class="promo-title">@Model.Title</h1>
 
-                <!-- NGÀY -->
                 <div class="promo-meta mb-4">
                     @Model.CreatedAt.ToString("dd/MM/yyyy")
                 </div>
 
-                <!-- ẢNH SẢN PHẨM -->
                 <div class="promo-image mb-4">
-                    <a asp-controller="Product"
-                       asp-action="Detail"
-                       asp-route-id="@Model.Product.Id">
+                    <a href="/Product/Detail/@Model.Product.Id">
                         <img src="~/images/products/@Model.Product.Image"
                              alt="@Model.Title" />
                     </a>
                 </div>
 
-                <!-- NỘI DUNG -->
-                <div class="promo-content text-start mx-auto">
+                <div class="promo-content text-start">
                     @Html.Raw((Model.Content ?? "").Replace("\n", "<br/>"))
+                </div>
+            </div>
+
+            
+        </div>
+
+        <!-- ===== CỘT PHẢI: CÓ THỂ BẠN THÍCH ===== -->
+        <div class="col-md-3">
+            <div class="related-box" id="related-box">
+
+                <h6 class="related-title">Có thể bạn thích</h6>
+
+                <div class="related-list">
+                    @if (ViewBag.RelatedProducts != null && ViewBag.RelatedProducts.Count > 0)
+                    {
+                        foreach (var p in ViewBag.RelatedProducts)
+                        {
+                            <a href="/Product/Detail/@p.Id" class="related-item">
+                                <img src="~/images/products/@p.Image" />
+                                <div class="related-info">
+                                    <span class="related-name">@p.Name</span>
+                                    <span class="related-price">@p.Price.ToString("N0") đ</span>
+                                </div>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-muted">Chưa có sản phẩm gợi ý</div>
+                    }
                 </div>
 
             </div>
@@ -38,3 +97,64 @@
 
     </div>
 </div>
+<!-- ===== DƯỚI ĐÁY: SẢN PHẨM CÙNG LOẠI ===== -->
+@if (ViewBag.SameCategoryProducts != null && ViewBag.SameCategoryProducts.Count > 0)
+{
+    <div class="same-category-wrapper">
+
+        <h5 class="same-category-title">Sản phẩm cùng loại</h5>
+
+        <div class="row justify-content-center">
+            @foreach (var item in ViewBag.SameCategoryProducts)
+            {
+                <div class="col-product mb-4">
+                    <div class="product-item @(item.Stock == 0 ? "out-of-stock" : "")">
+
+
+                        <div class="product-thumb">
+                            <a href="/Product/Detail/@item.Id">
+                                <img src="~/images/products/@item.Image" alt="@item.Name">
+                            </a>
+
+                            <div class="product-actions">
+                                @if (item.Stock > 0)
+                                {
+                                    <a asp-controller="Cart"
+                                       asp-action="AddToCart"
+                                       asp-route-productId="@item.Id"
+                                       class="btn-cart">
+                                        Thêm vào giỏ
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="btn-cart disabled">
+                                        Hết hàng
+                                    </span>
+                                }
+                            </div>
+
+                        </div>
+
+                        <div class="product-info">
+                            <a href="/Product/Detail/@item.Id" class="product-name">
+                                @item.Name
+                            </a>
+
+                            <p class="product-price">
+                                @item.Price.ToString("N0") đ
+                            </p>
+
+                            <p class="product-stock @(item.Stock == 0 ? "out-stock" : "")">
+                                @(item.Stock > 0 ? $"Còn {item.Stock} sản phẩm" : "Hết hàng")
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+}

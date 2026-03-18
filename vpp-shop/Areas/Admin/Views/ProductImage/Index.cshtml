@@ -4,7 +4,15 @@
 }
 
 <h3>Ảnh sản phẩm</h3>
+<div class="mb-3" style="max-width:400px">
+    <input type="text"
+           id="searchInput"
+           class="form-control"
+           placeholder="Gõ để tìm sản phẩm..."
+           value="@ViewBag.Keyword" />
+</div>
 
+<div id="tableWrap">
 <table class="table table-bordered align-middle">
     <thead>
         <tr>
@@ -56,7 +64,7 @@
         }
     </tbody>
 </table>
-
+</div>
 <!-- MODAL UPLOAD -->
 <div class="modal fade" id="uploadModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
@@ -94,55 +102,5 @@
 </div>
 
 @section Scripts {
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            let selectedFiles = [];
-            const preview = document.getElementById("preview");
-            const productIdInput = document.getElementById("productIdInput");
-            const dropZone = document.getElementById("dropZone");
-            const fileInput = document.getElementById("imageInput");
-
-            // 🔥 chỉ set productId – KHÔNG mở modal bằng JS
-            window.setProductId = function (id) {
-                productIdInput.value = id;
-                selectedFiles = [];
-                preview.innerHTML = "";
-                fileInput.value = "";
-            };
-
-            window.submitImages = function () {
-                if (selectedFiles.length === 0) return;
-
-                const fd = new FormData();
-                fd.append("productId", productIdInput.value);
-                selectedFiles.forEach(f => fd.append("images", f));
-
-                fetch("/Admin/ProductImage/AddMultiple", {
-                    method: "POST",
-                    body: fd
-                }).then(() => location.reload());
-            };
-
-            window.deleteImage = function (id) {
-                fetch("/Admin/ProductImage/Delete?id=" + id, {
-                    method: "POST"
-                }).then(() => location.reload());
-            };
-
-            dropZone.onclick = () => fileInput.click();
-
-            fileInput.onchange = () => {
-                for (let f of fileInput.files) {
-                    selectedFiles.push(f);
-                    const img = document.createElement("img");
-                    img.src = URL.createObjectURL(f);
-                    img.style.height = "80px";
-                    img.className = "border rounded";
-                    preview.appendChild(img);
-                }
-            };
-
-        });
-    </script>
+    <script src="~/js/admin/admin-image.js"></script>
 }

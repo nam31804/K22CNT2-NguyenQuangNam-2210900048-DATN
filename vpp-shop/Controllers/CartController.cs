@@ -14,9 +14,9 @@ namespace vpp_shop.Controllers
             _context = context;
         }
 
-        // ============================
+        
         // ADD TO CART
-        // ============================
+        
         public async Task<IActionResult> AddToCart(int productId)
         {
             var userId = HttpContext.Session.GetInt32("USER_ID");
@@ -60,9 +60,9 @@ namespace vpp_shop.Controllers
             return RedirectToAction("Index");
         }
 
-        // ============================
+        
         // VIEW CART
-        // ============================
+        
         public async Task<IActionResult> Index()
         {
             var userId = HttpContext.Session.GetInt32("USER_ID");
@@ -82,9 +82,9 @@ namespace vpp_shop.Controllers
             return View(cart);
         }
 
-        // ============================
+        
         // AJAX: TĂNG SỐ LƯỢNG
-        // ============================
+        
         [HttpPost]
         public async Task<IActionResult> Increase(int id)
         {
@@ -116,9 +116,9 @@ namespace vpp_shop.Controllers
 
         }
 
-        // ============================
+        
         // AJAX: GIẢM SỐ LƯỢNG (KHÔNG < 1)
-        // ============================
+        
         [HttpPost]
         public async Task<IActionResult> Decrease(int id)
         {
@@ -141,9 +141,9 @@ namespace vpp_shop.Controllers
             });
         }
 
-        // ============================
+        
         // AJAX: XÓA SẢN PHẨM
-        // ============================
+        
         [HttpPost]
         public async Task<IActionResult> Remove(int id)
         {

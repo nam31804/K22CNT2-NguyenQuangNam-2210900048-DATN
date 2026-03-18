@@ -36,16 +36,28 @@ namespace vpp_shop.Areas.Admin.Controllers
         // =========================
         // Reload bảng (AJAX)
         // =========================
-        public async Task<IActionResult> ReloadTable()
+        public async Task<IActionResult> ReloadTable(string keyword)
         {
-            var categories = await _context.Categories
+            var query = _context.Categories
                 .Include(c => c.Products)
                 .Include(c => c.CategoryGroup)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                query = query.Where(c =>
+                    c.Name.Contains(keyword) ||
+                    c.CategoryGroup.Name.Contains(keyword)
+                );
+            }
+
+            var categories = await query
                 .OrderByDescending(c => c.CreatedAt)
                 .ToListAsync();
 
             return PartialView("_CategoryTable", categories);
         }
+
 
         // =========================
         // CREATE / UPDATE

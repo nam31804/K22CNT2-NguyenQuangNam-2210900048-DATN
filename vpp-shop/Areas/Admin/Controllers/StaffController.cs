@@ -22,15 +22,24 @@ namespace vpp_shop.Areas.Admin.Controllers
         }
 
         // Load danh sách staff (KHÔNG ADMIN)
-        public IActionResult List()
+        public IActionResult List(string keyword)
         {
             var staffs = _context.Admins
-                .Where(x => x.Role == "STAFF")
-                .OrderByDescending(x => x.Id)
-                .ToList();
+                .Where(x => x.Role == "STAFF");
 
-            return PartialView("_StaffTable", staffs);
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                staffs = staffs.Where(x =>
+                    x.Username.Contains(keyword) ||
+                    x.FullName.Contains(keyword) ||
+                    x.Id.ToString().Contains(keyword)
+                );
+            }
+
+            return PartialView("_StaffTable",
+                staffs.OrderByDescending(x => x.Id).ToList());
         }
+
 
         [HttpPost]
         public IActionResult Create(vpp_shop.Models.Admin admin)
@@ -61,6 +70,19 @@ namespace vpp_shop.Areas.Admin.Controllers
             if (staff == null) return NotFound();
 
             staff.IsActive = !staff.IsActive;
+            _context.SaveChanges();
+
+            return Ok();
+        }
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var staff = _context.Admins
+                .FirstOrDefault(x => x.Id == id && x.Role == "STAFF");
+
+            if (staff == null) return NotFound();
+
+            _context.Admins.Remove(staff);
             _context.SaveChanges();
 
             return Ok();

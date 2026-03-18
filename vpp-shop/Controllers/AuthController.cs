@@ -127,5 +127,67 @@ namespace vpp_shop.Controllers
             return RedirectToAction("Login", "Auth");
         }
 
+    
+    // ================= QUÊN MẬT KHẨU =================
+[HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(
+            string email,
+            string phone,
+            string newPassword,
+            string confirmPassword
+        )
+        {
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == email);
+
+            if (user == null)
+            {
+                ViewBag.Error = "Email không tồn tại";
+                return View();
+            }
+
+            ViewBag.Email = email;
+
+            if (string.IsNullOrEmpty(phone))
+            {
+                ViewBag.Step = "PHONE";
+                return View();
+            }
+
+            if (user.Phone != phone)
+            {
+                ViewBag.Step = "PHONE";
+                ViewBag.Error = "Số điện thoại không đúng";
+                return View();
+            }
+
+            ViewBag.Phone = phone;
+
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                ViewBag.Step = "RESET";
+                return View();
+            }
+
+            if (newPassword != confirmPassword)
+            {
+                ViewBag.Step = "RESET";
+                ViewBag.Error = "Mật khẩu xác nhận không khớp";
+                return View();
+            }
+
+            user.Password = newPassword;
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Đổi mật khẩu thành công";
+            return RedirectToAction("Login");
+        }
     }
-}
+    }

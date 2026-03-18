@@ -50,8 +50,17 @@
                             onclick="toggleStaff(@s.Id)">
                         @(s.IsActive == true ? "Khoá" : "Mở")
                     </button>
+                    <button class="btn btn-sm btn-danger"
+                            onclick="deleteStaff(@s.Id)">
+                        Xoá
+                    </button>
+                <td>
+                    
+                </td>
+
                 </td>
             </tr>
         }
     </tbody>
 </table>
+

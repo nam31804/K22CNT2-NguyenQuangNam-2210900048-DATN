@@ -19,7 +19,11 @@
             onclick="openCreateCategory()">
         + Thêm thể loại
     </button>
-
+    <div class="mb-3" style="width:320px">
+        <input id="searchCategory"
+               class="form-control"
+               placeholder="Tìm tên thể loại..." />
+    </div>
     <!-- TABLE -->
     <div id="categoryTable" class="category-table">
         @await Html.PartialAsync("_CategoryTable", Model)
@@ -110,6 +114,6 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/admin/admin-reload.js"></script>
+    
     <script src="~/js/admin/admin-category.js"></script>
 }

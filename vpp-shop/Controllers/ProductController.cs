@@ -64,7 +64,11 @@ namespace vpp_shop.Controllers
                     _ => productsQuery
                 };
             }
-
+            else
+            {
+                // 🔥 RANDOM mặc định
+                productsQuery = productsQuery.OrderBy(x => Guid.NewGuid());
+            }
             // ===== 🔥 PHÂN TRANG =====
             int pageSize = 15;
 
@@ -93,7 +97,7 @@ namespace vpp_shop.Controllers
 
                 if (!string.IsNullOrEmpty(groupName))
                 {
-                    title = groupName.ToUpper() + " - VPP Twinkle";
+                    title = groupName.ToUpper() + " - VPP Nam Supplies";
                 }
             }
 
